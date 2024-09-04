@@ -1,0 +1,13 @@
+blocks:
+  - permission
+  # - user
+  # - group
+  - size
+  - date
+  - name
+
+icons:
+  separator: "  "
+
+color:
+  theme: default
