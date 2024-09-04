@@ -1,0 +1,38 @@
+user: white
+group: white
+permission:
+  read: white
+  write: white
+  exec: white
+  exec-sticky: white
+  no-access: black
+  octal: white
+  acl: white
+  context: white
+date:
+  hour-old: white
+  day-old: cyan
+  older: blue
+size:
+  none: black
+  small: red
+  medium: magenta
+  large: white
+inode:
+  valid: white
+  invalid: white
+links:
+  valid: white
+  invalid: white
+tree-edge: black
+git-status:
+  default: white
+  unmodified: white
+  ignored: white
+  new-in-index: white
+  new-in-workdir: white
+  typechange: white
+  deleted: red
+  renamed: white
+  modified: black
+  conflicted: red
