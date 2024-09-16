@@ -49,6 +49,3 @@ Invoke-Expression (&starship init powershell)
 
 # keep this line last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
-
-
