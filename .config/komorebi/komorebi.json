@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.28/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 2,
+  "default_container_padding": 2,
+  "border": true,
+  "border_width": 2,
+  "border_offset": 0,
+  "border_colours": {
+    "single": "#77ff00",
+    "stack": "#00a542",
+    "monocle": "#ff3399",
+    "unfocused": "#000000"
+  },
+  "stackbar": {
+    "height": 20,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#77ff00",
+      "unfocused_text": "#b3b3b3",
+      "background": "#141414"
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "II",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "III",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "UltrawideVerticalStack"
+        }
+      ]
+    }
+  ]
+}
