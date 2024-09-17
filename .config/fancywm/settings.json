@@ -5,7 +5,7 @@
   "NotifyVirtualDesktopServiceIncompatibility": true,
   "AllocateNewPanelSpace": false,
   "AutoCollapsePanels": true,
-  "AutoSplitCount": 4,
+  "AutoSplitCount": 3,
   "DelayReposition": false,
   "AnimateWindowMovement": true,
   "ModifierMoveWindow": false,
@@ -15,8 +15,8 @@
   "PanelFontSize": 10,
   "ShowFocus": true,
   "ShowFocusDuringAction": true,
-  "OverrideAccentColor": false,
-  "CustomAccentColor": "#0064FFFF",
+  "OverrideAccentColor": true,
+  "CustomAccentColor": "#77FF0032",
   "Keybindings": {
     "ToggleManager": {
       "IsDirectMode": false,
