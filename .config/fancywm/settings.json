@@ -21,12 +21,14 @@
     "ToggleManager": {
       "IsDirectMode": false,
       "Keys": [
-        "F11"
+        "LeftShift",
+        "T"
       ]
     },
     "RefreshWorkspace": {
       "IsDirectMode": false,
       "Keys": [
+        "LeftShift",
         "R"
       ]
     },
