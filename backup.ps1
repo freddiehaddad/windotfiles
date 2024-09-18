@@ -1,7 +1,4 @@
 # Backup Windows program settings
-
-# Copy arguments
-$copyProgram = "robocopy"
-$rootDirectory = "$env:USERPROFILE"
-
-Start-Process -FilePath "$copyProgram" -ArgumentList "$rootDirectory\.config\", ".\.config", "/mir", "/copyall" -NoNewWindow
+$argumentList = "$env:USERPROFILE\.config\", ".\.config", "/mir", "/copyall"
+& "robocopy" $argumentList
+# Start-Process -FilePath "$copyProgram" -ArgumentList "$rootDirectory\.config\", ".\.config", "/mir", "/copyall" -NoNewWindow
