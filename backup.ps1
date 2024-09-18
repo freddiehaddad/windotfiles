@@ -4,4 +4,4 @@
 $copyProgram = "robocopy"
 $rootDirectory = "$env:USERPROFILE"
 
-& "$copyProgram" "$rootDirectory\.config\" ".\.config\" /mir /copyall
+Start-Process -FilePath "$copyProgram" -ArgumentList "$rootDirectory\.config\", ".\.config", "/mir", "/copyall" -NoNewWindow
