@@ -16,7 +16,7 @@
   "ShowFocus": true,
   "ShowFocusDuringAction": true,
   "OverrideAccentColor": true,
-  "CustomAccentColor": "#77FF0032",
+  "CustomAccentColor": "#FF620032",
   "Keybindings": {
     "ToggleManager": {
       "IsDirectMode": false,
@@ -73,6 +73,7 @@
     "ShowDesktop": {
       "IsDirectMode": false,
       "Keys": [
+        "LeftShift",
         "D"
       ]
     },
@@ -103,6 +104,7 @@
     "ToggleFloatingMode": {
       "IsDirectMode": false,
       "Keys": [
+        "LeftCtrl",
         "F"
       ]
     },
@@ -197,38 +199,39 @@
     "SwitchToPreviousDesktop": {
       "IsDirectMode": false,
       "Keys": [
+        "LeftCtrl",
         "Q"
       ]
     },
     "SwitchToDesktop1": {
       "IsDirectMode": true,
       "Keys": [
-        "LeftCtrl",
         "LWin",
+        "LeftCtrl",
         "D1"
       ]
     },
     "SwitchToDesktop2": {
       "IsDirectMode": true,
       "Keys": [
-        "LeftCtrl",
         "LWin",
+        "LeftCtrl",
         "D2"
       ]
     },
     "SwitchToDesktop3": {
       "IsDirectMode": true,
       "Keys": [
-        "LeftCtrl",
         "LWin",
+        "LeftCtrl",
         "D3"
       ]
     },
     "SwitchToDesktop4": {
       "IsDirectMode": true,
       "Keys": [
-        "LeftCtrl",
         "LWin",
+        "LeftCtrl",
         "D4"
       ]
     },
@@ -335,6 +338,7 @@
     "SwitchToPreviousDisplay": {
       "IsDirectMode": false,
       "Keys": [
+        "LeftCtrl",
         "E"
       ]
     },
