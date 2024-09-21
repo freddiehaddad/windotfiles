@@ -1,36 +1,170 @@
-# Windows "dotfiles"
+# Windows "dot" Files and System Settings
 
-Program configuration backups:
+These instructions will apply the custom settings used on Windows 11 as well as
+provide the steps to install and configure third-party software.
 
-- git
-- windows terminal
-- powershell
-- fancywm
-- lsd
+1. Open Microsoft Store and update all apps.
 
-## Restoration
+2. Open Windows Terminal
 
-Some programs require a few manual steps to restore the settings (see below).
+   ```text
+   winget upgrade --all --accept-source-agreements --accept-package-agreements
+   ```
 
-For the rest, copy or symlink the `.config` directory to `$env:USERPROFILE`.
+3. Go to System Settings > System > For developers
 
-### Windows Terminal
+   Enable the following:
 
-Open the app, press `Ctrl+,` to open settings, click "Open JSON file", and
-replace the contents with the backup.
+   - End Task
+   - Show file extensions
+   - Show hidden and system files
+   - Show full path in title bar
+   - Show opotion to run asa different user in Start
+   - Windows Terminal
+   - Allow local PowerShell scripts to run without signing.
 
-### FancyWM
+4. Go to Advanced System Settings > Advanced > Settings
 
-Open the app, navigate to Settings, select the General tab, click
-"Show settings.json in containing folder". Replace the `settings.json` file
-with the backup.
+   Uncheck the following:
 
-## PowerShell
+   - Show shadows under windows
 
-Create a `PowerShell` directory under `Documents` and create a file named
-`Microsoft.PowerShell_profile.ps1` with the following contents:
+   Check the following:
 
-```powershell
-$PROFILE = "$env:USERPROFILE\.config\powershell\profile.ps1"
-. "$PROFILE"
-```
+   - Show shadows under mouse pointer
+
+5. Go to Control Panel > System and Security > Power Options
+
+   - Select High Performance
+   - Select Change plan settings
+   - Set Turn off the display to 20 minutes
+   - Set Put the computer to sleep to 2 hours
+   - Select Change advanced power settings
+   - Set Hibernate to: 240 minutes
+
+6. Right click task bar
+
+   - Select Taskbar settings
+   - Set Search to Hide
+   - Set Copilot to Off
+   - Set Widgets to Off
+   - Set Touch keyboard to Never
+   - Uncheck Select the far corner of the taskbar to show the desktop
+   - Set Combine taskbar buttons and hide labels to Never
+
+7. Go to System Settings > Accessibility > Mouse pointer and touch
+
+   - Select Custom
+   - Set color to Gold
+   - Increase Size to 2
+
+8. Go to System Settings > Accounts > Email & accounts
+
+   - Select Add a Microsoft account
+   - Enter email, password, etc.
+
+9. Right-click OneDrive on the taskbar
+
+   - Select settings
+   - Select Add an account
+   - Enter email, password, etc.
+
+10. Install and configure 1Password
+
+    ```text
+    winget inatall --id AgileBits.1Password
+    winget install --id AgileBits.1Password.CLI
+    ```
+
+    After signing in, open Settings > Developer:
+
+    - Enable SSH agent (follow the instructions for SSH agent configuration).
+    - Enable Integrate with 1Password CLI
+
+11. Git / GitHub CLI
+
+    ```text
+    winget install --id Git.Git
+    winget install --id GitHub.cli
+    ```
+
+    After running the following command you can configure GitHub CLI. Do not
+    create a new SSH key.
+
+    ```text
+    git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+    gh auth login
+    ```
+
+12. Create symbolic links
+
+    In an Administrator PowerShell window:
+
+    ```text
+    cd ~
+    New-Item -type SymbolicLink -Target S:\projects\git\windotfiles\.config\ -Name .config\
+    cd AppData\Local
+    new-Item -type SymbolicLink -Target S:\projects\git\nvim\ -Name nvim\
+    ```
+
+13. Terminal Configuration
+
+    Create a `PowerShell` directory under `Documents` and create a file named
+    `Microsoft.PowerShell_profile.ps1` with the following contents:
+
+    ```powershell
+    $PROFILE = "$env:USERPROFILE\.config\powershell\profile.ps1"
+    . "$PROFILE"
+    ```
+
+    Next, Install the following packages:
+
+    ```text
+    winget install --id Microsoft.PowerShell
+    winget install --id Chocolatey.Chocolatey
+    winget install --id Starship.Starship
+    winget install --id lsd-rs.lsd
+    winget install --id ajeetdsouza.zoxide
+    winget install --id junegunn.fzf
+    winget install --id BurntSushi.ripgrep.MSVC
+    ```
+
+14. Neovim Configuration
+
+    ```text
+    winget install --id Microsoft.VisualStudio.2022.BuildTools
+    winget install --id Neovim.Neovim
+    winget install --id Rustlang.Rustup
+    winget install --id OpenJS.NodeJS.LTS
+    winget install --id Python.Python.3.12
+    winget install --id GoLang.Go
+    ```
+
+    After installing the BuildTools, open Visual Studio Installer, click Modify
+    next to the Visual Stuiod Build Tools package, select Desktop development with C++.
+
+    Configure Rust
+
+    ```text
+    rustup default stable
+    rustup component add rust-analyzer
+    ```
+
+15. Additional Packages
+
+    ```text
+    winget install openrgb
+    winget inatall --id Nvidia.GeForceExperience
+    winget install --id Logitech.GHUB
+    winget install --id Microsoft.PowerToys
+    ```
+
+16. FancyWM
+
+    ```text
+    winget install fancywm --accept-source-agreements --accept-package-agreements
+    ```
+
+    Open FancyWM and go to Settings.  Under the General tab, click Show
+    settings.json in containing folder.  Open the file and replace the contents
+    with the backup.
