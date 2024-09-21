@@ -94,6 +94,7 @@ provide the steps to install and configure third-party software.
     ```text
     git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
     gh auth login
+    gh auth setup-git
     ```
 
 12. Create symbolic links
