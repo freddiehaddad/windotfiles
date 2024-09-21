@@ -92,6 +92,9 @@ provide the steps to install and configure third-party software.
     create a new SSH key.
 
     ```text
+    git config --global user.name "First Last"
+    git config --global user.email your@email.com
+    git config --global merge.tool nvimdiff
     git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
     gh auth login
     gh auth setup-git
