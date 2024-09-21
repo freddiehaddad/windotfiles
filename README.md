@@ -19,9 +19,9 @@ provide the steps to install and configure third-party software.
    - Show file extensions
    - Show hidden and system files
    - Show full path in title bar
-   - Show opotion to run asa different user in Start
-   - Windows Terminal
-   - Allow local PowerShell scripts to run without signing.
+   - Show opotion to run as a different user in Start
+   - Set default terminal to Windows Terminal
+   - Allow local PowerShell scripts to run without signing
 
 4. Go to Advanced System Settings > Advanced > Settings
 
