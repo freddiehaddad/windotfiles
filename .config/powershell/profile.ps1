@@ -23,8 +23,6 @@ rustup completions powershell | Out-String | Invoke-Expression
 op completion powershell | Out-String | Invoke-Expression
 
 # Neovim
-#$env:PATH += ";C:\Users\fhaddad\AppData\Local\nvim-data\mason\bin;"
-#$env:PATH += ";D:\Projects\bin;"
 $env:VISUAL = "nvim"
 $env:EDITOR = $env:VISUAL
 
@@ -46,6 +44,8 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
+
+Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
 
 # keep this line last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
