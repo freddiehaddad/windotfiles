@@ -184,6 +184,15 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.ResetFontSize,
 	},
+
+	-- workspaces
+	{
+		key = "s",
+		mods = "LEADER",
+		action = wezterm.action.ShowLauncherArgs({
+			flags = "FUZZY|WORKSPACES",
+		}),
+	},
 }
 
 return config
