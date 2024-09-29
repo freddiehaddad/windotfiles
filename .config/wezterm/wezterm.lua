@@ -2,7 +2,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.disable_default_key_bindings = true
-config.disable_default_mouse_bindings = true
+config.disable_default_mouse_bindings = false
+
+config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.99
@@ -137,6 +139,58 @@ config.key_tables = {
 			action = "PopKeyTable",
 		},
 	},
+
+	copy_mode = {
+		{
+			key = "v",
+			mods = "NONE",
+			action = wezterm.action.CopyMode({ SetSelectionMode = "Cell" }),
+		},
+		{
+			key = "v",
+			mods = "SHIFT",
+			action = wezterm.action.CopyMode({ SetSelectionMode = "Line" }),
+		},
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.CopyMode({ SetSelectionMode = "Block" }),
+		},
+
+		{ key = "h", mods = "NONE", action = wezterm.action.CopyMode("MoveLeft") },
+		{ key = "j", mods = "NONE", action = wezterm.action.CopyMode("MoveDown") },
+		{ key = "k", mods = "NONE", action = wezterm.action.CopyMode("MoveUp") },
+		{ key = "l", mods = "NONE", action = wezterm.action.CopyMode("MoveRight") },
+
+		{ key = "h", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToViewportTop") },
+		{ key = "l", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToViewportBottom") },
+		{ key = "m", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToViewportMiddle") },
+
+		{ key = "PageUp", mods = "NONE", action = wezterm.action.CopyMode("PageUp") },
+		{ key = "PageDown", mods = "NONE", action = wezterm.action.CopyMode("PageDown") },
+
+		{ key = "^", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToStartOfLineContent") },
+		{ key = "$", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToEndOfLineContent") },
+
+		{
+			key = "y",
+			mods = "NONE",
+			action = wezterm.action.Multiple({
+				{ CopyTo = "ClipboardAndPrimarySelection" },
+				wezterm.action.ScrollToBottom,
+				{ CopyMode = "Close" },
+			}),
+		},
+
+		{
+			key = "Escape",
+			mods = "NONE",
+			action = wezterm.action.Multiple({
+				wezterm.action.ScrollToBottom,
+				{ CopyMode = "Close" },
+			}),
+		},
+	},
 }
 
 config.keys = {
@@ -167,6 +221,11 @@ config.keys = {
 			timeout_milliseconds = 2000,
 		}),
 	},
+	{
+		key = "Escape",
+		mods = "LEADER",
+		action = wezterm.action.ActivateCopyMode,
+	},
 
 	-- fonts
 	{
@@ -193,6 +252,9 @@ config.keys = {
 			flags = "FUZZY|WORKSPACES",
 		}),
 	},
+
+	-- clipboard
+	{ key = "p", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
 }
 
 return config
