@@ -133,6 +133,7 @@ provide the steps to install and configure third-party software.
     winget install --id ajeetdsouza.zoxide
     winget install --id junegunn.fzf
     winget install --id BurntSushi.ripgrep.MSVC
+    winget install --id wez.wezterm
     ```
 
 14. Neovim Configuration
