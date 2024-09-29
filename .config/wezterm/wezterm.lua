@@ -58,7 +58,7 @@ config.colors = {
 	},
 }
 
-config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 
 config.key_tables = {
 	pane_navigation = {
@@ -166,8 +166,8 @@ config.key_tables = {
 		{ key = "l", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToViewportBottom") },
 		{ key = "m", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToViewportMiddle") },
 
-		{ key = "PageUp", mods = "NONE", action = wezterm.action.CopyMode("PageUp") },
-		{ key = "PageDown", mods = "NONE", action = wezterm.action.CopyMode("PageDown") },
+		{ key = "f", mods = "CTRL", action = wezterm.action.CopyMode("PageDown") },
+		{ key = "b", mods = "CTRL", action = wezterm.action.CopyMode("PageUp") },
 
 		{ key = "^", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToStartOfLineContent") },
 		{ key = "$", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToEndOfLineContent") },
