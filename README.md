@@ -168,6 +168,6 @@ provide the steps to install and configure third-party software.
     winget install fancywm --accept-source-agreements --accept-package-agreements
     ```
 
-    Open FancyWM and go to Settings.  Under the General tab, click Show
-    settings.json in containing folder.  Open the file and replace the contents
+    Open FancyWM and go to Settings. Under the General tab, click Show
+    settings.json in containing folder. Open the file and replace the contents
     with the backup.
