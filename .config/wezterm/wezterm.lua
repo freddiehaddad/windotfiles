@@ -253,6 +253,13 @@ config.keys = {
 		}),
 	},
 
+	-- reload configuration
+	{
+		key = "r",
+		mods = "LEADER|SHIFT",
+		action = wezterm.action.ReloadConfiguration,
+	},
+
 	-- clipboard
 	{ key = "p", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
 }
