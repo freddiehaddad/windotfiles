@@ -9,7 +9,7 @@ config.scrollback_lines = 100000
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.99
 
-config.default_prog = { "pwsh", "-NoLogo" }
+config.default_prog = { "pwsh", "-NoLogo", "-NoProfileLoadTime" }
 config.default_cwd = "s:/projects/git"
 
 config.font = wezterm.font("ComicShannsMono Nerd Font", { weight = "Bold" })
