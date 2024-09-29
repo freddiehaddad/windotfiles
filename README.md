@@ -29,10 +29,6 @@ provide the steps to install and configure third-party software.
 
    - Show shadows under windows
 
-   Check the following:
-
-   - Show shadows under mouse pointer
-
 5. Go to Control Panel > System and Security > Power Options
 
    - Select High Performance
