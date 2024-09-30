@@ -113,7 +113,6 @@ provide the steps to install and configure third-party software.
 
     ```text
     winget install --id Microsoft.PowerShell
-    winget install --id Chocolatey.Chocolatey
     winget install --id Starship.Starship
     winget install --id lsd-rs.lsd
     winget install --id ajeetdsouza.zoxide
@@ -134,7 +133,8 @@ provide the steps to install and configure third-party software.
     ```
 
     After installing the BuildTools, open Visual Studio Installer, click Modify
-    next to the Visual Stuiod Build Tools package, select Desktop development with C++.
+    next to the Visual Stuiod Build Tools package, select Desktop development
+    with C++.
 
     Configure Rust
 
@@ -152,12 +152,34 @@ provide the steps to install and configure third-party software.
     winget install --id Microsoft.PowerToys
     ```
 
-16. FancyWM
+16. GlazeWM
+
+    Disable Windows keybindings via registry editor:
+
+    Navigate to:
 
     ```text
-    winget install fancywm --accept-source-agreements --accept-package-agreements
+    Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
     ```
 
-    Open FancyWM and go to Settings. Under the General tab, click Show
-    settings.json in containing folder. Open the file and replace the contents
-    with the backup.
+    If the `Explorer` key does not exist, create it and then create a
+    `DWORD (32-bit) Value` named `NoWinKeys` and set it to `1`.
+
+    Unassign keyboard shortcuts that activate the language switcher when it pops
+    up (this will happen eventually).
+
+    ```text
+    winget install --id glazr-io.glazewm
+    ```
+
+    Open File Explorer and navigate to `C:\Program Files\glzr.io\GlazeWM`. Right
+    click on `glazewm.exe` and select `Create shortcut` (the shortcut will get
+    created on the desktop). Edit the shortcut and append the following after
+    `C:\Program Files\glzr.io\GlazeWM\glazewm.exe"` in the `Target:` field:
+
+    ```text
+    start --config C:\Users\fhaddad\.config\glazewm\glazewm.yaml
+    ```
+
+    In the File Explorer window address bar, type `shell:startup` and paste the
+    shortcut to that location.
