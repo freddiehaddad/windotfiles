@@ -7,9 +7,16 @@ config.disable_default_mouse_bindings = false
 config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.99
+config.window_background_opacity = 0.995
 
-config.default_prog = { "pwsh", "-NoLogo", "-NoProfileLoadTime" }
+config.default_prog = {
+	"pwsh",
+	"-NoLogo",
+	"-NoProfileLoadTime",
+	"-NoExit",
+	"-File",
+	"C:\\Users\\fhaddad\\.config\\powershell\\profile.ps1",
+}
 config.default_cwd = "s:/projects/git"
 
 config.font = wezterm.font("ComicShannsMono Nerd Font", { weight = "Bold" })

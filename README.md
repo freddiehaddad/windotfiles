@@ -111,16 +111,6 @@ provide the steps to install and configure third-party software.
 
 13. Terminal Configuration
 
-    Create a `PowerShell` directory under `Documents` and create a file named
-    `Microsoft.PowerShell_profile.ps1` with the following contents:
-
-    ```powershell
-    $PROFILE = "$env:USERPROFILE\.config\powershell\profile.ps1"
-    . "$PROFILE"
-    ```
-
-    Next, Install the following packages:
-
     ```text
     winget install --id Microsoft.PowerShell
     winget install --id Chocolatey.Chocolatey
