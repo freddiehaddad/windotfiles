@@ -19,7 +19,7 @@ config.default_prog = {
 }
 config.default_cwd = "s:/projects/git"
 
-config.font = wezterm.font("ComicShannsMono Nerd Font", { weight = "Bold" })
+config.font = wezterm.font("ComicShannsMono Nerd Font", { weight = "Regular" })
 config.font_size = 12
 config.bold_brightens_ansi_colors = "BrightOnly"
 config.adjust_window_size_when_changing_font_size = false
