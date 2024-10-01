@@ -25,14 +25,14 @@ config.bold_brightens_ansi_colors = "BrightOnly"
 config.adjust_window_size_when_changing_font_size = false
 
 config.inactive_pane_hsb = {
-	saturation = 0.75,
+	saturation = 0.9,
 }
 
 config.enable_tab_bar = false
 
 config.colors = {
-	foreground = "#D6D6D7",
-	background = "#090C11",
+	foreground = "#cdcecf",
+	background = "#121821",
 
 	cursor_fg = "#090C11",
 	cursor_bg = "#8EBAA4",
@@ -40,28 +40,28 @@ config.colors = {
 	selection_fg = "#090C11",
 	selection_bg = "#F6B079",
 
-	split = "#30323A",
+	split = "#181e27",
 
 	ansi = {
-		"#30323A",
-		"#AB435D",
-		"#6E9783",
-		"#BAA363",
-		"#6085B6",
-		"#8567B6",
-		"#54AEB0",
-		"#BEBEBE",
+		"#393b44",
+		"#c94f6d",
+		"#81b29a",
+		"#dbc074",
+		"#719cd6",
+		"#9d79d6",
+		"#63cdcf",
+		"#dfdfe0",
 	},
 
 	brights = {
-		"#393B44",
-		"#C94F6D",
-		"#81B29A",
-		"#DBC074",
-		"#719CD6",
-		"#9D79D6",
-		"#63CDCF",
-		"#DFDFE0",
+		"#575860",
+		"#d17983",
+		"#8ebaa4",
+		"#e0c989",
+		"#86abdc",
+		"#baa1e2",
+		"#7ad5d6",
+		"#e4e4e5",
 	},
 }
 
