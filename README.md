@@ -92,7 +92,7 @@ provide the steps to install and configure third-party software.
     git config --global user.email your@email.com
     git config --global merge.tool nvimdiff
     git config --global mergetool.keepBackup false
-    git config --global core.autocrlf input
+    git config --global core.autocrlf true
     git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
     gh auth login
     gh auth setup-git
