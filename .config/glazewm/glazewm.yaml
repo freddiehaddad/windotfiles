@@ -25,18 +25,18 @@ general:
     # Trigger for cursor jump:
     # - 'monitor_focus': Jump when focus changes between monitors.
     # - 'window_focus': Jump when focus changes between windows.
-    trigger: 'monitor_focus'
+    trigger: "monitor_focus"
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: '2px'
+  inner_gap: "2px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '2px'
-    right: '2px'
-    bottom: '2px'
-    left: '2px'
+    top: "2px"
+    right: "2px"
+    bottom: "2px"
+    left: "2px"
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -45,18 +45,18 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#ff622d'
+      color: "#ff622d"
 
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: '#111111'
+      color: "#111111"
 
 window_behavior:
   # New windows are created in this state whenever possible.
   # Allowed values: 'tiling', 'floating'.
-  initial_state: 'tiling'
+  initial_state: "tiling"
 
   # Sets the default options for when a new window is created. This also
   # changes the defaults for when the state change commands, like
@@ -78,95 +78,98 @@ window_behavior:
       shown_on_top: false
 
 workspaces:
-  - name: '1'
-  - name: '2'
-  - name: '3'
-  - name: '4'
+  - name: "1"
+  - name: "2"
+  - name: "3"
+  - name: "4"
 
 window_rules:
-  - commands: ['ignore']
+  - commands: ["ignore"]
     match:
       # Ignores any Zebar windows.
-      - window_process: { equals: 'TL' }
+      - window_process: { equals: "steam" }
+      - window_process: { equals: "TL" }
 
       # Ignores picture-in-picture windows for browsers.
-      - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
-        window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
+      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
+        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
       # Ignore rules for various 3rd-party apps.
-      - window_process: { equals: 'PowerToys' }
+      - window_process: { equals: "PowerToys" }
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
-      - window_process: { equals: 'Lively' }
-        window_class: { regex: 'HwndWrapper*' }
+      - window_process: { equals: "PowerToys" }
+        window_title: { regex: ".*? - Peek" }
+      - window_process: { equals: "Lively" }
+        window_class: { regex: "HwndWrapper" }
 
 binding_modes:
-  # When enabled, the focused window can be resized via arrow keys or HJKL.
-  - name: 'resize'
-    keybindings:
-      - commands: ['resize --width -2%']
-        bindings: ['h', 'left']
-      - commands: ['resize --width +2%']
-        bindings: ['l', 'right']
-      - commands: ['resize --height +2%']
-        bindings: ['k', 'up']
-      - commands: ['resize --height -2%']
-        bindings: ['j', 'down']
-      # Press enter/escape to return to default keybindings.
-      - commands: ['wm-disable-binding-mode --name resize']
-        bindings: ['escape', 'enter']
-
-  # When enabled, all keybindings are disabled except for alt+shift+p which
-  # returns to default keybindings.
-  - name: 'pause'
-    keybindings:
-      - commands: ['wm-disable-binding-mode --name pause']
-        bindings: ['alt+shift+p']
+#   # When enabled, the focused window can be resized via arrow keys or HJKL.
+#   - name: 'resize'
+#     keybindings:
+#       - commands: ['resize --width -2%']
+#         bindings: ['h', 'left']
+#       - commands: ['resize --width +2%']
+#         bindings: ['l', 'right']
+#       - commands: ['resize --height +2%']
+#         bindings: ['k', 'up']
+#       - commands: ['resize --height -2%']
+#         bindings: ['j', 'down']
+#       # Press enter/escape to return to default keybindings.
+#       - commands: ['wm-disable-binding-mode --name resize']
+#         bindings: ['escape', 'enter']
+#
+#   # When enabled, all keybindings are disabled except for alt+shift+p which
+#   # returns to default keybindings.
+#   - name: 'pause'
+#     keybindings:
+#       - commands: ['wm-disable-binding-mode --name pause']
+#         bindings: ['alt+shift+p']
 
 keybindings:
   # Shift focus in a given direction.
-  - commands: ['focus --direction left']
-    bindings: ['lwin+ctrl+h', 'alt+left']
-  - commands: ['focus --direction right']
-    bindings: ['lwin+ctrl+l', 'alt+right']
-  - commands: ['focus --direction up']
-    bindings: ['lwin+ctrl+k', 'alt+up']
-  - commands: ['focus --direction down']
-    bindings: ['lwin+ctrl+j', 'alt+down']
+  - commands: ["focus --direction left"]
+    bindings: ["lwin+ctrl+h", "alt+left"]
+  - commands: ["focus --direction right"]
+    bindings: ["lwin+ctrl+l", "alt+right"]
+  - commands: ["focus --direction up"]
+    bindings: ["lwin+ctrl+k", "alt+up"]
+  - commands: ["focus --direction down"]
+    bindings: ["lwin+ctrl+j", "alt+down"]
 
   # Move focused window in a given direction.
-  - commands: ['move --direction left']
-    bindings: ['lwin+alt+h', 'alt+shift+left']
-  - commands: ['move --direction right']
-    bindings: ['lwin+alt+l', 'alt+shift+right']
-  - commands: ['move --direction up']
-    bindings: ['lwin+alt+k', 'alt+shift+up']
-  - commands: ['move --direction down']
-    bindings: ['lwin+alt+j', 'alt+shift+down']
+  - commands: ["move --direction left"]
+    bindings: ["lwin+alt+h", "alt+shift+left"]
+  - commands: ["move --direction right"]
+    bindings: ["lwin+alt+l", "alt+shift+right"]
+  - commands: ["move --direction up"]
+    bindings: ["lwin+alt+k", "alt+shift+up"]
+  - commands: ["move --direction down"]
+    bindings: ["lwin+alt+j", "alt+shift+down"]
 
   # Resize focused window by a percentage or pixel amount.
-  - commands: ['resize --width -20px']
-    bindings: ['lwin+alt+left']
-  - commands: ['resize --width +20px']
-    bindings: ['lwin+alt+right']
-  - commands: ['resize --height +20px']
-    bindings: ['lwin+alt+up']
-  - commands: ['resize --height -20px']
-    bindings: ['lwin+alt+down']
+  - commands: ["resize --width -20px"]
+    bindings: ["lwin+alt+left"]
+  - commands: ["resize --width +20px"]
+    bindings: ["lwin+alt+right"]
+  - commands: ["resize --height +20px"]
+    bindings: ["lwin+alt+up"]
+  - commands: ["resize --height -20px"]
+    bindings: ["lwin+alt+down"]
 
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
   # - commands: ['wm-enable-binding-mode --name resize']
-    # bindings: ['alt+r']
+  # bindings: ['alt+r']
 
   # Disables all keybindings until alt+shift+p is pressed again.
   # - commands: ['wm-enable-binding-mode --name pause']
-    # bindings: ['alt+shift+p']
+  # bindings: ['alt+shift+p']
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
-  - commands: ['toggle-tiling-direction']
-    bindings: ['lwin+ctrl+v']
+  - commands: ["toggle-tiling-direction"]
+    bindings: ["lwin+ctrl+d"]
 
   # Change focus from tiling windows -> floating -> fullscreen.
   # - commands: ['wm-cycle-focus']
@@ -189,46 +192,46 @@ keybindings:
   #   bindings: ['alt+m']
 
   # Close focused window.
-  - commands: ['close']
-    bindings: ['lwin+ctrl+q']
+  - commands: ["close"]
+    bindings: ["lwin+ctrl+q"]
 
   # Kill GlazeWM process safely.
-  - commands: ['wm-exit']
-    bindings: ['lwin+ctrl+shift+e']
+  - commands: ["wm-exit"]
+    bindings: ["lwin+ctrl+shift+e"]
 
   # Re-evaluate configuration file.
-  - commands: ['wm-reload-config']
-    bindings: ['lwin+ctrl+shift+r']
+  - commands: ["wm-reload-config"]
+    bindings: ["lwin+ctrl+shift+r"]
 
   # Redraw all windows.
-  - commands: ['wm-redraw']
-    bindings: ['alt+shift+w']
+  - commands: ["wm-redraw"]
+    bindings: ["alt+shift+w"]
 
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   # - commands: ['shell-exec wezterm']
-    # bindings: ['lwin+enter']
+  # bindings: ['lwin+enter']
 
   # Focus the next/previous workspace defined in `workspaces` config.
   # - commands: ['focus --next-workspace']
-    # bindings: ['alt+s']
+  # bindings: ['alt+s']
   # - commands: ['focus --prev-workspace']
-    # bindings: ['alt+a']
+  # bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
   # - commands: ['focus --recent-workspace']
-    # bindings: ['alt+d']
+  # bindings: ['alt+d']
 
   # Change focus to a workspace defined in `workspaces` config.
-  - commands: ['focus --workspace 1']
-    bindings: ['lwin+ctrl+1']
-  - commands: ['focus --workspace 2']
-    bindings: ['lwin+ctrl+2']
-  - commands: ['focus --workspace 3']
-    bindings: ['lwin+ctrl+3']
-  - commands: ['focus --workspace 4']
-    bindings: ['lwin+ctrl+4']
+  - commands: ["focus --workspace 1"]
+    bindings: ["lwin+ctrl+1"]
+  - commands: ["focus --workspace 2"]
+    bindings: ["lwin+ctrl+2"]
+  - commands: ["focus --workspace 3"]
+    bindings: ["lwin+ctrl+3"]
+  - commands: ["focus --workspace 4"]
+    bindings: ["lwin+ctrl+4"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -242,11 +245,11 @@ keybindings:
   #   bindings: ['alt+shift+s']
 
   # Move focused window to a workspace defined in `workspaces` config.
-  - commands: ['move --workspace 1', 'focus --workspace 1']
-    bindings: ['lwin+alt++1']
-  - commands: ['move --workspace 2', 'focus --workspace 2']
-    bindings: ['lwin+alt++2']
-  - commands: ['move --workspace 3', 'focus --workspace 3']
-    bindings: ['lwin+alt+3']
-  - commands: ['move --workspace 4', 'focus --workspace 4']
-    bindings: ['lwin+alt+4']
+  - commands: ["move --workspace 1", "focus --workspace 1"]
+    bindings: ["lwin+alt++1"]
+  - commands: ["move --workspace 2", "focus --workspace 2"]
+    bindings: ["lwin+alt++2"]
+  - commands: ["move --workspace 3", "focus --workspace 3"]
+    bindings: ["lwin+alt+3"]
+  - commands: ["move --workspace 4", "focus --workspace 4"]
+    bindings: ["lwin+alt+4"]
