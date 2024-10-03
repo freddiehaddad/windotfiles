@@ -178,7 +178,7 @@ provide the steps to install and configure third-party software.
     `C:\Program Files\glzr.io\GlazeWM\glazewm.exe"` in the `Target:` field:
 
     ```text
-    start --config C:\Users\fhaddad\.config\glazewm\glazewm.yaml
+    start --config "%USERPROFILE%\.config\glazewm\glazewm.yaml"
     ```
 
     In the File Explorer window address bar, type `shell:startup` and paste the
