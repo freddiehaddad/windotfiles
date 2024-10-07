@@ -22,6 +22,8 @@ provide the steps to install and configure third-party software.
    - Show opotion to run as a different user in Start
    - Set default terminal to Windows Terminal
    - Allow local PowerShell scripts to run without signing
+   - Enable sudo
+     - Set Configure how sudo runs applications to Inline
 
 4. Go to Advanced System Settings > Advanced > Settings
 
