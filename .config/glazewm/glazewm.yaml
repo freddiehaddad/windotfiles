@@ -58,7 +58,7 @@ window_effects:
     # Change the corner style of the window's frame.
     # ** Exclusive to Windows 11 due to API limitations.
     corner_style:
-      enabled: true
+      enabled: false
       # Allowed values: 'square', 'rounded', 'small_rounded'.
       style: "square"
 
@@ -70,7 +70,7 @@ window_effects:
     hide_title_bar:
       enabled: false
     corner_style:
-      enabled: true
+      enabled: false
       style: "square"
 
 window_behavior:
