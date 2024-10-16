@@ -121,6 +121,9 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper" }
 
+      # Throne and Liberty
+      - window_process: { equals: "tl" }
+
 binding_modes:
 #   # When enabled, the focused window can be resized via arrow keys or HJKL.
 #   - name: 'resize'
