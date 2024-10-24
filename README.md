@@ -116,6 +116,7 @@ provide the steps to install and configure third-party software.
     ```text
     winget install --id Microsoft.PowerShell
     winget install --id Starship.Starship
+    winget install --id sharkdp.bat
     winget install --id lsd-rs.lsd
     winget install --id ajeetdsouza.zoxide
     winget install --id junegunn.fzf
