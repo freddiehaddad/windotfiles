@@ -40,6 +40,7 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
+Invoke-Expression (&starship init powershell)
 
 Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
 

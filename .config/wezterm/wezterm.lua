@@ -7,7 +7,7 @@ config.disable_default_mouse_bindings = false
 config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.995
+config.window_background_opacity = 0.991
 
 config.default_prog = {
 	"pwsh",
@@ -30,38 +30,40 @@ config.inactive_pane_hsb = {
 
 config.enable_tab_bar = false
 
+-- Base2Tone Morning
 config.colors = {
-	foreground = "#cdcecf",
-	background = "#121821",
+	foreground = "#E1E1E1",
+	background = "#151515",
 
-	cursor_fg = "#090C11",
-	cursor_bg = "#8EBAA4",
+	cursor_fg = "#151515",
+	cursor_bg = "#D0D0D0",
+	cursor_border = "#D0D0D0",
 
-	selection_fg = "#090C11",
-	selection_bg = "#F6B079",
+	--selection_fg = "#1c1c1c",
+	selection_bg = "#373737",
 
-	split = "#181e27",
+	split = "#202020",
 
 	ansi = {
-		"#393b44",
-		"#c94f6d",
-		"#81b29a",
-		"#dbc074",
-		"#719cd6",
-		"#9d79d6",
-		"#63cdcf",
-		"#dfdfe0",
+		"#373737", -- black
+		"#984936", -- red
+		"#586935", -- green
+		"#ab8550", -- yellow
+		"#51657b", -- blue
+		"#aa749f", -- magenta
+		"#576f82", -- cyan
+		"#d0d0d0", -- white
 	},
 
 	brights = {
-		"#575860",
-		"#d17983",
-		"#8ebaa4",
-		"#e0c989",
-		"#86abdc",
-		"#baa1e2",
-		"#7ad5d6",
-		"#e4e4e5",
+		"#727272", -- black
+		"#b46958", -- red
+		"#90a959", -- green
+		"#f4bf75", -- yellow
+		"#576f82", -- blue
+		"#aa759f", -- magenta
+		"#7e97ab", -- cyan
+		"#e1e1e1"  -- white
 	},
 }
 

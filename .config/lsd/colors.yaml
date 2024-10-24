@@ -1,0 +1,9 @@
+date:
+  hour-old: dark_green
+  day-old: green
+  older: green
+size:
+  none: red
+  small: dark_yellow
+  medium: yellow
+  large: yellow
