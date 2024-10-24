@@ -35,6 +35,8 @@ Set-Alias -Name lla -Value lsd_long_hidden
 Function lsd_tree {lsd --tree}
 Set-Alias -Name lt -Value lsd_tree
 
+Set-Alias -Name cat -Value bat
+
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
