@@ -7,7 +7,7 @@ provide the steps to install and configure third-party software.
 
 2. Open Windows Terminal
 
-   ```text
+   ```console
    winget upgrade --all --accept-source-agreements --accept-package-agreements
    ```
 
@@ -69,7 +69,7 @@ provide the steps to install and configure third-party software.
 
 10. Install and configure 1Password
 
-    ```text
+    ```console
     winget inatall --id AgileBits.1Password
     winget install --id AgileBits.1Password.CLI
     ```
@@ -81,7 +81,7 @@ provide the steps to install and configure third-party software.
 
 11. Git / GitHub CLI
 
-    ```text
+    ```console
     winget install --id Git.Git
     winget install --id GitHub.cli
     ```
@@ -89,7 +89,7 @@ provide the steps to install and configure third-party software.
     After running the following command you can configure GitHub CLI. Do not
     create a new SSH key.
 
-    ```text
+    ```console
     git config --global user.name "First Last"
     git config --global user.email your@email.com
     git config --global merge.tool nvimdiff
@@ -102,18 +102,21 @@ provide the steps to install and configure third-party software.
 
 12. Create symbolic links
 
-    In an Administrator PowerShell window:
+    After setting up sudo and Powershell:
 
-    ```text
+    ```console
     cd ~
-    New-Item -type SymbolicLink -Target S:\projects\git\windotfiles\.config\ -Name .config\
+    sudo run pwsh --Command "New-Item -type SymbolicLink -Target S:\projects\git\windotfiles\.config\ -Name .config\"
     cd AppData\Local
-    new-Item -type SymbolicLink -Target S:\projects\git\nvim\ -Name nvim\
+    sudo run pwsh --Command "new-Item -type SymbolicLink -Target S:\projects\git\nvim\ -Name nvim\"
     ```
 
 13. Terminal Configuration
 
-    ```text
+    Download and install the
+    [SeriousShanns Nerd Font](https://github.com/kaBeech/serious-shanns).
+
+    ```console
     winget install --id Microsoft.PowerShell
     winget install --id Starship.Starship
     winget install --id sharkdp.bat
@@ -126,7 +129,7 @@ provide the steps to install and configure third-party software.
 
 14. Neovim Configuration
 
-    ```text
+    ```console
     winget install --id Microsoft.VisualStudio.2022.BuildTools
     winget install --id Neovim.Neovim
     winget install --id Rustlang.Rustup
@@ -141,14 +144,14 @@ provide the steps to install and configure third-party software.
 
     Configure Rust
 
-    ```text
+    ```console
     rustup default stable
     rustup component add rust-analyzer
     ```
 
 15. Additional Packages
 
-    ```text
+    ```console
     winget install openrgb
     winget inatall --id Nvidia.GeForceExperience
     winget install --id Logitech.GHUB
@@ -161,7 +164,7 @@ provide the steps to install and configure third-party software.
 
     Navigate to:
 
-    ```text
+    ```console
     Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
     ```
 
@@ -171,7 +174,7 @@ provide the steps to install and configure third-party software.
     Unassign keyboard shortcuts that activate the language switcher when it pops
     up (this will happen eventually).
 
-    ```text
+    ```console
     winget install --id glazr-io.glazewm
     ```
 
@@ -180,7 +183,7 @@ provide the steps to install and configure third-party software.
     created on the desktop). Edit the shortcut and append the following after
     `C:\Program Files\glzr.io\GlazeWM\glazewm.exe"` in the `Target:` field:
 
-    ```text
+    ```console
     start --config "%USERPROFILE%\.config\glazewm\glazewm.yaml"
     ```
 
