@@ -36,6 +36,7 @@ Function lsd_tree {lsd --tree}
 Set-Alias -Name lt -Value lsd_tree
 
 Set-Alias -Name cat -Value bat
+$env:BAT_THEME="base16"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
