@@ -40,7 +40,8 @@ $env:BAT_THEME="base16"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
-$env:FZF_DEFAULT_OPTS="--height=50% --color=pointer:#984936,bg+:#171717"
+$env:FZF_DEFAULT_OPTS = "--color=fg:-1,fg+:#e1e1e1,bg:-1,bg+:#202020,hl:#7e97ab,hl+:#a3b5c1,info:#88afa2,marker:#b46958,prompt:#90a959,spinner:#f4bf75,pointer:#aa749f,header:#88afa2,gutter:#171717,border:#191a1f,label:#aeaeae,query:#d0d0d0 --border='sharp' --border-label='' --preview-window='border-sharp' --prompt='> ' --marker='>' --pointer='◆' --separator='─' --scrollbar='│' --height=50%"
+
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
