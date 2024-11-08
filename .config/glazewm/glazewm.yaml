@@ -121,6 +121,7 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper" }
       - window_title: { equals: "Snipping Tool" }
+      - window_title: { equals: "Calculator" }
 
       # Throne and Liberty
       - window_process: { equals: "tl" }
