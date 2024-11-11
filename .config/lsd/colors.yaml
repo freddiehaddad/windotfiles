@@ -1,9 +1,11 @@
 date:
-  hour-old: dark_green
-  day-old: green
-  older: green
+  hour-old: dark_blue
+  day-old: blue
+  older: blue
 size:
-  none: red
-  small: dark_yellow
-  medium: yellow
-  large: yellow
+  none: blue
+  small: dark_blue
+  medium: blue
+  large: blue
+permission:
+  no-access: white

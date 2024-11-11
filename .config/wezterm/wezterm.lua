@@ -1,13 +1,48 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.colors = {
+	foreground = "#96938c",
+	background = "#07090a",
+
+	cursor_fg     = "#07090a",
+	cursor_bg     = "#556778",
+	cursor_border = "#556778",
+
+	selection_bg = "#172120",
+
+	split = "#07090a",
+
+	ansi = {
+		"#7c745a", -- black
+		"#7c745a", -- red
+		"#7c745a", -- green
+		"#7c745a", -- yellow
+		"#7c745a", -- blue
+		"#7c745a", -- magenta
+		"#7c745a", -- cyan
+		"#96938c", -- white
+	},
+
+	brights = {
+		"#8a9ea0", -- black
+		"#8a9ea0", -- red
+		"#8a9ea0", -- green
+		"#8a9ea0", -- yellow
+		"#8a9ea0", -- blue
+		"#8a9ea0", -- magenta
+		"#8a9ea0", -- cyan
+		"#96938c", -- white
+	},
+}
+
 config.disable_default_key_bindings = true
 config.disable_default_mouse_bindings = false
 
 config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.991
+config.window_background_opacity = 1.0
 
 config.default_prog = {
 	"pwsh",
@@ -25,47 +60,10 @@ config.bold_brightens_ansi_colors = "BrightOnly"
 config.adjust_window_size_when_changing_font_size = false
 
 config.inactive_pane_hsb = {
-	saturation = 0.9,
+	saturation = 1.0,
 }
 
 config.enable_tab_bar = false
-
--- Base2Tone Morning
-config.colors = {
-	foreground = "#E1E1E1",
-	background = "#151515",
-
-	cursor_fg = "#151515",
-	cursor_bg = "#D0D0D0",
-	cursor_border = "#D0D0D0",
-
-	--selection_fg = "#1c1c1c",
-	selection_bg = "#373737",
-
-	split = "#202020",
-
-	ansi = {
-		"#373737", -- black
-		"#984936", -- red
-		"#586935", -- green
-		"#ab8550", -- yellow
-		"#51657b", -- blue
-		"#aa749f", -- magenta
-		"#576f82", -- cyan
-		"#d0d0d0", -- white
-	},
-
-	brights = {
-		"#727272", -- black
-		"#b46958", -- red
-		"#90a959", -- green
-		"#f4bf75", -- yellow
-		"#576f82", -- blue
-		"#aa759f", -- magenta
-		"#7e97ab", -- cyan
-		"#e1e1e1"  -- white
-	},
-}
 
 config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 
