@@ -5,11 +5,11 @@ config.colors = {
 	foreground = "#96938c",
 	background = "#07090a",
 
-	cursor_fg     = "#07090a",
-	cursor_bg     = "#556778",
-	cursor_border = "#556778",
+	cursor_fg = "#96938c",
+	cursor_bg = "#2a363c",
+	cursor_border = "#2a363c",
 
-	selection_bg = "#172120",
+	selection_bg = "#2a363c",
 
 	split = "#07090a",
 
@@ -39,6 +39,8 @@ config.colors = {
 config.disable_default_key_bindings = true
 config.disable_default_mouse_bindings = false
 
+-- config.max_fps = 240
+
 config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
@@ -54,9 +56,9 @@ config.default_prog = {
 }
 config.default_cwd = "s:/projects/git"
 
-config.font = wezterm.font("SeriousShanns Nerd Font", { weight = "Regular" })
+config.font = wezterm.font_with_fallback({ { family = "SeriousShanns Nerd Font", weight = "Regular" } })
 config.font_size = 12
-config.bold_brightens_ansi_colors = "BrightOnly"
+-- config.bold_brightens_ansi_colors = "BrightOnly"
 config.adjust_window_size_when_changing_font_size = false
 
 config.inactive_pane_hsb = {
