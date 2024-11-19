@@ -4,6 +4,9 @@ general:
   # Example: The below command launches Zebar.
   # startup_commands: ['shell-exec zebar']
 
+  # Show or hide all windows from all workspaces on the task bar
+  hide_method: "hide"
+
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
   # shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
