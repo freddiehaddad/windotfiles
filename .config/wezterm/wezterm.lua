@@ -178,6 +178,9 @@ config.key_tables = {
 		{ key = "f", mods = "CTRL", action = wezterm.action.CopyMode("PageDown") },
 		{ key = "b", mods = "CTRL", action = wezterm.action.CopyMode("PageUp") },
 
+		{ key = "u", mods = "CTRL", action = wezterm.action.ScrollByPage(-0.5) },
+		{ key = "d", mods = "CTRL", action = wezterm.action.ScrollByPage(0.5) },
+
 		{ key = "^", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToStartOfLineContent") },
 		{ key = "$", mods = "SHIFT", action = wezterm.action.CopyMode("MoveToEndOfLineContent") },
 
@@ -199,6 +202,14 @@ config.key_tables = {
 				{ CopyMode = "Close" },
 			}),
 		},
+
+		{ key = "/", mods = "NONE", action = wezterm.action.Search("CurrentSelectionOrEmptyString") },
+		{ key = "n", mods = "NONE", action = wezterm.action.CopyMode("NextMatch") },
+		{ key = "N", mods = "NONE", action = wezterm.action.CopyMode("PriorMatch") },
+	},
+
+	search_mode = {
+		{ key = "Enter", mods = "NONE", action = wezterm.action.ActivateCopyMode },
 	},
 }
 
@@ -271,6 +282,9 @@ config.keys = {
 
 	-- clipboard
 	{ key = "p", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
+
+	-- command palette
+	{ key = "p", mods = "CTRL|SHIFT", action = wezterm.action.ActivateCommandPalette },
 }
 
 return config
