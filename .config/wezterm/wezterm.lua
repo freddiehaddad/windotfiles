@@ -272,6 +272,18 @@ config.keys = {
 			flags = "FUZZY|WORKSPACES",
 		}),
 	},
+	{
+		key = "S",
+		mods = "LEADER|SHIFT",
+		action = wezterm.action.PromptInputLine({
+			description = "Enter name for new workspace",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:perform_action(wezterm.action.SwitchToWorkspace({ name = line }), pane)
+				end
+			end),
+		}),
+	},
 
 	-- reload configuration
 	{
