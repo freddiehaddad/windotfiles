@@ -6,18 +6,18 @@ $env:INCLUDE = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\V
 $env:LIB = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.22621.0\\um\x64"
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
-Import-Module -Name Microsoft.WinGet.CommandNotFound
+# Import-Module -Name Microsoft.WinGet.CommandNotFound
 #f45873b3-b655-43a6-b217-97c00aa0db58
 
 # Git tab completion
 # PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
-Import-Module posh-git
+# Import-Module posh-git
 
 # Rustup completions
-rustup completions powershell | Out-String | Invoke-Expression
+# rustup completions powershell | Out-String | Invoke-Expression
 
 # 1Password
-op completion powershell | Out-String | Invoke-Expression
+# op completion powershell | Out-String | Invoke-Expression
 
 # Neovim
 $env:VISUAL = "nvim"
@@ -47,7 +47,7 @@ $env:FZF_DEFAULT_OPTS = "--color=fg:#96938C,fg+:#8A9EA0,bg:#101517,bg+:#1f292d,h
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
 
-Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
+# Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
 
 # keep this line last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
