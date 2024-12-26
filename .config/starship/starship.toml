@@ -20,7 +20,6 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
-style = "fg:color_green"
 
 [docker_context]
 symbol = " "
@@ -138,6 +137,7 @@ Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
+style = "bold purple"
 
 [perl]
 symbol = " "
