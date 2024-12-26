@@ -25,13 +25,13 @@ config.colors = {
 	},
 
 	brights = {
-		"#8a9ea0", -- black
-		"#8a9ea0", -- red
-		"#8a9ea0", -- green
-		"#8a9ea0", -- yellow
-		"#8a9ea0", -- blue
-		"#8a9ea0", -- magenta
-		"#8a9ea0", -- cyan
+		"#546c78", -- black
+		"#546c78", -- red
+		"#546c78", -- green
+		"#546c78", -- yellow
+		"#546c78", -- blue
+		"#546c78", -- magenta
+		"#546c78", -- cyan
 		"#96938c", -- white
 	},
 }
