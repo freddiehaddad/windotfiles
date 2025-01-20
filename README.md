@@ -149,6 +149,10 @@ provide the steps to install and configure third-party software.
     rustup component add rust-analyzer
     ```
 
+    See the
+    [documention](https://rust-lang.github.io/rustup/installation/windows.html)
+    for rustup on configuring the default host for CodeLLDB debugger support.
+
 15. Additional Packages
 
     ```console
