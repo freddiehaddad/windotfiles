@@ -41,7 +41,7 @@ $env:BAT_THEME="base16"
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 # https://vitormv.github.io/fzf-themes/
-$env:FZF_DEFAULT_OPTS = "--color=fg:#a8a59f,fg+:#5c7884,bg:#101517,bg+:#1f292d,hl:#1f292d,hl+:#5c7884,info:#8e8567,marker:#1f292d,prompt:#5c7884,spinner:#5c7884,pointer:#8e8567,header:#8e8567,gutter:#101517,border:#101517,separator:#5c7884,scrollbar:#101517,label:#8e8567,query:#8e8567 --border='sharp' --border-label='' --preview-window='border-sharp' --prompt='> ' --marker='>' --pointer='o' --separator='─' --scrollbar='│' --height=50%"
+$env:FZF_DEFAULT_OPTS = "--color=fg:#9e9b94,fg+:#5c7884,bg:#101517,bg+:#1f292d,hl:#1f292d,hl+:#5c7884,info:#8e8567,marker:#1f292d,prompt:#5c7884,spinner:#5c7884,pointer:#8e8567,header:#8e8567,gutter:#101517,border:#101517,separator:#5c7884,scrollbar:#101517,label:#8e8567,query:#8e8567 --border='sharp' --border-label='' --preview-window='border-sharp' --prompt='> ' --marker='>' --pointer='o' --separator='─' --scrollbar='│' --height=50%"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
