@@ -2,37 +2,37 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#8F9695",
+	foreground = "#829090",
 	background = "#000000",
 
 	cursor_fg = "#000000",
-	cursor_bg = "#5A7582",
-	cursor_border = "#5A7582",
+	cursor_bg = "#4D7695",
+	cursor_border = "#4D7695",
 
-	selection_bg = "#293639",
+	selection_bg = "#8DB9AF",
 
 	split = "#000000",
 
 	ansi = {
-		"#656B6A", -- black
-		"#757568", -- red
-		"#757568", -- green
-		"#929284", -- yellow
-		"#5A7582", -- blue
-		"#929284", -- magenta
-		"#7692A0", -- cyan
-		"#8F9695", -- white
+		"#707776", -- black
+		"#A2763B", -- red
+		"#A2763B", -- green
+		"#B9A970", -- yellow
+		"#4D7695", -- blue
+		"#B9A970", -- magenta
+		"#5899A7", -- cyan
+		"#829090", -- white
 	},
 
 	brights = {
-		"#656B6A", -- black
-		"#757568", -- red
-		"#757568", -- green
-		"#929284", -- yellow
-		"#5A7582", -- blue
-		"#929284", -- magenta
-		"#7692A0", -- cyan
-		"#8F9695", -- white
+		"#707776", -- black
+		"#A2763B", -- red
+		"#A2763B", -- green
+		"#B9A970", -- yellow
+		"#4D7695", -- blue
+		"#B9A970", -- magenta
+		"#5899A7", -- cyan
+		"#829090", -- white
 	},
 }
 
