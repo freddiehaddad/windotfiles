@@ -11,12 +11,12 @@ permission:
   context: white
 date:
   hour-old: white
-  day-old: cyan
-  older: blue
+  day-old: red
+  older: magenta
 size:
   none: black
-  small: red
-  medium: magenta
+  small: cyan
+  medium: blue
   large: white
 inode:
   valid: white

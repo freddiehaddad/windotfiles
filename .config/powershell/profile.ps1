@@ -41,9 +41,10 @@ $env:BAT_THEME="ansi"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
-# https://vitormv.github.io/fzf-themes/
-# https://vitormv.github.io/fzf-themes#eyJib3JkZXJTdHlsZSI6InNoYXJwIiwiYm9yZGVyTGFiZWwiOiIgRnV6enkgU2VhcmNoICIsImJvcmRlckxhYmVsUG9zaXRpb24iOjAsInByZXZpZXdCb3JkZXJTdHlsZSI6InNoYXJwIiwicGFkZGluZyI6IjAiLCJtYXJnaW4iOiIwIiwicHJvbXB0Ijoi74CCICAiLCJtYXJrZXIiOiLvgIwgIiwicG9pbnRlciI6Iu+RiiIsInNlcGFyYXRvciI6IuKUgCIsInNjcm9sbGJhciI6IuKUgiIsImxheW91dCI6ImRlZmF1bHQiLCJpbmZvIjoicmlnaHQiLCJjb2xvcnMiOiJmZzojOEE4RjhGLGZnKzojOEE4QTdCLGJnOiMxQjI0MjYsYmcrOiMyQTM2MzksaGw6IzVhNzU4MixobCs6IzZDOEE5OSxpbmZvOiM1YTc1ODIsbWFya2VyOiM2QzhBOTkscHJvbXB0OiMzODQ5NEQsc3Bpbm5lcjojNWE3NTgyLHBvaW50ZXI6Izc1NzU2OCxoZWFkZXI6IzhBOEY4Rixib3JkZXI6IzM4NDk0RCxsYWJlbDojOEE4RjhGLHF1ZXJ5OiM1YTc1ODIifQ==
-$env:FZF_DEFAULT_OPTS = "--color=fg:#829090,fg+:#B9A970,bg:#0D1112,bg+:#1A2125,hl:#4D7695,hl+:#5899A7,info:#4D7695,marker:#5899A7,prompt:#424B4B,spinner:#4D7695,pointer:#A2763B,header:#829090,border:#424B4B,label:#829090,query:#4D7695 --border='sharp' --border-label=' Fuzzy Search ' --border-label-pos='0' --preview-window='border-sharp' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='│' --info='right' --height='50%'"
+
+# https://vitormv.github.io/fzf-themes
+$env:FZF_DEFAULT_OPTS = "--color=fg:#A09F88,fg+:#070603,bg:#221F15,bg+:#605637,hl:#B9A970,hl+:#B9A970,info:#836A4B,marker:#908F5F,prompt:#B9A970,spinner:#836A4B,pointer:#B9A970,header:#A09F88,border:#4F4E3C,label:#A09F88,query:#836A4B,gutter:#221F15 --border='sharp' --border-label=' Fuzzy Search ' --border-label-pos='0' --preview-window='border-sharp' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
+
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
