@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 config.colors = {
 	foreground = "#afafaf",
-	background = "#0f0808",
+	background = "#050503",
 
 	cursor_fg = "#0f0808",
 	cursor_bg = "#afafaf",
