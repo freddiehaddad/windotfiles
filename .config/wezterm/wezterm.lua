@@ -2,38 +2,38 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#afaca0",
-	background = "#050503",
+	foreground = "#3c3d34",
+	background = "#eeecf4",
 
-	cursor_fg = "#0f0808",
-	cursor_bg = "#afaca0",
-	cursor_border = "#afaca0",
+	cursor_fg = "#3c3d34",
+	cursor_bg = "#aebab1",
+	cursor_border = "#aebab1",
 
-	-- selection_fg = "#0f0808",
-	selection_bg = "#2a2e23",
+	-- selection_fg = "#eeecf4",
+	selection_bg = "#dbdccf",
 
-	split = "#070603",
+	split = "#eeecf4",
 
 	ansi = {
-		"#51504a", -- black
-		"#969564", -- red
-		"#967f64", -- green
-		"#969564", -- yellow
-		"#648d96", -- blue
-		"#967f64", -- magenta
-		"#578b74", -- cyan
-		"#afaca0", -- white
+		"#626e75", -- black
+		"#615040", -- red
+		"#597a79", -- green
+		"#597a79", -- yellow
+		"#587281", -- blue
+		"#5d5881", -- magenta
+		"#597a79", -- cyan
+		"#353b3e", -- white
 	},
 
 	brights = {
-		"#51504a", -- black
-		"#969564", -- red
-		"#967f64", -- green
-		"#969564", -- yellow
-		"#648d96", -- blue
-		"#967f64", -- magenta
-		"#578b74", -- cyan
-		"#afaca0", -- white
+		"#626e75", -- black
+		"#615040", -- red
+		"#597a79", -- green
+		"#597a79", -- yellow
+		"#587281", -- blue
+		"#5d5881", -- magenta
+		"#597a79", -- cyan
+		"#353b3e", -- white
 	},
 }
 
