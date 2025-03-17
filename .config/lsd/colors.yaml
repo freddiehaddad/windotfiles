@@ -1,38 +1,38 @@
-user: white
-group: white
+user: black
+group: black
 permission:
-  read: white
-  write: white
-  exec: white
-  exec-sticky: white
+  read: black
+  write: black
+  exec: black
+  exec-sticky: black
   no-access: black
-  octal: white
-  acl: white
-  context: white
+  octal: black
+  acl: black
+  context: black
 date:
-  hour-old: white
-  day-old: red
-  older: magenta
+  hour-old: blue
+  day-old: black
+  older: grey
 size:
-  none: black
-  small: cyan
-  medium: blue
-  large: white
+  none: red
+  small: blue
+  medium: black
+  large: magenta
 inode:
-  valid: white
-  invalid: white
+  valid: blue
+  invalid: red
 links:
-  valid: white
-  invalid: white
-tree-edge: black
+  valid: blue
+  invalid: red
+tree-edge: blue
 git-status:
-  default: white
-  unmodified: white
-  ignored: white
-  new-in-index: white
-  new-in-workdir: white
-  typechange: white
+  default: magenta
+  unmodified: magenta
+  ignored: magenta
+  new-in-index: green
+  new-in-workdir: green
+  typechange: magenta
   deleted: red
-  renamed: white
+  renamed: red
   modified: black
   conflicted: red
