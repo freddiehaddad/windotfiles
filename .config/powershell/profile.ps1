@@ -24,17 +24,39 @@ $env:PATH += "C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users
 $env:VISUAL = "nvim"
 $env:EDITOR = $env:VISUAL
 
-# Aliases
-Set-Alias -Name ls -Value lsd
+# LSD Shortcuts (aliases)
+Remove-Item Alias:ls
+Function ls {
+    param (
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$args
+    )
+    lsd @args
+}
 
-Function lsd_long {lsd -l}
-Set-Alias -Name ll -Value lsd_long
+Function ll {
+    param (
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$args
+    )
+    lsd -l @args
+}
 
-Function lsd_long_hidden {lsd -la}
-Set-Alias -Name lla -Value lsd_long_hidden
+Function lla {
+    param (
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$args
+    )
+    lsd -l -a @args
+}
 
-Function lsd_tree {lsd --tree}
-Set-Alias -Name lt -Value lsd_tree
+Function lt {
+    param (
+        [Parameter(ValueFromRemainingArguments=$true)]
+        [string[]]$args
+    )
+    lsd --tree @args
+}
 
 Set-Alias -Name cat -Value bat
 $env:BAT_THEME="ansi"
