@@ -15,23 +15,23 @@ config.colors = {
 
 	ansi = {
 		"#674600", -- black
-		"#760c24", -- red
-		"#0b5b48", -- green
+		"#761e0c", -- red
+		"#445b09", -- green
 		"#475e67", -- yellow
 		"#475e67", -- blue
 		"#52463c", -- magenta
-		"#0b5b48", -- cyan
+		"#445b09", -- cyan
 		"#443b2a", -- white
 	},
 
 	brights = {
 		"#674600", -- black
-		"#760c24", -- red
-		"#0b5b48", -- green
+		"#761e0c", -- red
+		"#445b09", -- green
 		"#475e67", -- yellow
 		"#475e67", -- blue
 		"#52463c", -- magenta
-		"#0b5b48", -- cyan
+		"#445b09", -- cyan
 		"#90856c", -- white (ghost text)
 	},
 }
