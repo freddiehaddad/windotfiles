@@ -26,36 +26,36 @@ $env:EDITOR = $env:VISUAL
 
 # LSD Shortcuts (aliases)
 Remove-Item Alias:ls
-Function ls {
+function ls {
     param (
         [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$args
+        [string[]]$_args
     )
-    lsd @args
+    lsd @_args
 }
 
-Function ll {
+function ll {
     param (
         [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$args
+        [string[]]$_args
     )
-    lsd -l @args
+    lsd -l @_args
 }
 
-Function lla {
+function lla {
     param (
         [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$args
+        [string[]]$_args
     )
-    lsd -l -a @args
+    lsd -l -a @_args
 }
 
-Function lt {
+function lt {
     param (
         [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$args
+        [string[]]$_args
     )
-    lsd --tree @args
+    lsd --tree @_args
 }
 
 Set-Alias -Name cat -Value bat
