@@ -132,6 +132,7 @@ window_rules:
         window_class: { regex: "HwndWrapper" }
       - window_title: { equals: "Snipping Tool" }
       - window_title: { equals: "Calculator" }
+      - window_title: { equals: "Azure VPN Client" }
 
       # Throne and Liberty
       - window_process: { equals: "tl" }
