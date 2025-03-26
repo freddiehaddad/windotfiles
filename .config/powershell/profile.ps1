@@ -69,7 +69,7 @@ $env:BAT_THEME="ansi"
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # https://vitormv.github.io/fzf-themes
-$env:FZF_DEFAULT_OPTS = "--color=fg:#443b2a,fg+:#443b2a,bg:#dbdccf,bg+:#bbac74,hl:#475e67,hl+:#475e67,info:#475e67,marker:#495b1d,prompt:#362e52,spinner:#362e52,pointer:#362e52,header:#495b1d,gutter:#dbdccf,border:#dbdccf,separator:#656468,scrollbar:#656468,label:#443b2a,query:#475e67 --border='sharp' --border-label=' Fuzzy Search ' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
+$env:FZF_DEFAULT_OPTS = "--color=fg:#514530,fg+:#514530,bg:#dbdccf,bg+:#bbac74,hl:#2f4953,hl+:#2f4953,info:#2f4953,marker:#4a542d,prompt:#46263e,spinner:#46263e,pointer:#46263e,header:#4a542d,gutter:#dbdccf,border:#dbdccf,separator:#656468,scrollbar:#656468,label:#514530,query:#2f4953 --border='sharp' --border-label=' Fuzzy Search ' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
