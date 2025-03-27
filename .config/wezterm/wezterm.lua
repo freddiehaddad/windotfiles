@@ -3,15 +3,15 @@ local config = wezterm.config_builder()
 
 config.colors = {
 	foreground = "#514530",
-	background = "#faf1de",
+	background = "#f5eacf",
 
-	cursor_fg = "#faf1de",
+	cursor_fg = "#f5eacf",
 	cursor_bg = "#656468",
 	cursor_border = "#656468",
 
 	selection_bg = "#b4b69a",
 
-	split = "#faf1de",
+	split = "#f5eacf",
 
 	ansi = {
 		"#674600", -- black
