@@ -69,11 +69,15 @@ $env:BAT_THEME="ansi"
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # https://vitormv.github.io/fzf-themes
-$env:FZF_DEFAULT_OPTS = "--color=fg:#514530,fg+:#514530,bg:#dbdccf,bg+:#bbc1a3,hl:#496a68,hl+:#496a68,info:#496a68,marker:#485b27,prompt:#736929,spinner:#736929,pointer:#736929,header:#485b27,gutter:#dbdccf,border:#dbdccf,separator:#99886d,scrollbar:#99886d,label:#514530,query:#496a68 --border='sharp' --border-label=' Fuzzy Search ' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
+$env:FZF_DEFAULT_OPTS = "--color=fg:#a6a18d,fg+:#a6a18d,bg:#1d1d12,bg+:#46462b,hl:#c09c58,hl+:#c09c58,info:#a5a5a5,marker:#ad8c6e,prompt:#d4ae88,spinner:#8d5e5f,pointer:#8d5e5f,header:#979797,gutter:#1d1d12,border:#4e4b42,label:#b2ae9d,query:#c09c58,scrollbar:#66663e,preview-scrollbar:#66663e --border='sharp' --border-label=' Fuzzy Search ' --border-label-pos='0' --preview-window='border-sharp' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
+
+# Powershell color adjustments
+Set-PSReadLineOption -Colors @{ InlinePrediction = "Black" }
+$PSStyle.FileInfo.Directory = "`e[94m"
 
 # Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
 

@@ -2,44 +2,45 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#514530",
-	background = "#f5eacf",
+	foreground = "#a6a18d",
+	background = "#000000",
 
-	cursor_fg = "#f5eacf",
-	cursor_bg = "#656468",
-	cursor_border = "#656468",
+	cursor_fg = "none",
+	cursor_bg = "#7a2427",
+	cursor_border = "#7a2427",
 
-	selection_bg = "#b4b69a",
+	compose_cursor = "#c15a3b",
 
-	split = "#f5eacf",
+	selection_fg = "none",
+	selection_bg = "#141d19",
+
+	split = "none",
 
 	ansi = {
-		"#674600", -- black
-		"#674239", -- red
-		"#485b27", -- green
-		"#496a68", -- yellow
-		"#496a68", -- blue
-		"#736929", -- magenta
-		"#485b27", -- cyan
-		"#514530", -- white
+		"#494a4d", -- black
+		"#cda074", -- red
+		"#9e7a58", -- green
+		"#c09c58", -- yellow
+		"#a14b31", -- blue
+		"#734c4d", -- magenta
+		"#979797", -- cyan
+		"#a6a18d", -- white (grey)
 	},
 
 	brights = {
-		"#674600", -- black
-		"#674239", -- red
-		"#485b27", -- green
-		"#496a68", -- yellow
-		"#496a68", -- blue
-		"#736929", -- magenta
-		"#485b27", -- cyan
-		"#99886d", -- white (ghost text)
+		"#616267", -- black
+		"#d4ae88", -- red
+		"#ad8c6e", -- green
+		"#c8ad7a", -- yellow
+		"#c15a3b", -- blue
+		"#8d5e5f", -- magenta
+		"#a5a5a5", -- cyan
+		"#b2ae9d", -- white
 	},
 }
 
 config.disable_default_key_bindings = true
 config.disable_default_mouse_bindings = false
-
--- config.max_fps = 240
 
 config.scrollback_lines = 100000
 
@@ -57,7 +58,7 @@ config.default_prog = {
 config.default_cwd = "s:/projects/git"
 
 config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", italic = false })
-config.font_size = 13
+config.font_size = 14
 -- config.bold_brightens_ansi_colors = "BrightOnly"
 config.font_rules = {
 	-- diable bold
