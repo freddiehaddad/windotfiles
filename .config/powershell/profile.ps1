@@ -7,6 +7,9 @@ $env:PATH += ";C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC
 $env:INETROOT="s:\Azure\Storage\XStore"
 $env:INCLUDE += ";S:\Azure\Storage\XStore\src\base\XStoreShared\inc;S:\Azure\Storage\XStore\src\base\ServicesCommon\inc"
 
+# 1Password (Wezterm nightly overrides this value)
+$env:SSH_AUTH_SOCK="\\.\pipe\openssh-ssh-agent"
+
 # For mdformat 
 $env:PATH += "C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users\fhaddad\.local\bin;"
 
