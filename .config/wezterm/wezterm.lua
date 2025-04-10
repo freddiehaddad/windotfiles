@@ -9,7 +9,7 @@ config.colors = {
 	cursor_bg = "#7a2427",
 	cursor_border = "#7a2427",
 
-	compose_cursor = "#c15a3b",
+	compose_cursor = "#c56244",
 
 	selection_fg = "none",
 	selection_bg = "#141d19",
@@ -17,25 +17,25 @@ config.colors = {
 	split = "none",
 
 	ansi = {
-		"#494a4d", -- black
+		"#4e4b42", -- black
 		"#cd9474", -- red
 		"#9e7a58", -- green
-		"#c09c58", -- yellow
+		"#c0a064", -- yellow
 		"#a14b31", -- blue
-		"#734c4d", -- magenta
+		"#875a5b", -- magenta
 		"#979797", -- cyan
 		"#a6a18d", -- white (grey)
 	},
 
 	brights = {
-		"#616267", -- black
-		"#d4a488", -- red
-		"#ad8c6e", -- green
-		"#c8ad7a", -- yellow
-		"#c15a3b", -- blue
-		"#8d5e5f", -- magenta
-		"#a5a5a5", -- cyan
-		"#b2ae9d", -- white
+		"#635f54", -- black
+		"#d9af96", -- red
+		"#b6997c", -- green
+		"#d0b88b", -- yellow
+		"#c56244", -- blue
+		"#a57879", -- magenta
+		"#adadad", -- cyan
+		"#b7b3a4", -- white
 	},
 }
 
