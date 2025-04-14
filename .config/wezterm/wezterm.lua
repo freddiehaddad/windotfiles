@@ -17,7 +17,7 @@ config.colors = {
 	split = "none",
 
 	ansi = {
-		"#4e4b42", -- black
+		"#3e413a", -- black
 		"#cd9474", -- red
 		"#9e7a58", -- green
 		"#c0a064", -- yellow
@@ -28,7 +28,7 @@ config.colors = {
 	},
 
 	brights = {
-		"#635f54", -- black
+		"#52564d", -- black
 		"#d9af96", -- red
 		"#b6997c", -- green
 		"#d0b88b", -- yellow
