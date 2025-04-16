@@ -2,40 +2,49 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#a6a18d",
-	background = "#000000",
+	foreground = "#c2beb0",
+	background = "#101010",
 
-	cursor_fg = "none",
-	cursor_bg = "#7a2427",
-	cursor_border = "#7a2427",
+	cursor_fg = "101010",
+	cursor_bg = "#c2beb0",
+	cursor_border = "#c2beb0",
 
-	compose_cursor = "#c56244",
+	compose_cursor = "#d9a45a",
 
 	selection_fg = "none",
-	selection_bg = "#141d19",
+	selection_bg = "#2c2824",
 
 	split = "none",
 
 	ansi = {
-		"#3e413a", -- black
-		"#cd9474", -- red
-		"#9e7a58", -- green
-		"#c0a064", -- yellow
-		"#a14b31", -- blue
-		"#875a5b", -- magenta
-		"#979797", -- cyan
-		"#a6a18d", -- white (grey)
+		"#58534f", -- black
+		"#cc4d4d", -- red
+		"#909c6e", -- green
+		"#c9c08c", -- yellow
+		"#7a8aa6", -- blue
+		"#b8aed3", -- magenta
+		"#28505f", -- cyan
+		"#bebebe", -- white (grey)
 	},
 
 	brights = {
-		"#52564d", -- black
-		"#d9af96", -- red
-		"#b6997c", -- green
-		"#d0b88b", -- yellow
-		"#c56244", -- blue
-		"#a57879", -- magenta
-		"#adadad", -- cyan
-		"#b7b3a4", -- white
+		"#6f6f6c", -- black
+		"#c88a77", -- red
+		"#73916a", -- green
+		"#d8a16c", -- yellow
+		"#83adc3", -- blue
+		"#893124", -- magenta
+		"#617b87", -- cyan
+		"#d1cdc6", -- white
+	},
+
+	indexed = {
+		[16] = "#bd8695", -- wewak
+		[17] = "#4e5a3a", -- costa_del_sol
+		[18] = "#1e1e1c", -- grey_one
+		[19] = "#302e2c", -- grey_three
+		[20] = "#8a8c91", -- regent_grey
+		[21] = "#c2bdb8", -- silver_rust
 	},
 }
 
@@ -71,6 +80,12 @@ config.font_rules = {
 		intensity = "Half",
 		italic = true,
 		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Thin", style = "Normal" }),
+	},
+	-- diable italic
+	{
+		intensity = "Normal",
+		italic = true,
+		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", style = "Normal" }),
 	},
 }
 config.adjust_window_size_when_changing_font_size = false

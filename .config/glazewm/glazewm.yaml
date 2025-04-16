@@ -51,7 +51,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#d9af96"
+      color: "#7db7cc"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -134,6 +134,7 @@ window_rules:
       - window_title: { equals: "Command Palette" }
       - window_title: { equals: "Calculator" }
       - window_title: { equals: "Azure VPN Client" }
+      - window_title: { equals: "MSI Center" }
       - window_process: { equals: "PathOfExileSteam" }
 
       # Throne and Liberty
