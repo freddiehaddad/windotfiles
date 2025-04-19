@@ -2,14 +2,15 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#c2beb0",
-	background = "#101010",
+	foreground = "#e8e8d3",
+	background = "#151515",
 
-	cursor_fg = "101010",
-	cursor_bg = "#c2beb0",
-	cursor_border = "#c2beb0",
+	cursor_fg = "151515",
+	cursor_bg = "#e8e8d3",
+	cursor_border = "#e8e8d3",
 
 	compose_cursor = "#d9a45a",
+	visual_bell = "#d9a45a",
 
 	selection_fg = "none",
 	selection_bg = "#2c2824",
@@ -18,33 +19,33 @@ config.colors = {
 
 	ansi = {
 		"#58534f", -- black
-		"#cc4d4d", -- red
-		"#909c6e", -- green
-		"#c9c08c", -- yellow
-		"#7a8aa6", -- blue
-		"#b8aed3", -- magenta
-		"#28505f", -- cyan
+		"#b05050", -- red
+		"#99ad6a", -- green
+		"#dad085", -- yellow
+		"#8197bf", -- blue
+		"#c6b6ee", -- magenta
+		"#2b5b77", -- cyan
 		"#bebebe", -- white (grey)
 	},
 
 	brights = {
 		"#6f6f6c", -- black
-		"#c88a77", -- red
-		"#73916a", -- green
-		"#d8a16c", -- yellow
-		"#83adc3", -- blue
-		"#893124", -- magenta
-		"#617b87", -- cyan
+		"#cf6a4c", -- red
+		"#99ad6a", -- green
+		"#ffb964", -- yellow
+		"#8fbfdc", -- blue
+		"#c6b6ee", -- magenta
+		"#668799", -- cyan
 		"#d1cdc6", -- white
 	},
 
 	indexed = {
-		[16] = "#bd8695", -- wewak
-		[17] = "#4e5a3a", -- costa_del_sol
-		[18] = "#1e1e1c", -- grey_one
-		[19] = "#302e2c", -- grey_three
-		[20] = "#8a8c91", -- regent_grey
-		[21] = "#c2bdb8", -- silver_rust
+		[16] = "#cf6a4c", -- wewak
+		[17] = "#d8ad4c", -- costa_del_sol
+		[18] = "#1c1c1c", -- grey_one
+		[19] = "#303030", -- grey_three
+		[20] = "#636363", -- regent_grey
+		[21] = "#c7c7c7", -- silver_rust
 	},
 }
 
