@@ -5,7 +5,7 @@ $env:PATH += ";C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC
 
 # XStore
 $env:INETROOT="s:\Azure\Storage\XStore"
-$env:INCLUDE += ";S:\Azure\Storage\XStore\src\base\XStoreShared\inc;S:\Azure\Storage\XStore\src\base\ServicesCommon\inc"
+$env:INCLUDE += ";T:\CxCache\Storage-vcpkg.mts.release-x64.14.42.34440.1-4f746bc66\installed\x64mtsr\include"
 
 # 1Password (Wezterm nightly overrides this value)
 $env:SSH_AUTH_SOCK="\\.\pipe\openssh-ssh-agent"
