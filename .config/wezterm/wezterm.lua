@@ -67,7 +67,7 @@ config.default_prog = {
 }
 config.default_cwd = "s:/projects/git"
 
-config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", italic = false })
+config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular" })
 config.font_size = 14
 -- config.bold_brightens_ansi_colors = "BrightOnly"
 config.font_rules = {
@@ -80,7 +80,7 @@ config.font_rules = {
 	{
 		intensity = "Half",
 		italic = true,
-		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Thin", style = "Normal" }),
+		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", style = "Normal" }),
 	},
 	-- diable italic
 	{
