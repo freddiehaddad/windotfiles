@@ -68,7 +68,7 @@ config.default_prog = {
 config.default_cwd = "s:/projects/git"
 
 config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular" })
-config.font_size = 14
+config.font_size = 12
 -- config.bold_brightens_ansi_colors = "BrightOnly"
 config.font_rules = {
 	-- diable bold
