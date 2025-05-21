@@ -135,10 +135,7 @@ window_rules:
       - window_title: { equals: "Calculator" }
       - window_title: { equals: "Azure VPN Client" }
       - window_title: { equals: "MSI Center" }
-      - window_process: { equals: "PathOfExileSteam" }
-
-      # Throne and Liberty
-      - window_process: { equals: "tl" }
+      - window_process: { equals: "NoRestForTheWicked" }
 
 binding_modes:
 #   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -214,12 +211,12 @@ keybindings:
   #   bindings: ['alt+space']
 
   # Change the focused window to be floating.
-  # - commands: ['toggle-floating --centered']
-  #   bindings: ['alt+shift+space']
+  - commands: ['toggle-floating --centered']
+    bindings: ['lwin+ctrl+shift+f']
 
   # Change the focused window to be tiling.
   # - commands: ['toggle-tiling']
-  #   bindings: ['alt+t']
+  #   bindings: ['lwin+ctrl+shift+f']
 
   # Change the focused window to be fullscreen.
   # - commands: ['toggle-fullscreen']
