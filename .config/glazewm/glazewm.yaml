@@ -32,7 +32,7 @@ general:
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
-  scale_with_dpi: true
+  scale_with_dpi: false
 
   # Gap between adjacent windows.
   inner_gap: "2px"
@@ -133,8 +133,16 @@ window_rules:
       - window_title: { equals: "Snipping Tool" }
       - window_title: { equals: "Command Palette" }
       - window_title: { equals: "Calculator" }
+
       - window_title: { equals: "Azure VPN Client" }
+
       - window_title: { equals: "MSI Center" }
+
+      # Dell Peripheral Manager
+      - window_title: { equals: "PowerMon" }
+      - window_title: { equals: "InfoWindow" }
+
+      # Games
       - window_process: { equals: "NoRestForTheWicked" }
 
 binding_modes:
