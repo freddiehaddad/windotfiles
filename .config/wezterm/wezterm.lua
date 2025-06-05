@@ -2,50 +2,51 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#e8e8d3",
-	background = "#151515",
+	foreground = "#c0caf5",
+	background = "#24283b",
 
-	cursor_fg = "151515",
-	cursor_bg = "#e8e8d3",
-	cursor_border = "#e8e8d3",
+	cursor_bg = "#c0caf5",
+	cursor_border = "#c0caf5",
+	cursor_fg = "24283b",
 
-	compose_cursor = "#d9a45a",
+	compose_cursor = "#ff9e64",
 	visual_bell = "#d9a45a",
+	scrollbar_thumb = "#292e42",
 
-	selection_fg = "none",
-	selection_bg = "#2c2824",
+	selection_fg = "none", -- #c0caf5
+	selection_bg = "#283457",
 
 	split = "none",
 
 	ansi = {
-		"#58534f", -- black
-		"#b05050", -- red
-		"#99ad6a", -- green
-		"#dad085", -- yellow
-		"#8197bf", -- blue
-		"#c6b6ee", -- magenta
-		"#2b5b77", -- cyan
-		"#bebebe", -- white (grey)
+		"#414868", -- black
+		"#f7768e", -- red
+		"#9ece6a", -- green
+		"#e0af68", -- yellow
+		"#7aa2f7", -- blue
+		"#bb9af7", -- magenta
+		"#7dcfff", -- cyan
+		"#a9b1d6", -- white (grey)
 	},
 
 	brights = {
-		"#6f6f6c", -- black
-		"#cf6a4c", -- red
-		"#99ad6a", -- green
-		"#ffb964", -- yellow
-		"#8fbfdc", -- blue
-		"#c6b6ee", -- magenta
-		"#668799", -- cyan
-		"#d1cdc6", -- white
+		"#6973A1", -- black
+		"#ff899d", -- red
+		"#9fe044", -- green
+		"#faba4a", -- yellow
+		"#8db0ff", -- blue
+		"#c7a9ff", -- magenta
+		"#a4daff", -- cyan
+		"#c0caf5", -- white
 	},
 
 	indexed = {
-		[16] = "#cf6a4c", -- wewak
-		[17] = "#d8ad4c", -- costa_del_sol
-		[18] = "#1c1c1c", -- grey_one
-		[19] = "#303030", -- grey_three
-		[20] = "#636363", -- regent_grey
-		[21] = "#c7c7c7", -- silver_rust
+		[16] = "#ff0000", -- wewak
+		[17] = "#ff0000", -- costa_del_sol
+		[18] = "#ff0000", -- grey_one
+		[19] = "#ff0000", -- grey_three
+		[20] = "#ff0000", -- regent_grey
+		[21] = "#ff0000", -- silver_rust
 	},
 }
 
@@ -67,26 +68,26 @@ config.default_prog = {
 }
 config.default_cwd = "s:/projects/git"
 
-config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular" })
+config.font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Light" })
 config.font_size = 12
 -- config.bold_brightens_ansi_colors = "BrightOnly"
 config.font_rules = {
 	-- diable bold
 	{
 		intensity = "Bold",
-		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", style = "Normal" }),
+		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Light", style = "Normal" }),
 	},
 	-- disable half/italic
 	{
 		intensity = "Half",
 		italic = true,
-		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", style = "Normal" }),
+		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Light", style = "Normal" }),
 	},
 	-- diable italic
 	{
 		intensity = "Normal",
 		italic = true,
-		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Regular", style = "Normal" }),
+		font = wezterm.font({ family = "SeriousShanns Nerd Font", weight = "Light", style = "Normal" }),
 	},
 }
 config.adjust_window_size_when_changing_font_size = false
