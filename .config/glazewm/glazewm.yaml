@@ -144,6 +144,7 @@ window_rules:
 
       # Games
       - window_process: { equals: "NoRestForTheWicked" }
+      - window_process: { equals: "PathOfExileSteam" }
 
 binding_modes:
 #   # When enabled, the focused window can be resized via arrow keys or HJKL.
