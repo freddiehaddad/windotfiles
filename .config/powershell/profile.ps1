@@ -70,8 +70,21 @@ $env:BAT_THEME="ansi"
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
-# https://vitormv.github.io/fzf-themes
-$env:FZF_DEFAULT_OPTS = "--color=fg:#c0caf5,fg+:#c0caf5,bg:#16161e,bg+:#283457,hl:#2ac3de,hl+:#2ac3de,info:#545c7e,marker:#ff007c,prompt:#2ac3de,spinner:#ff007c,pointer:#ff007c,header:#ff9e64,gutter:#16161e,border:#16161e,scrollbar:#27a1b9,label:#c0caf5,query:#c0caf5:regular --border='sharp' --border-label=' Fuzzy Search ' --border-label-pos='0' --preview-window='border-sharp' --prompt='  ' --marker=' ' --pointer='' --separator='─' --scrollbar='█' --info='right' --height='50%'"
+# Set the main FZF theme with Rust colors
+$env:FZF_DEFAULT_OPTS = @"
+--color=bg+:#2d2d2d,bg:#1a1a1a,spinner:#ce422b,hl:#ce422b
+--color=fg:#d4d4d4,header:#ce422b,info:#a33a2a,pointer:#ce422b
+--color=marker:#ce422b,fg+:#ffffff,prompt:#ce422b,hl+:#ff6b47
+--color=border:#555555,gutter:#1a1a1a,query:#d4d4d4
+--border=sharp
+--preview-window=border-sharp
+--height=40%
+--layout=reverse
+--info=inline
+--prompt='🦀 '
+--pointer='▶'
+--marker='✓'
+"@
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"

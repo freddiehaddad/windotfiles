@@ -2,51 +2,50 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {
-	foreground = "#c0caf5",
-	background = "#1a1b26",
+	-- Terminal colors
+	foreground = "#deb887", -- Burlywood for main text
+	background = "#1f1611", -- Deep brown background
+	cursor_bg = "#ce422b", -- Rust orange cursor
+	cursor_fg = "#ffffff", -- White cursor text
+	cursor_border = "#ce422b", -- Rust orange cursor border
 
-	cursor_bg = "#c0caf5",
-	cursor_border = "#c0caf5",
-	cursor_fg = "1a1b26",
+	-- Compose cursor (for input methods)
+	compose_cursor = "#f74c00", -- Bright orange for compose cursor
 
-	compose_cursor = "#ff9e64",
-	visual_bell = "#d9a45a",
-	scrollbar_thumb = "#292e42",
+	-- Visual bell
+	visual_bell = "#ff8c00", -- Semi-transparent orange flash
 
-	selection_fg = "none", -- #c0caf5
-	selection_bg = "#283457",
+	-- Scrollbar
+	scrollbar_thumb = "#8c6239", -- Brown scrollbar
+
+	-- Selection colors
+	selection_fg = "#ffffff", -- White selection text
+	selection_bg = "#8c4a2b", -- Warm brown selection
 
 	split = "none",
 
+	-- Standard ANSI colors (0-7)
 	ansi = {
-		"#414868", -- black
-		"#f7768e", -- red
-		"#9ece6a", -- green
-		"#e0af68", -- yellow
-		"#7aa2f7", -- blue
-		"#bb9af7", -- magenta
-		"#7dcfff", -- cyan
-		"#a9b1d6", -- white (grey)
+		"#4a3728", -- Black (brighter brown, visible against background)
+		"#dc322f", -- Red (errors)
+		"#859900", -- Green (strings/success)
+		"#b58900", -- Yellow (functions)
+		"#268bd2", -- Blue (types)
+		"#d33682", -- Magenta (numbers)
+		"#2aa198", -- Cyan (attributes)
+		"#deb887", -- White (foreground)
 	},
 
+	-- Bright ANSI colors (8-15)
 	brights = {
-		"#6973A1", -- black
-		"#ff899d", -- red
-		"#9fe044", -- green
-		"#faba4a", -- yellow
-		"#8db0ff", -- blue
-		"#c7a9ff", -- magenta
-		"#a4daff", -- cyan
-		"#c0caf5", -- white
-	},
-
-	indexed = {
-		[16] = "#ff0000", -- wewak
-		[17] = "#ff0000", -- costa_del_sol
-		[18] = "#ff0000", -- grey_one
-		[19] = "#ff0000", -- grey_three
-		[20] = "#ff0000", -- regent_grey
-		[21] = "#ff0000", -- silver_rust
+		"#8c6239", -- Bright Black (comments)
+		"#f74c00", -- Bright Red (bright errors)
+		"#859900", -- Bright Green (same as green)
+		"#ff8c00", -- Bright Yellow (warnings)
+		"#268bd2", -- Bright Blue (same as blue)
+		"#d33682", -- Bright Magenta (same as magenta)
+		"#2aa198", -- Bright Cyan (same as cyan)
+		"#ffffff", -- Bright White (bright text)
 	},
 }
 
