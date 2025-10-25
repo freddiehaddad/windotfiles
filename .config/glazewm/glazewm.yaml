@@ -51,7 +51,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#e6a75a"
+      color: "#6297e2"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -76,7 +76,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: "#4e4b42"
+      color: "#505050"
     hide_title_bar:
       enabled: false
     corner_style:
@@ -145,6 +145,8 @@ window_rules:
       # Games
       - window_process: { equals: "NoRestForTheWicked" }
       - window_process: { equals: "PathOfExileSteam" }
+      - window_process: { equals: "Ascension" }
+      - window_process: { equals: "Ascension Launcher" }
 
 binding_modes:
 #   # When enabled, the focused window can be resized via arrow keys or HJKL.
