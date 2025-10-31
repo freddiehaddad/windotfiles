@@ -114,39 +114,58 @@ workspaces:
   - name: "4"
 
 window_rules:
+  # ---------------------------------------------
+  # Force tiling
+  # ---------------------------------------------
+  - commands: ["set-tiling"]
+    match:
+      - window_process: { equals: "Code" }
+    on: ["manage"]
+
+  # ---------------------------------------------
+  # Global ignore rules
+  # ---------------------------------------------
   - commands: ["ignore"]
     match:
-      # Ignores any Zebar windows.
-      - window_process: { equals: "zebar" }
-
-      # Ignores picture-in-picture windows for browsers.
+      # Ignores PiP windows in browsers.
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
-      # Ignore rules for various 3rd-party apps.
+      # PowerToys
       - window_process: { equals: "PowerToys" }
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
       - window_process: { equals: "PowerToys" }
         window_title: { regex: ".*? - Peek" }
+
+      # Lively
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper" }
+
+      # Misc utilities
       - window_title: { equals: "Snipping Tool" }
       - window_title: { equals: "Command Palette" }
       - window_title: { equals: "Calculator" }
-
       - window_title: { equals: "Azure VPN Client" }
-
       - window_title: { equals: "MSI Center" }
 
       # Dell Peripheral Manager
       - window_title: { equals: "PowerMon" }
       - window_title: { equals: "InfoWindow" }
 
-      # Games
-      - window_process: { equals: "NoRestForTheWicked" }
-      - window_process: { equals: "PathOfExileSteam" }
-      - window_process: { equals: "Ascension" }
+  # ---------------------------------------------
+  # Floating Rules
+  # ---------------------------------------------
+  - commands: ["set-floating"]
+    match:
       - window_process: { equals: "Ascension Launcher" }
+ 
+  # ---------------------------------------------
+  # Full Screen
+  # ---------------------------------------------
+  - commands: ["set-fullscreen"]
+    match:
+      - window_process: { equals: "Ascension" }
+
 
 binding_modes:
 #   # When enabled, the focused window can be resized via arrow keys or HJKL.
