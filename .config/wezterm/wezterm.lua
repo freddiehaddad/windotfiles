@@ -163,19 +163,19 @@ config.key_tables = {
 	pane_resize = {
 		{
 			key = "LeftArrow",
-			action = wezterm.action.AdjustPaneSize({ "Left", 2 }),
+			action = wezterm.action.AdjustPaneSize({ "Left", 1 }),
 		},
 		{
 			key = "DownArrow",
-			action = wezterm.action.AdjustPaneSize({ "Down", 2 }),
+			action = wezterm.action.AdjustPaneSize({ "Down", 1 }),
 		},
 		{
 			key = "UpArrow",
-			action = wezterm.action.AdjustPaneSize({ "Up", 2 }),
+			action = wezterm.action.AdjustPaneSize({ "Up", 1 }),
 		},
 		{
 			key = "RightArrow",
-			action = wezterm.action.AdjustPaneSize({ "Right", 2 }),
+			action = wezterm.action.AdjustPaneSize({ "Right", 1 }),
 		},
 		{
 			key = "Escape",
