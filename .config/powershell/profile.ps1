@@ -2,7 +2,7 @@
 $env:SSH_AUTH_SOCK="\\.\pipe\openssh-ssh-agent"
 
 # For mdformat 
-$env:PATH += ";C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users\fhaddad\.local\bin;C:\Users\fhaddad\AppData\Local\Microsoft\WinGet\Packages\lsd-rs.lsd_Microsoft.Winget.Source_8wekyb3d8bbwe\lsd-v1.2.0-x86_64-pc-windows-msvc"
+$env:PATH += ";C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users\fhaddad\.local\bin"
 
 # For C/CPP
 $VCToolsVersion = "14.44.35207"
