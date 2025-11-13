@@ -121,7 +121,7 @@ provide the steps to install and configure third-party software.
    winget install --id Microsoft.PowerShell
    winget install --id Starship.Starship
    winget install --id sharkdp.bat
-   winget install --id lsd-rs.lsd
+   winget install eza-community.eza --accept-package-agreements --location C:\Users\fhaddad\.local\bin\
    winget install --id ajeetdsouza.zoxide
    winget install --id junegunn.fzf
    winget install --id BurntSushi.ripgrep.MSVC

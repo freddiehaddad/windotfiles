@@ -1,57 +1,8 @@
 local wezterm = require("wezterm")
-local theme = require("nightingale")
 
 local config = wezterm.config_builder()
 
-config.colors = theme.colors
-
--- config.colors = {
--- 	-- Terminal colors
--- 	foreground = "#deb887", -- Burlywood for main text
--- 	background = "#1f1611", -- Deep brown background
--- 	cursor_bg = "#ce422b", -- Rust orange cursor
--- 	cursor_fg = "#ffffff", -- White cursor text
--- 	cursor_border = "#ce422b", -- Rust orange cursor border
---
--- 	-- Compose cursor (for input methods)
--- 	compose_cursor = "#f74c00", -- Bright orange for compose cursor
---
--- 	-- Visual bell
--- 	visual_bell = "#ff8c00", -- Semi-transparent orange flash
---
--- 	-- Scrollbar
--- 	scrollbar_thumb = "#8c6239", -- Brown scrollbar
---
--- 	-- Selection colors
--- 	selection_fg = "#ffffff", -- White selection text
--- 	selection_bg = "#8c4a2b", -- Warm brown selection
---
--- 	split = "none",
---
--- 	-- Standard ANSI colors (0-7)
--- 	ansi = {
--- 		"#4a3728", -- Black (brighter brown, visible against background)
--- 		"#dc322f", -- Red (errors)
--- 		"#859900", -- Green (strings/success)
--- 		"#b58900", -- Yellow (functions)
--- 		"#268bd2", -- Blue (types)
--- 		"#d33682", -- Magenta (numbers)
--- 		"#2aa198", -- Cyan (attributes)
--- 		"#deb887", -- White (foreground)
--- 	},
---
--- 	-- Bright ANSI colors (8-15)
--- 	brights = {
--- 		"#8c6239", -- Bright Black (comments)
--- 		"#f74c00", -- Bright Red (bright errors)
--- 		"#859900", -- Bright Green (same as green)
--- 		"#ff8c00", -- Bright Yellow (warnings)
--- 		"#268bd2", -- Bright Blue (same as blue)
--- 		"#d33682", -- Bright Magenta (same as magenta)
--- 		"#2aa198", -- Bright Cyan (same as cyan)
--- 		"#ffffff", -- Bright White (bright text)
--- 	},
--- }
+config.color_scheme = "Silt"
 
 config.disable_default_key_bindings = true
 config.disable_default_mouse_bindings = false
@@ -60,6 +11,8 @@ config.scrollback_lines = 100000
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
+
+local wezterm = require 'wezterm'
 
 config.default_prog = {
 	"pwsh",

@@ -1,0 +1,46 @@
+[colors]
+# Silt - A warm monochromatic theme
+# Background: deep warm charcoal
+# Accent: muted amber/tan with tonal variations
+
+foreground = "#e8e3df"
+background = "#1a1614"
+
+cursor_bg = "#d4a574"
+cursor_fg = "#1a1614"
+cursor_border = "#d4a574"
+
+selection_fg = "#e8e3df"
+selection_bg = "#3a3430"
+
+scrollbar_thumb = "#3a3430"
+
+split = "#2a2420"
+
+# ANSI Colors
+ansi = [
+  "#2a2420",  # black (slightly lighter than bg for visibility)
+  "#d47474",  # red (same luminosity as accent, shifted hue for errors)
+  "#a5b880",  # green (muted sage, still in warm family)
+  "#d4a574",  # yellow (main accent)
+  "#8ba0b8",  # blue (muted, slightly cool for contrast)
+  "#b88fa0",  # magenta (warm rose)
+  "#80b8a5",  # cyan (muted teal)
+  "#e8e3df",  # white (foreground)
+]
+
+# Bright ANSI Colors (more saturated/lighter variants)
+ansi_bright = [
+  "#6b5d54",  # bright black (comment color)
+  "#e68686",  # bright red
+  "#b8c898",  # bright green
+  "#e6b886",  # bright yellow (constants)
+  "#a0b5d0",  # bright blue
+  "#d0a5b8",  # bright magenta
+  "#98d0bd",  # bright cyan
+  "#f5f2ef",  # bright white (brighter foreground)
+]
+
+[metadata]
+name = "Silt"
+author = "OpenCode AI"

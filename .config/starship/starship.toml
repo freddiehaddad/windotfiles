@@ -1,175 +1,265 @@
-"$schema" = "https://starship.rs/config-schema.json"
+# Silt Theme Colors
+# Primary: #d4a574 | Secondary: #8ba0b8 | Accent: #b88fa0
+# Red: #d47474 | Green: #a5b880 | Cyan: #80b8a5 | Yellow: #e6b886
 
-command_timeout = 1000
-
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[crystal]
-symbol = " "
-
-[dart]
-symbol = " "
+[character]
+success_symbol = "[❯](bold #d4a574)"
+error_symbol = "[❯](bold #d47474)"
 
 [directory]
 read_only = " 󰌾"
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
+style = "bold #d4a574"
 
 [git_branch]
-symbol = " "
+symbol = " "
+style = "bold #8ba0b8"
+
+[git_status]
+style = "bold #e6b886"
 
 [git_commit]
-tag_symbol = "  "
+tag_symbol = '  '
+style = "#b88fa0"
+
+[cmd_duration]
+style = "#9a8f84"
+
+[aws]
+symbol = " "
+style = "#e6b886"
+
+[buf]
+symbol = " "
+style = "#80b8a5"
+
+[bun]
+symbol = " "
+style = "#d4a574"
+
+[c]
+symbol = " "
+style = "#8ba0b8"
+
+[cpp]
+symbol = " "
+style = "#8ba0b8"
+
+[cmake]
+symbol = " "
+style = "#9a8f84"
+
+[conda]
+symbol = " "
+style = "#a5b880"
+
+[crystal]
+symbol = " "
+style = "#e8e3df"
+
+[dart]
+symbol = " "
+style = "#80b8a5"
+
+[deno]
+symbol = " "
+style = "#a5b880"
+
+[docker_context]
+symbol = " "
+style = "#8ba0b8"
+
+[elixir]
+symbol = " "
+style = "#b88fa0"
+
+[elm]
+symbol = " "
+style = "#80b8a5"
+
+[fennel]
+symbol = " "
+style = "#a5b880"
+
+[fortran]
+symbol = " "
+style = "#b88fa0"
+
+[fossil_branch]
+symbol = " "
+style = "#8ba0b8"
+
+[gcloud]
+symbol = " "
+style = "#e6b886"
 
 [golang]
-symbol = " "
+symbol = " "
+style = "#80b8a5"
+
+[gradle]
+symbol = " "
+style = "#a5b880"
 
 [guix_shell]
-symbol = " "
+symbol = " "
+style = "#e6b886"
 
 [haskell]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
 
 [haxe]
-symbol = " "
+symbol = " "
+style = "#d4a574"
 
 [hg_branch]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = " "
+style = "#8ba0b8"
 
 [java]
-symbol = " "
+symbol = " "
+style = "#d47474"
 
 [julia]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
 
 [kotlin]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
 
 [lua]
-symbol = " "
+symbol = " "
+style = "#8ba0b8"
 
 [memory_usage]
 symbol = "󰍛 "
+style = "#e6b886"
 
 [meson]
 symbol = "󰔷 "
+style = "#8ba0b8"
 
 [nim]
 symbol = "󰆥 "
+style = "#e6b886"
 
 [nix_shell]
-symbol = " "
+symbol = " "
+style = "#8ba0b8"
 
 [nodejs]
-symbol = " "
+symbol = " "
+style = "#a5b880"
 
 [ocaml]
-symbol = " "
+symbol = " "
+style = "#d4a574"
 
 [os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
 Garuda = "󰛓 "
-Gentoo = " "
+Gentoo = " "
 HardenedBSD = "󰞌 "
 Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
 OpenBSD = "󰈺 "
-openSUSE = " "
+openSUSE = " "
 OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
 Redox = "󰀘 "
 Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
 Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
-style = "bold purple"
+style = "bold #b88fa0"
 
 [perl]
-symbol = " "
+symbol = " "
+style = "#8ba0b8"
 
 [php]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
 
 [pijul_channel]
-symbol = " "
+symbol = " "
+style = "#b88fa0"
+
+[pixi]
+symbol = "󰏗 "
+style = "#80b8a5"
 
 [python]
-symbol = " "
+symbol = " "
+style = "#80b8a5"
 
 [rlang]
 symbol = "󰟔 "
+style = "#8ba0b8"
 
 [ruby]
-symbol = " "
+symbol = " "
+style = "#d47474"
 
 [rust]
 symbol = "󱘗 "
+style = "#d4a574"
 
 [scala]
-symbol = " "
+symbol = " "
+style = "#d47474"
+
+[status]
+symbol = " "
+style = "#d47474"
 
 [swift]
-symbol = " "
+symbol = " "
+style = "#d4a574"
+
+[xmake]
+symbol = " "
+style = "#d4a574"
 
 [zig]
-symbol = " "
-
-[gradle]
-symbol = " "
+symbol = " "
+style = "#d4a574"

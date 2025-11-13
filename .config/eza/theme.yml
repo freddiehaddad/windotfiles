@@ -1,0 +1,258 @@
+# Silt Theme for eza
+# Layers of Calm - A monochromatic warm palette
+#
+# Installation:
+# Place this file in one of these locations:
+# - $EZA_CONFIG_DIR/theme.yml
+# - $XDG_CONFIG_HOME/eza/theme.yml (Linux/Mac)
+# - %APPDATA%/eza/theme.yml (Windows)
+
+# Silt Color Palette:
+# Primary: #d4a574 (warm amber/tan)
+# Secondary: #8ba0b8 (muted blue)
+# Accent: #b88fa0 (muted mauve)
+# Red: #d47474
+# Green: #a5b880
+# Cyan: #80b8a5
+# Yellow: #e6b886
+# Foreground: #e8e3df
+# Muted: #9a8f84
+# Gray: #6b5d54
+
+# File types
+filekinds:
+  normal:
+    foreground: "#e8e3df"
+  directory:
+    foreground: "#8ba0b8"
+    is_bold: true
+  symlink:
+    foreground: "#80b8a5"
+  pipe:
+    foreground: "#e6b886"
+  block_device:
+    foreground: "#e6b886"
+  char_device:
+    foreground: "#e6b886"
+  socket:
+    foreground: "#b88fa0"
+  special:
+    foreground: "#b88fa0"
+  executable:
+    foreground: "#d4a574"
+    is_bold: true
+  mount_point:
+    foreground: "#8ba0b8"
+    is_underline: true
+
+# Permissions
+perms:
+  user_read:
+    foreground: "#a5b880"
+    is_bold: true
+  user_write:
+    foreground: "#e6b886"
+    is_bold: true
+  user_execute_file:
+    foreground: "#d47474"
+    is_bold: true
+  user_execute_other:
+    foreground: "#d4a574"
+    is_bold: true
+  group_read:
+    foreground: "#a5b880"
+  group_write:
+    foreground: "#e6b886"
+  group_execute:
+    foreground: "#d47474"
+  other_read:
+    foreground: "#a5b880"
+  other_write:
+    foreground: "#e6b886"
+  other_execute:
+    foreground: "#d47474"
+  special_user_file:
+    foreground: "#d4a574"
+  special_other:
+    foreground: "#d4a574"
+  attribute:
+    foreground: "#9a8f84"
+
+# File sizes
+size:
+  major:
+    foreground: "#a5b880"
+  minor:
+    foreground: "#e6b886"
+  number_byte:
+    foreground: "#e8e3df"
+  number_kilo:
+    foreground: "#a5b880"
+  number_mega:
+    foreground: "#e6b886"
+  number_giga:
+    foreground: "#d4a574"
+  number_huge:
+    foreground: "#d47474"
+  unit_byte:
+    foreground: "#9a8f84"
+  unit_kilo:
+    foreground: "#9a8f84"
+  unit_mega:
+    foreground: "#9a8f84"
+  unit_giga:
+    foreground: "#9a8f84"
+  unit_huge:
+    foreground: "#9a8f84"
+
+# Users and Groups
+users:
+  user_you:
+    foreground: "#d4a574"
+    is_bold: true
+  user_root:
+    foreground: "#d47474"
+    is_bold: true
+  user_other:
+    foreground: "#9a8f84"
+  group_yours:
+    foreground: "#d4a574"
+  group_other:
+    foreground: "#9a8f84"
+  group_root:
+    foreground: "#d47474"
+
+# Links
+links:
+  normal:
+    foreground: "#9a8f84"
+  multi_link_file:
+    foreground: "#d4a574"
+
+# Git status
+git:
+  new:
+    foreground: "#a5b880"
+  modified:
+    foreground: "#e6b886"
+  deleted:
+    foreground: "#d47474"
+  renamed:
+    foreground: "#80b8a5"
+  typechange:
+    foreground: "#b88fa0"
+  ignored:
+    foreground: "#6b5d54"
+  conflicted:
+    foreground: "#d47474"
+    is_bold: true
+
+# Git repo status
+git_repo:
+  branch_main:
+    foreground: "#8ba0b8"
+    is_bold: true
+  branch_other:
+    foreground: "#8ba0b8"
+  git_clean:
+    foreground: "#a5b880"
+  git_dirty:
+    foreground: "#e6b886"
+
+# Security context
+security_context:
+  colon:
+    foreground: "#9a8f84"
+  user:
+    foreground: "#d4a574"
+  role:
+    foreground: "#8ba0b8"
+  typ:
+    foreground: "#80b8a5"
+  range:
+    foreground: "#b88fa0"
+
+# File extensions
+extensions:
+  # Archives - Accent (mauve)
+  zip: {filename: {foreground: "#b88fa0"}}
+  tar: {filename: {foreground: "#b88fa0"}}
+  gz: {filename: {foreground: "#b88fa0"}}
+  bz2: {filename: {foreground: "#b88fa0"}}
+  xz: {filename: {foreground: "#b88fa0"}}
+  7z: {filename: {foreground: "#b88fa0"}}
+  rar: {filename: {foreground: "#b88fa0"}}
+  
+  # Code files - Cyan
+  rs: {filename: {foreground: "#80b8a5"}}
+  js: {filename: {foreground: "#80b8a5"}}
+  ts: {filename: {foreground: "#80b8a5"}}
+  py: {filename: {foreground: "#80b8a5"}}
+  rb: {filename: {foreground: "#80b8a5"}}
+  go: {filename: {foreground: "#80b8a5"}}
+  c: {filename: {foreground: "#80b8a5"}}
+  cpp: {filename: {foreground: "#80b8a5"}}
+  java: {filename: {foreground: "#80b8a5"}}
+  lua: {filename: {foreground: "#80b8a5"}}
+  
+  # Config files - Green
+  json: {filename: {foreground: "#a5b880"}}
+  yaml: {filename: {foreground: "#a5b880"}}
+  yml: {filename: {foreground: "#a5b880"}}
+  toml: {filename: {foreground: "#a5b880"}}
+  xml: {filename: {foreground: "#a5b880"}}
+  ini: {filename: {foreground: "#a5b880"}}
+  conf: {filename: {foreground: "#a5b880"}}
+  
+  # Documents - Yellow
+  md: {filename: {foreground: "#e6b886"}}
+  txt: {filename: {foreground: "#e6b886"}}
+  pdf: {filename: {foreground: "#e6b886"}}
+  doc: {filename: {foreground: "#e6b886"}}
+  docx: {filename: {foreground: "#e6b886"}}
+  
+  # Web files - Red
+  html: {filename: {foreground: "#d47474"}}
+  css: {filename: {foreground: "#d47474"}}
+  scss: {filename: {foreground: "#d47474"}}
+  vue: {filename: {foreground: "#d47474"}}
+  jsx: {filename: {foreground: "#d47474"}}
+  tsx: {filename: {foreground: "#d47474"}}
+  
+  # Scripts - Primary
+  sh: {filename: {foreground: "#d4a574"}}
+  bash: {filename: {foreground: "#d4a574"}}
+  ps1: {filename: {foreground: "#d4a574"}}
+  bat: {filename: {foreground: "#d4a574"}}
+  
+  # Images/Media - Accent
+  jpg: {filename: {foreground: "#b88fa0"}}
+  png: {filename: {foreground: "#b88fa0"}}
+  gif: {filename: {foreground: "#b88fa0"}}
+  svg: {filename: {foreground: "#b88fa0"}}
+  mp3: {filename: {foreground: "#b88fa0"}}
+  mp4: {filename: {foreground: "#b88fa0"}}
+
+# Special filenames
+filenames:
+  # Git files - Gray
+  ".git": {filename: {foreground: "#6b5d54"}}
+  ".gitignore": {filename: {foreground: "#6b5d54"}}
+  ".gitmodules": {filename: {foreground: "#6b5d54"}}
+  ".gitattributes": {filename: {foreground: "#6b5d54"}}
+  
+  # Build files - Primary
+  "Makefile": {filename: {foreground: "#d4a574"}}
+  "Cargo.toml": {filename: {foreground: "#d4a574"}}
+  "Cargo.lock": {filename: {foreground: "#d4a574"}}
+  "package.json": {filename: {foreground: "#d4a574"}}
+  "CMakeLists.txt": {filename: {foreground: "#d4a574"}}
+  
+  # Config files - Green
+  ".env": {filename: {foreground: "#a5b880"}}
+  ".editorconfig": {filename: {foreground: "#a5b880"}}
+  
+  # Docs - Yellow
+  "README.md": {filename: {foreground: "#e6b886", is_bold: true}}
+  "LICENSE": {filename: {foreground: "#e6b886"}}
+  "CHANGELOG.md": {filename: {foreground: "#e6b886"}}
