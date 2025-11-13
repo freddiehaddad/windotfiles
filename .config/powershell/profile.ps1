@@ -32,6 +32,8 @@ op completion powershell | Out-String | Invoke-Expression
 
 # EZA theme directory
 $env:EZA_CONFIG_DIR = "$env:USERPROFILE\.config\eza"
+# $env:EZA_ICON_SPACING = "2"
+# $env:EZA_ICONS_AUTO = $true
 
 # LSD Shortcuts (aliases)
 Remove-Item Alias:ls
