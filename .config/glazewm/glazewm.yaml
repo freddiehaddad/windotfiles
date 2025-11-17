@@ -51,7 +51,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#d4a574'  # Silt primary (warm amber)
+      color: '#8ba0b8'  # Liminal
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -76,7 +76,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: '#6b5d54'  # Silt gray (step7)
+      color: '#343e45' # Liminal
     hide_title_bar:
       enabled: false
     corner_style:
