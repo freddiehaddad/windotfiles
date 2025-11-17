@@ -1,0 +1,46 @@
+[colors]
+# Liminal + Silt Hybrid
+# Backgrounds: cool blue-gray neutrals (Liminal)
+# Foreground/Accents: warm Silt hues unchanged
+
+foreground = "#e8e3df"
+background = "#151a1d"
+
+cursor_bg = "#d4a574"
+cursor_fg = "#151a1d"
+cursor_border = "#d4a574"
+
+selection_fg = "#e8e3df"
+selection_bg = "#232b30"
+
+scrollbar_thumb = "#232b30"
+
+split = "#1c2327"
+
+# ANSI Colors
+ansi = [
+  "#1c2327",  # black (slightly lighter than bg for visibility)
+  "#d47474",  # red
+  "#a5b880",  # green
+  "#d4a574",  # yellow (primary accent)
+  "#8ba0b8",  # blue (secondary)
+  "#b88fa0",  # magenta (accent mauve)
+  "#80b8a5",  # cyan (teal)
+  "#e8e3df",  # white (foreground)
+]
+
+# Bright ANSI Colors
+ansi_bright = [
+  "#3d474f",  # bright black (comment / subtle)
+  "#e68686",  # bright red
+  "#b8c898",  # bright green
+  "#e6b886",  # bright yellow (constants)
+  "#a0b5d0",  # bright blue
+  "#d0a5b8",  # bright magenta
+  "#98d0bd",  # bright cyan
+  "#f5f2ef",  # bright white
+]
+
+[metadata]
+name = "Liminal"
+author = "OpenCode AI"

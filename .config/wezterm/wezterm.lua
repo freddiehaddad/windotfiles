@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Silt"
+config.color_scheme = "Liminal"
 
 config.disable_default_key_bindings = true
 config.disable_default_mouse_bindings = false

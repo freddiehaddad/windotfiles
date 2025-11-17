@@ -77,13 +77,13 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
 $env:FZF_DEFAULT_OPTS = @"
---color=fg:#e8e3df,bg:#242018,hl:#d4a574
---color=fg+:#e8e3df,bg+:#3a3430,hl+:#d4a574
+--color=fg:#e8e3df,bg:#1c2327,hl:#d4a574
+--color=fg+:#e8e3df,bg+:#343e45,hl+:#d4a574
 --color=info:#8ba0b8,prompt:#d4a574,pointer:#d4a574
 --color=marker:#a5b880,spinner:#b88fa0,header:#8ba0b8
---color=border:#6b5d54,label:#e8e3df,query:#e8e3df
---color=gutter:#242018
---prompt='🦀 '
+--color=border:#49545d,label:#e8e3df,query:#e8e3df
+--color=gutter:#1c2327
+--prompt='❯ '
 --marker='✓'
 --pointer='▶'
 --separator='─'
@@ -91,7 +91,6 @@ $env:FZF_DEFAULT_OPTS = @"
 --layout='reverse'
 --info='right'
 --height=40%
---multi
 --preview-window='right:50%:wrap'
 --bind='ctrl-/:toggle-preview'
 --bind='ctrl-u:preview-half-page-up'
@@ -116,7 +115,7 @@ Set-PSReadLineOption -Colors @{
     String             = '#a5b880'      # Green - Strings
     Number             = '#d4a574'      # Primary/Orange - Numbers
     Type               = '#80b8a5'      # Cyan - Types
-    Comment            = '#6b5d54'      # Step7 - Comments
+    Comment            = '#49545d'      # Cool border neutral (was warm #6b5d54)
     Keyword            = '#d47474'      # Red - Keywords
     Member             = '#e6b886'      # Yellow - Members
     
@@ -126,12 +125,12 @@ Set-PSReadLineOption -Colors @{
     Error              = '#d47474'      # Red - Errors
     
     # Selection and search
-    Selection          = '#2e2820'      # Step3 - Selection background
-    InlinePrediction   = '#6b5d54'      # Step7 - Predictive IntelliSense
+    Selection          = '#232b30'      # Liminal selection background
+    InlinePrediction   = '#3d474f'      # Subtle neutral
     
     # List prediction (menu completion)
     ListPrediction          = '#d4a574'      # Primary
-    ListPredictionSelected  = '#2e2820'      # Step3 - Selection background
+    ListPredictionSelected  = '#232b30'      # Selection background
 }
 
 # Set prediction view style
@@ -205,9 +204,9 @@ $PSStyle.FileInfo.Extension['.svg'] = "`e[38;2;184;143;160m"   # Accent
 $PSStyle.FileInfo.Extension['.ico'] = "`e[38;2;184;143;160m"   # Accent
 
 # Git
-$PSStyle.FileInfo.Extension['.git'] = "`e[38;2;107;93;84m"      # Step7
-$PSStyle.FileInfo.Extension['.gitignore'] = "`e[38;2;107;93;84m" # Step7
-$PSStyle.FileInfo.Extension['.gitattributes'] = "`e[38;2;107;93;84m" # Step7
+$PSStyle.FileInfo.Extension['.git'] = "`e[38;2;73;84;93m"      # Cool neutral (was #6b5d54)
+$PSStyle.FileInfo.Extension['.gitignore'] = "`e[38;2;73;84;93m" # Cool neutral
+$PSStyle.FileInfo.Extension['.gitattributes'] = "`e[38;2;73;84;93m" # Cool neutral
 
 # Formatting styles
 $PSStyle.Formatting.FormatAccent = "`e[38;2;212;165;116m"      # Primary
