@@ -69,8 +69,10 @@ function lt {
     eza --tree @_args
 }
 
+# On new setups, be sure to type "bat cache --build"
 Set-Alias -Name cat -Value bat
-$env:BAT_THEME="ansi"
+$env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
+$env:BAT_THEME="Liminal"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
