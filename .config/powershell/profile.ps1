@@ -71,153 +71,22 @@ function lt {
 
 # On new setups, be sure to type "bat cache --build"
 Set-Alias -Name cat -Value bat
-$env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
-$env:BAT_THEME="Liminal"
+
+# $env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
+# $env:BAT_THEME="nightowl"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
-$env:FZF_DEFAULT_OPTS = @"
---color=fg:#e8e3df,bg:#1c2327,hl:#d4a574
---color=fg+:#e8e3df,bg+:#343e45,hl+:#d4a574
---color=info:#8ba0b8,prompt:#d4a574,pointer:#d4a574
---color=marker:#a5b880,spinner:#b88fa0,header:#8ba0b8
---color=border:#49545d,label:#e8e3df,query:#e8e3df
---color=gutter:#1c2327
---prompt='❯ '
---marker='✓'
---pointer='▶'
---separator='─'
---scrollbar='│'
---layout='reverse'
---info='right'
---height=40%
---preview-window='right:50%:wrap'
---bind='ctrl-/:toggle-preview'
---bind='ctrl-u:preview-half-page-up'
---bind='ctrl-d:preview-half-page-down'
---bind='ctrl-f:preview-page-down'
---bind='ctrl-b:preview-page-up'
---bind='shift-up:preview-up'
---bind='shift-down:preview-down'
-"@
+. "$env:USERPROFILE\.config\powershell\fzf.ps1"
+
+# Set Powershell theme
+. "$env:USERPROFILE\.config\powershell\nightowl.ps1"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
-
-# PSReadLine Colors (command line editing)
-Set-PSReadLineOption -Colors @{
-    # Command line input
-    Command            = '#8ba0b8'      # Secondary - Commands
-    Parameter          = '#e8e3df'      # Foreground - Parameters
-    Operator           = '#d4a574'      # Primary - Operators
-    Variable           = '#b88fa0'      # Accent - Variables
-    String             = '#a5b880'      # Green - Strings
-    Number             = '#d4a574'      # Primary/Orange - Numbers
-    Type               = '#80b8a5'      # Cyan - Types
-    Comment            = '#49545d'      # Cool border neutral (was warm #6b5d54)
-    Keyword            = '#d47474'      # Red - Keywords
-    Member             = '#e6b886'      # Yellow - Members
-    
-    # Syntax highlighting
-    Default            = '#e8e3df'      # Foreground
-    Emphasis           = '#d4a574'      # Primary - Emphasized text
-    Error              = '#d47474'      # Red - Errors
-    
-    # Selection and search
-    Selection          = '#232b30'      # Liminal selection background
-    InlinePrediction   = '#3d474f'      # Subtle neutral
-    
-    # List prediction (menu completion)
-    ListPrediction          = '#d4a574'      # Primary
-    ListPredictionSelected  = '#232b30'      # Selection background
-}
-
-# Set prediction view style
-# Set-PSReadLineOption -PredictionViewStyle ListView
-
-# Directory colors
-$PSStyle.FileInfo.Directory = "`e[38;2;139;160;184m"           # Secondary (#8ba0b8)
-
-# Extension-based colors
-$PSStyle.FileInfo.Extension['.ps1'] = "`e[38;2;212;165;116m"   # Primary
-$PSStyle.FileInfo.Extension['.psm1'] = "`e[38;2;212;165;116m"  # Primary
-$PSStyle.FileInfo.Extension['.psd1'] = "`e[38;2;212;165;116m"  # Primary
-
-# Archives
-$PSStyle.FileInfo.Extension['.zip'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.7z'] = "`e[38;2;184;143;160m"    # Accent
-$PSStyle.FileInfo.Extension['.tar'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.gz'] = "`e[38;2;184;143;160m"    # Accent
-$PSStyle.FileInfo.Extension['.rar'] = "`e[38;2;184;143;160m"   # Accent
-
-# Documents
-$PSStyle.FileInfo.Extension['.txt'] = "`e[38;2;230;184;134m"   # Yellow
-$PSStyle.FileInfo.Extension['.md'] = "`e[38;2;230;184;134m"    # Yellow
-$PSStyle.FileInfo.Extension['.doc'] = "`e[38;2;230;184;134m"   # Yellow
-$PSStyle.FileInfo.Extension['.docx'] = "`e[38;2;230;184;134m"  # Yellow
-$PSStyle.FileInfo.Extension['.pdf'] = "`e[38;2;230;184;134m"   # Yellow
-
-# Config files
-$PSStyle.FileInfo.Extension['.json'] = "`e[38;2;165;184;128m"  # Green
-$PSStyle.FileInfo.Extension['.yaml'] = "`e[38;2;165;184;128m"  # Green
-$PSStyle.FileInfo.Extension['.yml'] = "`e[38;2;165;184;128m"   # Green
-$PSStyle.FileInfo.Extension['.toml'] = "`e[38;2;165;184;128m"  # Green
-$PSStyle.FileInfo.Extension['.xml'] = "`e[38;2;165;184;128m"   # Green
-$PSStyle.FileInfo.Extension['.ini'] = "`e[38;2;165;184;128m"   # Green
-$PSStyle.FileInfo.Extension['.conf'] = "`e[38;2;165;184;128m"  # Green
-
-# Code files
-$PSStyle.FileInfo.Extension['.js'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.ts'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.py'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.rb'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.go'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.rs'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.java'] = "`e[38;2;128;184;165m"  # Cyan
-$PSStyle.FileInfo.Extension['.c'] = "`e[38;2;128;184;165m"     # Cyan
-$PSStyle.FileInfo.Extension['.cpp'] = "`e[38;2;128;184;165m"   # Cyan
-$PSStyle.FileInfo.Extension['.cs'] = "`e[38;2;128;184;165m"    # Cyan
-$PSStyle.FileInfo.Extension['.lua'] = "`e[38;2;128;184;165m"   # Cyan
-
-# Web files
-$PSStyle.FileInfo.Extension['.html'] = "`e[38;2;212;116;116m"  # Red
-$PSStyle.FileInfo.Extension['.css'] = "`e[38;2;212;116;116m"   # Red
-$PSStyle.FileInfo.Extension['.scss'] = "`e[38;2;212;116;116m"  # Red
-$PSStyle.FileInfo.Extension['.vue'] = "`e[38;2;212;116;116m"   # Red
-$PSStyle.FileInfo.Extension['.jsx'] = "`e[38;2;212;116;116m"   # Red
-$PSStyle.FileInfo.Extension['.tsx'] = "`e[38;2;212;116;116m"   # Red
-
-# Executables
-$PSStyle.FileInfo.Extension['.exe'] = "`e[38;2;212;165;116m"   # Primary
-$PSStyle.FileInfo.Extension['.dll'] = "`e[38;2;212;165;116m"   # Primary
-$PSStyle.FileInfo.Extension['.bat'] = "`e[38;2;212;165;116m"   # Primary
-$PSStyle.FileInfo.Extension['.cmd'] = "`e[38;2;212;165;116m"   # Primary
-$PSStyle.FileInfo.Extension['.sh'] = "`e[38;2;212;165;116m"    # Primary
-
-# Images
-$PSStyle.FileInfo.Extension['.jpg'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.jpeg'] = "`e[38;2;184;143;160m"  # Accent
-$PSStyle.FileInfo.Extension['.png'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.gif'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.svg'] = "`e[38;2;184;143;160m"   # Accent
-$PSStyle.FileInfo.Extension['.ico'] = "`e[38;2;184;143;160m"   # Accent
-
-# Git
-$PSStyle.FileInfo.Extension['.git'] = "`e[38;2;73;84;93m"      # Cool neutral (was #6b5d54)
-$PSStyle.FileInfo.Extension['.gitignore'] = "`e[38;2;73;84;93m" # Cool neutral
-$PSStyle.FileInfo.Extension['.gitattributes'] = "`e[38;2;73;84;93m" # Cool neutral
-
-# Formatting styles
-$PSStyle.Formatting.FormatAccent = "`e[38;2;212;165;116m"      # Primary
-$PSStyle.Formatting.TableHeader = "`e[38;2;139;160;184m"       # Secondary
-$PSStyle.Formatting.ErrorAccent = "`e[38;2;212;116;116m"       # Red
-$PSStyle.Formatting.Error = "`e[38;2;212;116;116m"             # Red
-$PSStyle.Formatting.Warning = "`e[38;2;212;165;116m"           # Orange/Primary
-$PSStyle.Formatting.Verbose = "`e[38;2;139;160;184m"           # Secondary
-$PSStyle.Formatting.Debug = "`e[38;2;230;184;134m"             # Yellow
 
 # Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
 

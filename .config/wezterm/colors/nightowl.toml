@@ -1,0 +1,79 @@
+# Night Owl WezTerm Color Scheme (full, fixed indexed)
+# Load with: config.color_scheme = "nightowl"
+
+[metadata]
+name = "nightowl"
+
+[colors]
+foreground = "#d6deeb"
+background = "#011627"
+cursor_bg = "#3D6FD9"
+cursor_fg = "#011627"
+cursor_border = "#82AAFF"
+selection_bg = "#1E3B55"
+selection_fg = "#d6deeb"
+scrollbar_thumb = "#234D69"
+split = "#1F4259"
+compose_cursor = "#3AA59A"
+
+ansi = [
+  "#011627",
+  "#EF5350",
+  "#c5e478",
+  "#ecc48d",
+  "#82AAFF",
+  "#c792ea",
+  "#7fdbca",
+  "#89a4bb"
+]
+
+brights = [
+  "#0b253a",
+  "#ff5874",
+  "#c5e478",
+  "#ecc48d",
+  "#82AAFF",
+  "#B985E9",
+  "#7fdbca",
+  "#d6deeb"
+]
+
+colors.indexed = { 16 = "#3D2E15", 17 = "#59401C", 18 = "#0F3148", 19 = "#3AA59A" }
+[colors.tab_bar]
+background = "#011627"
+
+[colors.tab_bar.active_tab]
+bg_color = "#0E3047"
+fg_color = "#d6deeb"
+intensity = "Bold"
+underline = "None"
+italic = false
+strikethrough = false
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#082235"
+fg_color = "#6F90AD"
+intensity = "Normal"
+underline = "None"
+italic = false
+strikethrough = false
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#102E45"
+fg_color = "#C9D4DD"
+underline = "None"
+italic = false
+
+[colors.tab_bar.new_tab]
+bg_color = "#011627"
+fg_color = "#6F90AD"
+intensity = "Normal"
+underline = "None"
+italic = false
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#184564"
+fg_color = "#d6deeb"
+intensity = "Bold"
+underline = "None"
+italic = false

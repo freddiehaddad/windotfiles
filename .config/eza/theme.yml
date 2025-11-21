@@ -1,258 +1,102 @@
-# Silt Theme for eza
-# Layers of Calm - A monochromatic warm palette
-#
-# Installation:
-# Place this file in one of these locations:
-# - $EZA_CONFIG_DIR/theme.yml
-# - $XDG_CONFIG_HOME/eza/theme.yml (Linux/Mac)
-# - %APPDATA%/eza/theme.yml (Windows)
+colourful: true
 
-# Silt Color Palette:
-# Primary: #d4a574 (warm amber/tan)
-# Secondary: #8ba0b8 (muted blue)
-# Accent: #b88fa0 (muted mauve)
-# Red: #d47474
-# Green: #a5b880
-# Cyan: #80b8a5
-# Yellow: #e6b886
-# Foreground: #e8e3df
-# Muted: #9a8f84
-# Gray: #6b5d54
-
-# File types
 filekinds:
-  normal:
-    foreground: "#e8e3df"
-  directory:
-    foreground: "#8ba0b8"
-    is_bold: true
-  symlink:
-    foreground: "#80b8a5"
-  pipe:
-    foreground: "#e6b886"
-  block_device:
-    foreground: "#e6b886"
-  char_device:
-    foreground: "#e6b886"
-  socket:
-    foreground: "#b88fa0"
-  special:
-    foreground: "#b88fa0"
-  executable:
-    foreground: "#d4a574"
-    is_bold: true
-  mount_point:
-    foreground: "#8ba0b8"
-    is_underline: true
+  normal: { foreground: "#d6deeb" }
+  directory: { foreground: "#82AAFF" }
+  symlink: { foreground: "#7fdbca" }
+  pipe: { foreground: "#637777" }
+  block_device: { foreground: "#ecc48d" }
+  char_device: { foreground: "#ecc48d" }
+  socket: { foreground: "#c792ea" }
+  special: { foreground: "#ff5874" }
+  executable: { foreground: "#c5e478" }
+  mount_point: { foreground: "#B985E9" }
 
-# Permissions
 perms:
-  user_read:
-    foreground: "#a5b880"
-    is_bold: true
-  user_write:
-    foreground: "#e6b886"
-    is_bold: true
-  user_execute_file:
-    foreground: "#d47474"
-    is_bold: true
-  user_execute_other:
-    foreground: "#d4a574"
-    is_bold: true
-  group_read:
-    foreground: "#a5b880"
-  group_write:
-    foreground: "#e6b886"
-  group_execute:
-    foreground: "#d47474"
-  other_read:
-    foreground: "#a5b880"
-  other_write:
-    foreground: "#e6b886"
-  other_execute:
-    foreground: "#d47474"
-  special_user_file:
-    foreground: "#d4a574"
-  special_other:
-    foreground: "#d4a574"
-  attribute:
-    foreground: "#9a8f84"
+  user_read: { foreground: "#7fdbca" }
+  user_write: { foreground: "#c792ea" }
+  user_execute_file: { foreground: "#c5e478" }
+  user_execute_other: { foreground: "#c5e478" }
+  group_read: { foreground: "#7fdbca" }
+  group_write: { foreground: "#F78C6C" }
+  group_execute: { foreground: "#c5e478" }
+  other_read: { foreground: "#7fdbca" }
+  other_write: { foreground: "#ff5874" }
+  other_execute: { foreground: "#c5e478" }
+  special_user_file: { foreground: "#ff5874" }
+  special_other: { foreground: "#EF5350" }
+  attribute: { foreground: "#5f7e97" }
 
-# File sizes
 size:
-  major:
-    foreground: "#a5b880"
-  minor:
-    foreground: "#e6b886"
-  number_byte:
-    foreground: "#e8e3df"
-  number_kilo:
-    foreground: "#a5b880"
-  number_mega:
-    foreground: "#e6b886"
-  number_giga:
-    foreground: "#d4a574"
-  number_huge:
-    foreground: "#d47474"
-  unit_byte:
-    foreground: "#9a8f84"
-  unit_kilo:
-    foreground: "#9a8f84"
-  unit_mega:
-    foreground: "#9a8f84"
-  unit_giga:
-    foreground: "#9a8f84"
-  unit_huge:
-    foreground: "#9a8f84"
+  major: { foreground: "#7fdbca" }
+  minor: { foreground: "#c792ea" }
+  number_byte: { foreground: "#89a4bb" }
+  number_kilo: { foreground: "#82AAFF" }
+  number_mega: { foreground: "#7fdbca" }
+  number_giga: { foreground: "#F78C6C" }
+  number_huge: { foreground: "#ff5874" }
+  unit_byte: { foreground: "#89a4bb" }
+  unit_kilo: { foreground: "#82AAFF" }
+  unit_mega: { foreground: "#7fdbca" }
+  unit_giga: { foreground: "#F78C6C" }
+  unit_huge: { foreground: "#ff5874" }
 
-# Users and Groups
 users:
-  user_you:
-    foreground: "#d4a574"
-    is_bold: true
-  user_root:
-    foreground: "#d47474"
-    is_bold: true
-  user_other:
-    foreground: "#9a8f84"
-  group_yours:
-    foreground: "#d4a574"
-  group_other:
-    foreground: "#9a8f84"
-  group_root:
-    foreground: "#d47474"
+  user_you: { foreground: "#3D6FD9" }
+  user_root: { foreground: "#c792ea" }
+  user_other: { foreground: "#7fdbca" }
+  group_yours: { foreground: "#82AAFF" }
+  group_root: { foreground: "#c792ea" }
+  group_other: { foreground: "#d6deeb" }
 
-# Links
 links:
-  normal:
-    foreground: "#9a8f84"
-  multi_link_file:
-    foreground: "#d4a574"
+  normal: { foreground: "#82AAFF" }
+  multi_link_file: { foreground: "#7fdbca" }
 
-# Git status
 git:
-  new:
-    foreground: "#a5b880"
-  modified:
-    foreground: "#e6b886"
-  deleted:
-    foreground: "#d47474"
-  renamed:
-    foreground: "#80b8a5"
-  typechange:
-    foreground: "#b88fa0"
-  ignored:
-    foreground: "#6b5d54"
-  conflicted:
-    foreground: "#d47474"
-    is_bold: true
+  new: { foreground: "#c5e478" }
+  modified: { foreground: "#c792ea" }
+  deleted: { foreground: "#EF5350" }
+  renamed: { foreground: "#7fdbca" }
+  typechange: { foreground: "#7fdbca" }
+  ignored: { foreground: "#5f7e97" }
+  conflicted: { foreground: "#F78C6C" }
 
-# Git repo status
 git_repo:
-  branch_main:
-    foreground: "#8ba0b8"
-    is_bold: true
-  branch_other:
-    foreground: "#8ba0b8"
-  git_clean:
-    foreground: "#a5b880"
-  git_dirty:
-    foreground: "#e6b886"
+  branch_main: { foreground: "#637777" }
+  branch_other: { foreground: "#7fdbca" }
+  git_clean: { foreground: "#0F3148" }
+  git_dirty: { foreground: "#c792ea" }
 
-# Security context
 security_context:
-  colon:
-    foreground: "#9a8f84"
-  user:
-    foreground: "#d4a574"
-  role:
-    foreground: "#8ba0b8"
-  typ:
-    foreground: "#80b8a5"
-  range:
-    foreground: "#b88fa0"
+  colon: { foreground: "#5f7e97" }
+  user: { foreground: "#637777" }
+  role: { foreground: "#7fdbca" }
+  typ: { foreground: "#3D6FD9" }
+  range: { foreground: "#c792ea" }
 
-# File extensions
-extensions:
-  # Archives - Accent (mauve)
-  zip: {filename: {foreground: "#b88fa0"}}
-  tar: {filename: {foreground: "#b88fa0"}}
-  gz: {filename: {foreground: "#b88fa0"}}
-  bz2: {filename: {foreground: "#b88fa0"}}
-  xz: {filename: {foreground: "#b88fa0"}}
-  7z: {filename: {foreground: "#b88fa0"}}
-  rar: {filename: {foreground: "#b88fa0"}}
-  
-  # Code files - Cyan
-  rs: {filename: {foreground: "#80b8a5"}}
-  js: {filename: {foreground: "#80b8a5"}}
-  ts: {filename: {foreground: "#80b8a5"}}
-  py: {filename: {foreground: "#80b8a5"}}
-  rb: {filename: {foreground: "#80b8a5"}}
-  go: {filename: {foreground: "#80b8a5"}}
-  c: {filename: {foreground: "#80b8a5"}}
-  cpp: {filename: {foreground: "#80b8a5"}}
-  java: {filename: {foreground: "#80b8a5"}}
-  lua: {filename: {foreground: "#80b8a5"}}
-  
-  # Config files - Green
-  json: {filename: {foreground: "#a5b880"}}
-  yaml: {filename: {foreground: "#a5b880"}}
-  yml: {filename: {foreground: "#a5b880"}}
-  toml: {filename: {foreground: "#a5b880"}}
-  xml: {filename: {foreground: "#a5b880"}}
-  ini: {filename: {foreground: "#a5b880"}}
-  conf: {filename: {foreground: "#a5b880"}}
-  
-  # Documents - Yellow
-  md: {filename: {foreground: "#e6b886"}}
-  txt: {filename: {foreground: "#e6b886"}}
-  pdf: {filename: {foreground: "#e6b886"}}
-  doc: {filename: {foreground: "#e6b886"}}
-  docx: {filename: {foreground: "#e6b886"}}
-  
-  # Web files - Red
-  html: {filename: {foreground: "#d47474"}}
-  css: {filename: {foreground: "#d47474"}}
-  scss: {filename: {foreground: "#d47474"}}
-  vue: {filename: {foreground: "#d47474"}}
-  jsx: {filename: {foreground: "#d47474"}}
-  tsx: {filename: {foreground: "#d47474"}}
-  
-  # Scripts - Primary
-  sh: {filename: {foreground: "#d4a574"}}
-  bash: {filename: {foreground: "#d4a574"}}
-  ps1: {filename: {foreground: "#d4a574"}}
-  bat: {filename: {foreground: "#d4a574"}}
-  
-  # Images/Media - Accent
-  jpg: {filename: {foreground: "#b88fa0"}}
-  png: {filename: {foreground: "#b88fa0"}}
-  gif: {filename: {foreground: "#b88fa0"}}
-  svg: {filename: {foreground: "#b88fa0"}}
-  mp3: {filename: {foreground: "#b88fa0"}}
-  mp4: {filename: {foreground: "#b88fa0"}}
+file_type:
+  image: { foreground: "#82AAFF" }
+  video: { foreground: "#3AA59A" }
+  music: { foreground: "#7fdbca" }
+  lossless: { foreground: "#6F90AD" }
+  crypto: { foreground: "#EF5350" }
+  document: { foreground: "#89a4bb" }
+  compressed: { foreground: "#F78C6C" }
+  temp: { foreground: "#5f7e97" }
+  compiled: { foreground: "#5f7e97" }
+  build: { foreground: "#c5e478" }
+  source: { foreground: "#c792ea" }
 
-# Special filenames
-filenames:
-  # Git files - Gray
-  ".git": {filename: {foreground: "#6b5d54"}}
-  ".gitignore": {filename: {foreground: "#6b5d54"}}
-  ".gitmodules": {filename: {foreground: "#6b5d54"}}
-  ".gitattributes": {filename: {foreground: "#6b5d54"}}
-  
-  # Build files - Primary
-  "Makefile": {filename: {foreground: "#d4a574"}}
-  "Cargo.toml": {filename: {foreground: "#d4a574"}}
-  "Cargo.lock": {filename: {foreground: "#d4a574"}}
-  "package.json": {filename: {foreground: "#d4a574"}}
-  "CMakeLists.txt": {filename: {foreground: "#d4a574"}}
-  
-  # Config files - Green
-  ".env": {filename: {foreground: "#a5b880"}}
-  ".editorconfig": {filename: {foreground: "#a5b880"}}
-  
-  # Docs - Yellow
-  "README.md": {filename: {foreground: "#e6b886", is_bold: true}}
-  "LICENSE": {filename: {foreground: "#e6b886"}}
-  "CHANGELOG.md": {filename: {foreground: "#e6b886"}}
+punctuation: { foreground: "#637777" }
+date: { foreground: "#ecc48d" }
+inode: { foreground: "#5f7e97" }
+blocks: { foreground: "#5f7e97" }
+header: { foreground: "#89a4bb" }
+octal: { foreground: "#F78C6C" }
+flags: { foreground: "#c792ea" }
+
+symlink_path: { foreground: "#82AAFF" }
+control_char: { foreground: "#F78C6C" }
+broken_symlink: { foreground: "#ff5874" }
+broken_path_overlay: { foreground: "#ff5874" }
