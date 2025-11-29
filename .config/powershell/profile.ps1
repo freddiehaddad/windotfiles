@@ -27,8 +27,9 @@ rustup completions powershell | Out-String | Invoke-Expression
 op completion powershell | Out-String | Invoke-Expression
 
 # Neovim
-#$env:VISUAL = "nvim"
-#$env:EDITOR = $env:VISUAL
+$env:VISUAL = "nvim"
+$env:EDITOR = $env:VISUAL
+$env:XDG_CONFIG_HOME = Join-Path $env:USERPROFILE ".config"
 
 # EZA theme directory
 $env:EZA_CONFIG_DIR = "$env:USERPROFILE\.config\eza"
