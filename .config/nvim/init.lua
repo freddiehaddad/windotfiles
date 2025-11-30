@@ -1,7 +1,8 @@
-vim.cmd.colorscheme "nightowl"
+vim.cmd.colorscheme("nightowl")
 
 vim.o.clipboard = "unnamedplus"
 
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
+vim.lsp.enable("luals")
