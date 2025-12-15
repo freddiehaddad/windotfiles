@@ -1,9 +1,9 @@
-# Starship prompt config with Liminal/Silt semantic coloring
-# Icons preserved; only styles mapped to unified semantic roles.
+# Starship prompt config with Night Owl semantic coloring
+# Nerd Font Icons preserved; only styles mapped to unified semantic roles.
 # Roles:
 #  - Primary (action/keywords): #82AAFF
 #  - Yellow (types/static/numeric): #ecc48d
-#  - Accent (variables/data): #ff5874
+#  - Accent (variables/data): #addb67
 #  - Secondary (properties/structure/meta): #89a4bb
 #  - Cyan (info/operators/env): #7fdbca
 #  - Green (success/additions): #c5e478
@@ -28,10 +28,10 @@ tag_symbol = "  "                     # tag will inherit style; treat tag as 
 
 [git_status]
 conflicted = "[!](bold #EF5350)"
-stashed    = "[$](bold #ff5874)"       # accent (stored variable data)
+stashed    = "[$](bold #addb67)"       # accent (stored variable data)
 modified   = "[~](bold #ecc48d)"       # change -> yellow (attention/static delta)
 staged     = "[+](bold #c5e478)"       # additions -> green
-renamed    = "[>](bold #ff5874)"       # accent (identifier change)
+renamed    = "[>](bold #7fdbca)"       # cyan (change/movement)
 deleted    = "[-](bold #EF5350)"       # removal -> red
 untracked  = "[?](bold #c5e478)"       # new files -> green (potential addition)
 style      = "#5f7e97"                 # container muted
@@ -177,7 +177,7 @@ style  = "#ecc48d"
 # Package module = accent (data payload)
 [package]
 symbol = "󰏗 "
-style  = "bold #ff5874"
+style  = "bold #addb67"
 
 # Fossil / other VCS branch meta = secondary
 [fossil_branch]

@@ -165,6 +165,8 @@ window_rules:
   - commands: ["set-fullscreen"]
     match:
       - window_process: { equals: "Ascension" }
+      # - window_process: { equals: "PathOfExile" }
+      - window_title: { equals: "Path of Exile 2" }
 
 
 binding_modes:

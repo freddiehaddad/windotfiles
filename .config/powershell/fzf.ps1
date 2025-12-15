@@ -1,15 +1,3 @@
-#
-#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-#  --color=fg:#9c2222,fg+:#b25f5f,bg:#121212,bg+:#a05f5f
-#  --color=hl:#7a226e,hl+:#40b930,info:#2ca16e,marker:#142303
-#  --color=prompt:#8b4b68,spinner:#7735b9,pointer:#6c33a5,header:#189c9c
-#  --color=gutter:#8d7373,border:#c26262,separator:#9c2a2a,scrollbar:#7e3131
-#  --color=preview-fg:#25a357,preview-bg:#28924b,preview-border:#469c2c,preview-scrollbar:#942b2b
-#  --color=preview-label:#092662,label:#641a95,query:#2031af,disabled:#2caf46
-#  --border="sharp" --border-label=" fzf " --border-label-pos="0" --preview-window="border-sharp"
-#  --prompt="> " --marker=">" --pointer="▶" --separator="─"
-#  --scrollbar="│" --info="right"'
-
 $palette = @{
 	fg        = "#d6deeb" # main text color
 	bg        = "#0b253a" # panel background
@@ -19,7 +7,7 @@ $palette = @{
 	hlPlus    = "#F78C6C" # selected match highlight
 	info      = "#5f7e97" # info line
 	prompt    = "#82aaff" # prompt symbol
-	pointer   = "#ff5874" # current selection arrow
+	pointer   = "#f0a6bc" # current selection arrow
 	marker    = "#c5e478" # multi-select marker
 	spinner   = "#7fdbca" # spinner while searching
 	header    = "#c792ea" # header lines
@@ -65,4 +53,3 @@ $env:FZF_DEFAULT_OPTS = @"
 --bind="shift-up:preview-up"
 --bind="shift-down:preview-down"
 "@
-

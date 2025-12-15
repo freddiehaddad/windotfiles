@@ -7,7 +7,7 @@
 	<key>uuid</key>
 	<string>00000000-0000-0000-0000-000000NIGHTOWL</string>
 	<key>author</key>
-	<string>Nightowl adaptation using extended semantic palette</string>
+	<string>Night Owl adaptation using extended semantic palette</string>
 	<key>semanticClass</key>
 	<string>theme.dark.nightowl</string>
 	<key>colorSpaceName</key>
@@ -156,7 +156,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ecc48d</string>
+				<string>#c5e478</string>
 			</dict>
 		</dict>
 		<dict>
@@ -235,7 +235,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ff5874</string>
+				<string>#f0a6bc</string>
 			</dict>
 		</dict>
 		<dict>
@@ -469,7 +469,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ff5874</string>
+				<string>#f0a6bc</string>
 				<key>fontStyle</key>
 				<string>bold</string>
 			</dict>
@@ -537,7 +537,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ff5874</string>
+				<string>#f0a6bc</string>
 			</dict>
 		</dict>
 	</array>
