@@ -11,6 +11,16 @@ provide the steps to install and configure third-party software.
    winget upgrade --all --accept-source-agreements --accept-package-agreements
    ```
 
+1. Configure Terminal Settings
+
+   ```console
+   setx COLORTERM truecolor
+   setx TERM xterm-256color
+   ```
+
+   > Restart Windows Terminal
+   
+
 1. Go to System Settings > System > For developers
 
    Enable the following:
@@ -148,6 +158,12 @@ provide the steps to install and configure third-party software.
    ```console
    rustup default stable
    rustup component add rust-analyzer
+   ```
+
+   Configure TreeSitter for Neovim
+
+   ```console
+   cargo install tree-sitter-cli
    ```
 
 1. Install `mdformat` and plugins:

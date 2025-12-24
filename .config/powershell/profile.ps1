@@ -12,6 +12,10 @@ $env:PATH += ";C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC
 $env:INCLUDE = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\$VCToolsVersion\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\$WindowsSdkVersion\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\um;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\shared;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\cppwinrt"
 $env:LIB = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\$VCToolsVersion\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\$WindowsSdkVersion\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\$WindowsSdkVersion\\um\x64"
 
+# For Treesitter installed via Rust/Cargo
+# cargo install tree-sitter-cli
+$env:LIBCLANG_PATH = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin"
+
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
 # Import-Module -Name Microsoft.WinGet.CommandNotFound
 #f45873b3-b655-43a6-b217-97c00aa0db58
@@ -73,17 +77,17 @@ function lt {
 # On new setups, be sure to type "bat cache --build"
 Set-Alias -Name cat -Value bat
 
-# $env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
-# $env:BAT_THEME="nightowl"
+$env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
+$env:BAT_THEME="peanut-dark"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
-. "$env:USERPROFILE\.config\powershell\fzf.ps1"
+. "$env:USERPROFILE\.config\powershell\fzf-peanut-dark.ps1"
 
 # Set Powershell theme
-. "$env:USERPROFILE\.config\powershell\nightowl.ps1"
+. "$env:USERPROFILE\.config\powershell\pwsh-peanut-dark.ps1"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"

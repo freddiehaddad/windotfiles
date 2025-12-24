@@ -1,249 +1,202 @@
-# Starship prompt config with Night Owl semantic coloring
-# Nerd Font Icons preserved; only styles mapped to unified semantic roles.
-# Roles:
-#  - Primary (action/keywords): #82AAFF
-#  - Yellow (types/static/numeric): #ecc48d
-#  - Accent (variables/data): #addb67
-#  - Secondary (properties/structure/meta): #89a4bb
-#  - Cyan (info/operators/env): #7fdbca
-#  - Green (success/additions): #c5e478
-#  - Muted (deemphasis): #5f7e97
-#  - Red (errors/deletions): #EF5350
-#  - Foreground base: #e8e3df
+'$schema' = 'https://starship.rs/config-schema.json'
 
-[character]
-success_symbol = "[❯](bold #c5e478)"   # success = green
-error_symbol   = "[❯](bold #EF5350)"   # errors = red
+[aws]
+symbol = ' '
+
+[buf]
+symbol = ' '
+
+[bun]
+symbol = ' '
+
+[c]
+symbol = ' '
+
+[cpp]
+symbol = ' '
+
+[cmake]
+symbol = ' '
+
+[conda]
+symbol = ' '
+
+[crystal]
+symbol = ' '
+
+[dart]
+symbol = ' '
+
+[deno]
+symbol = ' '
 
 [directory]
-read_only = " 󰌾"
-style = "bold #89a4bb"                 # structural path = secondary
+read_only = ' 󰌾'
+
+[docker_context]
+symbol = ' '
+
+[elixir]
+symbol = ' '
+
+[elm]
+symbol = ' '
+
+[fennel]
+symbol = ' '
+
+[fortran]
+symbol = ' '
+
+[fossil_branch]
+symbol = ' '
+
+[gcloud]
+symbol = ' '
 
 [git_branch]
-symbol = " "
-style  = "bold #89a4bb"                # branch metadata = secondary
+symbol = ' '
 
 [git_commit]
-tag_symbol = "  "                     # tag will inherit style; treat tag as type/static -> yellow via format override if added later
+tag_symbol = '  '
 
-[git_status]
-conflicted = "[!](bold #EF5350)"
-stashed    = "[$](bold #addb67)"       # accent (stored variable data)
-modified   = "[~](bold #ecc48d)"       # change -> yellow (attention/static delta)
-staged     = "[+](bold #c5e478)"       # additions -> green
-renamed    = "[>](bold #7fdbca)"       # cyan (change/movement)
-deleted    = "[-](bold #EF5350)"       # removal -> red
-untracked  = "[?](bold #c5e478)"       # new files -> green (potential addition)
-style      = "#5f7e97"                 # container muted
+[golang]
+symbol = ' '
 
-# Cloud / env contexts = cyan (info)
-[aws]
-symbol = " "
-style  = "#7fdbca"
-[gcloud]
-symbol = " "
-style  = "#7fdbca"
+[gradle]
+symbol = ' '
+
+[guix_shell]
+symbol = ' '
+
+[haskell]
+symbol = ' '
+
+[haxe]
+symbol = ' '
+
+[hg_branch]
+symbol = ' '
+
 [hostname]
-ssh_symbol = " "
-style = "#7fdbca"
+ssh_symbol = ' '
 
-[cmd_duration]
-min_time = 500
-format = "took [$duration](#ecc48d)"
-style = "#ecc48d"
+[java]
+symbol = ' '
+
+[julia]
+symbol = ' '
+
+[kotlin]
+symbol = ' '
+
+[lua]
+symbol = ' '
 
 [memory_usage]
-symbol = "󰍛 "
-style  = "#ecc48d"                     # numeric metric -> yellow
+symbol = '󰍛 '
 
-# Build / tooling orchestrators = primary (action)
-[bun]
-symbol = " "
-style  = "#82AAFF"
-[cmake]
-symbol = " "
-style  = "#82AAFF"
-[gradle]
-symbol = " "
-style  = "#82AAFF"
-[nix_shell]
-symbol = " "
-style  = "#7fdbca"                     # environment info
-[nodejs]
-symbol = " "
-style  = "#82AAFF"                     # runtime (action surface)
-[pixi]
-symbol = "󰏗 "
-style  = "#82AAFF"
-[xmake]
-symbol = " "
-style  = "#82AAFF"
-[conda]
-symbol = " "
-style  = "#89a4bb"                     # structural environment
-[docker_context]
-symbol = " "
-style  = "#89a4bb"                     # container context
-
-# Languages = yellow (types/static domain)
-[c]
-symbol = " "
-style  = "#ecc48d"
-[cpp]
-symbol = " "
-style  = "#ecc48d"
-[crystal]
-symbol = " "
-style  = "#ecc48d"
-[dart]
-symbol = " "
-style  = "#ecc48d"
-[deno]
-symbol = " "
-style  = "#ecc48d"
-[elixir]
-symbol = " "
-style  = "#ecc48d"
-[elm]
-symbol = " "
-style  = "#ecc48d"
-[fennel]
-symbol = " "
-style  = "#ecc48d"
-[fortran]
-symbol = " "
-style  = "#ecc48d"
-[golang]
-symbol = " "
-style  = "#ecc48d"
-[haskell]
-symbol = " "
-style  = "#ecc48d"
-[haxe]
-symbol = " "
-style  = "#ecc48d"
-[hg_branch]
-symbol = " "
-style  = "#ecc48d"                     # treat as language/meta when shown
-[java]
-symbol = " "
-style  = "#ecc48d"
-[julia]
-symbol = " "
-style  = "#ecc48d"
-[kotlin]
-symbol = " "
-style  = "#ecc48d"
-[lua]
-symbol = " "
-style  = "#ecc48d"
-[nim]
-symbol = "󰆥 "
-style  = "#ecc48d"
-[ocaml]
-symbol = " "
-style  = "#ecc48d"
-[perl]
-symbol = " "
-style  = "#ecc48d"
-[php]
-symbol = " "
-style  = "#ecc48d"
-[pijul_channel]
-symbol = " "
-style  = "#ecc48d"
-[python]
-symbol = " "
-style  = "#ecc48d"
-[rlang]
-symbol = "󰟔 "
-style  = "#ecc48d"
-[ruby]
-symbol = " "
-style  = "#ecc48d"
-[rust]
-symbol = "󱘗 "
-style  = "#ecc48d"
-[scala]
-symbol = " "
-style  = "#ecc48d"
-[swift]
-symbol = " "
-style  = "#ecc48d"
-[zig]
-symbol = " "
-style  = "#ecc48d"
-
-# Package module = accent (data payload)
-[package]
-symbol = "󰏗 "
-style  = "bold #addb67"
-
-# Fossil / other VCS branch meta = secondary
-[fossil_branch]
-symbol = " "
-style  = "#89a4bb"
-
-# Meson build (action) = primary
 [meson]
-symbol = "󰔷 "
-style  = "#82AAFF"
+symbol = '󰔷 '
 
-# Guix shell (info/env) = cyan
-[guix_shell]
-symbol = " "
-style  = "#7fdbca"
+[nim]
+symbol = '󰆥 '
 
-# Status/error indicator = red
-[status]
-symbol = " "
-style  = "#EF5350"
+[nix_shell]
+symbol = ' '
 
-# OS symbols left without explicit style (inherits prompt default) to avoid clutter.
+[nodejs]
+symbol = ' '
+
+[ocaml]
+symbol = ' '
+
 [os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-AOSC = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
+Alpaquita = ' '
+Alpine = ' '
+AlmaLinux = ' '
+Amazon = ' '
+Android = ' '
+AOSC = ' '
+Arch = ' '
+Artix = ' '
+CachyOS = ' '
+CentOS = ' '
+Debian = ' '
+DragonFly = ' '
+Emscripten = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = '󰛓 '
+Gentoo = ' '
+HardenedBSD = '󰞌 '
+Illumos = '󰈸 '
+Kali = ' '
+Linux = ' '
+Mabox = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+MidnightBSD = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+Nobara = ' '
+OpenBSD = '󰈺 '
+openSUSE = ' '
+OracleLinux = '󰌷 '
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+RockyLinux = ' '
+Redox = '󰀘 '
+Solus = '󰠳 '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Void = ' '
+Windows = '󰍲 '
+
+[package]
+symbol = '󰏗 '
+
+[perl]
+symbol = ' '
+
+[php]
+symbol = ' '
+
+[pijul_channel]
+symbol = ' '
+
+[pixi]
+symbol = '󰏗 '
+
+[python]
+symbol = ' '
+
+[rlang]
+symbol = '󰟔 '
+
+[ruby]
+symbol = ' '
+
+[rust]
+symbol = '󱘗 '
+
+[scala]
+symbol = ' '
+
+[status]
+symbol = ' '
+
+[swift]
+symbol = ' '
+
+[xmake]
+symbol = ' '
+
+[zig]
+symbol = ' '

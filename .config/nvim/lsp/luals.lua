@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 vim.lsp.config["luals"] = {
 	-- Command and arguments to start the server.
 	cmd = { "lua-language-server" },
