@@ -123,11 +123,11 @@ hl(0, "LineNrBelow", { fg = ui.fg[3] })
 
 hl(0, "NormalFloat", { bg = ui.bg[4] })
 hl(0, "Pmenu", { bg = ui.bg[4], fg = ui.fg[1] })
-hl(0, "PmenuSel", { bg = ui.bg[5], fg = ui.fg[1] })
+hl(0, "PmenuSel", { bg = ui.bg[5] })
 hl(0, "PmenuThumb", { bg = ui.bg[5] })
--- PmenuExtra
+hl(0, "PmenuExtra", { fg = ui.fg[2] })
 -- PmenuExtraSel
--- PmenuKind
+hl(0, "PmenuKind", { fg = ui.fg[2] })
 -- PmenuKindSel
 -- PmenuMatch
 -- PmenuMatchSel
