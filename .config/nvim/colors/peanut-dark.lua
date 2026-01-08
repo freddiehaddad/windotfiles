@@ -146,7 +146,13 @@ hl(0, "StatusLineNC", { bg = ui.bg[3], fg = ui.fg[3] })
 -- StatusLineTerm
 -- StatusLineTermNC
 hl(0, "WinSeparator", { fg = ui.bg[2] })
-hl(0, "QuickFixLine", { fg = ui.bg[2] })
+
+-- QuickFix
+hl(0, "QuickFixLine", { bg = ui.bg[2] })
+hl(0, "qfLineNr", { fg = ui.fg[3] })
+hl(0, "qfText", { fg = code[1] })
+hl(0, "qfSeparator1", { fg = code[6] })
+hl(0, "qfSeparator2", { fg = code[6] })
 
 -- LSP
 -- DiagnosticDeprecated
@@ -224,7 +230,7 @@ hl(0, "Structure", { fg = code[2] })
 hl(0, "Macro", { fg = code[1] })
 hl(0, "PreProc", { fg = code[6] })
 
--- comment
+-- Comment
 hl(0, "@comment.documentation", { fg = ui.fg[7] })
 hl(0, "@lsp.type.event", { fg = ui.fg[7] })
 hl(0, "@lsp.typemod.keyword.documentation", { fg = ui.fg[7] })

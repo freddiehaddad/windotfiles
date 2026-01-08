@@ -19,6 +19,13 @@ vim.opt.smartcase = true
 
 vim.opt.pumheight = 20
 
-vim.lsp.enable("clangd")
-vim.lsp.enable("luals")
-vim.lsp.enable("rust_analyzer")
+vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })
+
+require("blink.cmp").setup({
+	keymap = {
+		["<C-space>"] = false,
+		["<C-s>"] = { "hide", "show_signature", "hide_signature" },
+		["<C-k>"] = { "show", "show_documentation", "hide_documentation" },
+		["<C-e>"] = { "hide", "show" },
+	},
+})
