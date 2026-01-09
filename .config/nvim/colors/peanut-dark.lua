@@ -112,7 +112,7 @@ hl(0, "Cursor", { bg = ui.fg[1], fg = ui.bg[1] })
 hl(0, "CursorLine", { bg = ui.bg[3] })
 hl(0, "CursorLineNr", { bg = ui.bg[3], fg = ui.fg[1] })
 hl(0, "CursorLineSign", { bg = ui.bg[3] })
-hl(0, "CursorLineFold", { bg = ui.bg[3] })
+hl(0, "CursorLineFold", { bg = ui.bg[3], fg = ui.fg[3] })
 
 hl(0, "CursorColumn", { bg = ui.bg[3] })
 hl(0, "ColorColumn", { bg = ui.bg[2] })
