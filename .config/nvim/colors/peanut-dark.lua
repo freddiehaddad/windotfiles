@@ -75,10 +75,10 @@ local vcs = {
 
 local code = {
 	"#7d9db5", -- 1: constants, numbers, booleans, macros
-	"#d4caba", -- 2: keywords, types, constructors
+	"#a59c8a", -- 2: keywords, types, constructors
 	"#c9bfad", -- 3: functions, method names
 	"#b8ad9b", -- 4: properties, fields, parameters
-	"#a59c8a", -- 5: identifiers, plain variables
+	"#d4caba", -- 5: identifiers, plain variables
 	"#8d867a", -- 6: operators, punctuation, delimiters
 	"#6e6b63", -- 7: comments, nontext
 }

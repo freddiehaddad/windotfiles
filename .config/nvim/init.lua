@@ -3,11 +3,13 @@
 vim.cmd.colorscheme("peanut-dark")
 
 vim.opt.mouse = ""
-vim.o.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
+
+vim.opt.conceallevel = 2
 
 vim.opt.foldcolumn = "1"
 vim.opt.foldlevel = 99

@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-vim.lsp.config["rust_analyzer"] = {
+return {
 	cmd = { "rust-analyzer" },
 	filetypes = { "rust" },
 	root_markers = { { "Cargo.toml", "Cargo.lock" }, ".git" },
@@ -8,4 +8,9 @@ vim.lsp.config["rust_analyzer"] = {
 		["rust-analyzer"] = {},
 	},
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
+	handlers = {
+		["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+			wrap = false,
+		}),
+	},
 }

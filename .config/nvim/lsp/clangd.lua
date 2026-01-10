@@ -1,7 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-vim.lsp.config["clangd"] = {
-	-- Command and arguments to start the server.
+return {
 	cmd = {
 		"clangd",
 		"--all-scopes-completion",
