@@ -51,3 +51,17 @@ require("blink.cmp").setup({
 		["<C-e>"] = { "hide", "show" },
 	},
 })
+
+-- stylua: ignore start
+-- Move between windows using Ctrl + h,j,k,l
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+
+-- Resize windows using Ctrl + Arrow keys
+vim.keymap.set("n", "<C-Up>",    ":resize -1<CR>",          { silent = true, desc = "Decrease window height" })
+vim.keymap.set("n", "<C-Down>",  ":resize +1<CR>",          { silent = true, desc = "Increase window height" })
+vim.keymap.set("n", "<C-Left>",  ":vertical resize -1<CR>", { silent = true, desc = "Decrease window width" })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +1<CR>", { silent = true, desc = "Increase window width" })
+-- stylua: ignore end
