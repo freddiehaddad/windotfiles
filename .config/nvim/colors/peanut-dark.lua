@@ -75,12 +75,14 @@ local vcs = {
 
 local code = {
 	"#7d9db5", -- 1: constants, numbers, booleans, macros
-	"#a59c8a", -- 2: keywords, types, constructors
-	"#c9bfad", -- 3: functions, method names
-	"#b8ad9b", -- 4: properties, fields, parameters
-	"#d4caba", -- 5: identifiers, plain variables
-	"#8d867a", -- 6: operators, punctuation, delimiters
+	"#a89b7f", -- 2: keywords, constructors
+	"#8fa882", -- 3: functions, method names
+	"#b5afa1", -- 4: properties, fields, parameters
+	"#d9d0bb", -- 5: identifiers, plain variables
+	"#8a8078", -- 6: operators, punctuation, delimiters
 	"#6e6b63", -- 7: comments, nontext
+	"#c9a86a", -- 8: types, type annotations
+	"#e6dcc6", -- 9: emphasis
 }
 
 -- UI
@@ -223,10 +225,10 @@ hl(0, "Constant", { fg = code[1] })
 hl(0, "Number", { fg = code[1] })
 hl(0, "Float", { fg = code[1] })
 hl(0, "String", { fg = code[1] })
-hl(0, "Type", { fg = code[2] })
-hl(0, "Typedef", { fg = code[2] })
+hl(0, "Type", { fg = code[8] })
+hl(0, "Typedef", { fg = code[8] })
 hl(0, "Constructor", { fg = code[2] })
-hl(0, "Structure", { fg = code[2] })
+hl(0, "Structure", { fg = code[8] })
 hl(0, "Macro", { fg = code[1] })
 hl(0, "PreProc", { fg = code[6] })
 
@@ -240,4 +242,4 @@ hl(0, "@lsp.type.property", { fg = code[4] })
 hl(0, "@constructor", { fg = code[2] })
 hl(0, "@variable", { fg = code[5] })
 
-hl(0, "@lsp.type", { fg = code[2] })
+hl(0, "@lsp.type", { fg = code[8] })
