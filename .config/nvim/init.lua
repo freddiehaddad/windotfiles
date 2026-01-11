@@ -20,6 +20,10 @@ vim.opt.foldlevel = 99
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 4
+vim.opt.sidescrolloff = 4
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 vim.opt.statuscolumn = "%C %s%=%{v:relnum==0 ? v:lnum : v:relnum} "
 
