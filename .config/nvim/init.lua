@@ -41,17 +41,6 @@ end
 
 vim.opt.grepprg = "rg --vimgrep --smart-case --follow"
 
--- lsp
-vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })
-require("blink.cmp").setup({
-	keymap = {
-		["<C-space>"] = false,
-		["<C-s>"] = { "hide", "show_signature", "hide_signature" },
-		["<C-k>"] = { "show", "show_documentation", "hide_documentation" },
-		["<C-e>"] = { "hide", "show" },
-	},
-})
-
 -- stylua: ignore start
 -- Move between windows using Ctrl + h,j,k,l
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
@@ -65,3 +54,16 @@ vim.keymap.set("n", "<C-Down>",  ":resize +1<CR>",          { silent = true, des
 vim.keymap.set("n", "<C-Left>",  ":vertical resize -1<CR>", { silent = true, desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +1<CR>", { silent = true, desc = "Increase window width" })
 -- stylua: ignore end
+
+-- lsp
+require("blink.cmp").setup({
+	keymap = {
+		["<C-space>"] = false,
+		["<C-s>"] = { "hide", "show_signature", "hide_signature" },
+		["<C-k>"] = { "show", "show_documentation", "hide_documentation" },
+		["<C-e>"] = { "hide", "show" },
+	},
+})
+
+vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })
+

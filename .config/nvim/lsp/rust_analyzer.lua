@@ -8,9 +8,29 @@ return {
 		["rust-analyzer"] = {},
 	},
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
-	handlers = {
-		["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-			wrap = false,
-		}),
-	},
+	on_attach = function(_, bufnr)
+		vim.keymap.set("n", "K", function()
+			-- Create an autocommand for the markdown filetype used by hover popups
+			local group = vim.api.nvim_create_augroup("LspHoverStyle", { clear = true })
+			vim.api.nvim_create_autocmd("FileType", {
+				group = group,
+				pattern = "markdown",
+				once = true,
+				callback = function()
+					local win = vim.api.nvim_get_current_win()
+					-- Verify it is a floating window
+					if vim.api.nvim_win_get_config(win).relative ~= "" then
+						vim.wo[win].sidescrolloff = 0
+						vim.wo[win].wrap = false
+					end
+				end,
+			})
+
+			-- Trigger the request
+			vim.lsp.buf.hover({
+				max_width = 80,
+				wrap = false,
+			})
+		end, { buffer = bufnr, desc = "vim.lsp.buf.hover()" })
+	end,
 }
