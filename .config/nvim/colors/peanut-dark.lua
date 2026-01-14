@@ -137,7 +137,7 @@ hl(0, "PmenuKind", { fg = ui.fg[2] })
 hl(0, "WildMenu", { bg = search.bg[1], fg = search.fg[2] })
 
 hl(0, "Folded", { bg = ui.bg[2], fg = ui.fg[3] })
-hl(0, "FoldColumn", { fg = ui.fg[4] })
+hl(0, "FoldColumn", { fg = ui.fg[3] })
 
 hl(0, "TabLine", { bg = ui.bg[2], fg = ui.fg[3] })
 hl(0, "TabLineFill", { bg = ui.bg[2] })

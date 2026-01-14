@@ -53,6 +53,10 @@ vim.keymap.set("n", "<C-Up>",    ":resize -1<CR>",          { silent = true, des
 vim.keymap.set("n", "<C-Down>",  ":resize +1<CR>",          { silent = true, desc = "Increase window height" })
 vim.keymap.set("n", "<C-Left>",  ":vertical resize -1<CR>", { silent = true, desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +1<CR>", { silent = true, desc = "Increase window width" })
+
+-- Center some navigation movements
+vim.keymap.set({ "n", "v" }, "<C-]>", "<C-]>zz", { silent = true, desc = "Jump to the definition" })
+vim.keymap.set({ "n" }, "<C-o>", "<C-o>zz", { silent = true, desc = "Go to previous position in jump list" })
 -- stylua: ignore end
 
 -- lsp
