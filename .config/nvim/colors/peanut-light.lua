@@ -7,18 +7,18 @@ vim.g.colors_name = "peanut light"
 
 local ui = {
 	bg = {
-		"#f0eee6", -- 1: base background
-		"#e8e5da", -- 2: inactive tabs, window splits
-		"#e0dccf", -- 3: statuslines, cursorline
-		"#faf9f5", -- 4: menus, popups
-		"#d8d4c5", -- 5: menu hover, active tabs
+		"#f2f0eb", -- 1: base background
+		"#ede9e3", -- 2: inactive tabs, window splits
+		"#e7e3dc", -- 3: statuslines, cursorline
+		"#e0dbd3", -- 4: menus, popups, active tabs
+		"#d8d2c8", -- 5: menu hover, active tabs
 	},
 	fg = {
-		"#5a5448", -- 1: primary, statusline, menu text, active tabs
-		"#726b5e", -- 2: labels, secondary menu items
-		"#8d8679", -- 3: inactive tabs, disabled items
-		"#9a9389", -- 4: line/fold gutter text
-		"#4e4740", -- 5: titles, emphasized
+		"#3a4045", -- 1: primary, statusline, menu text, active tabs
+		"#2a3035", -- 2: labels, secondary menu items
+		"#6a7075", -- 3: inactive tabs, disabled items
+		"#95a0a5", -- 4: line/fold gutter text
+		"#1a2025", -- 5: titles, emphasized
 	},
 }
 
@@ -74,15 +74,15 @@ local vcs = {
 }
 
 local code = {
-	"#4a6b7d", -- 1: constants, numbers, booleans, macros
-	"#6d5f45", -- 2: keywords, constructors
-	"#5a7d56", -- 3: functions, method names
-	"#5c564d", -- 4: properties, fields, parameters
-	"#2e2820", -- 5: identifiers, plain variables
-	"#8a8379", -- 6: operators, punctuation, delimiters
-	"#a39b8f", -- 7: comments, nontext
-	"#9d6e3a", -- 8: types, type annotations
-	"#453f38", -- 9: emphasis
+	"#4a6888", -- 1: constants, numbers, booleans, macros
+	"#5f5850", -- 2: keywords, constructors
+	"#86704a", -- 3: functions, method names
+	"#5a544a", -- 4: properties, fields, parameters
+	"#6e6048", -- 5: identifiers, plain variables
+	"#4a4038", -- 6: operators, punctuation, delimiters
+	"#a0acb0", -- 7: comments, nontext
+	"#58636e", -- 8: types, type annotations
+	"#302820", -- 9: emphasis
 }
 
 -- UI
@@ -120,8 +120,8 @@ hl(0, "CursorColumn", { bg = ui.bg[3] })
 hl(0, "ColorColumn", { bg = ui.bg[2] })
 
 hl(0, "LineNr", { fg = ui.fg[1] })
-hl(0, "LineNrAbove", { fg = ui.fg[3] })
-hl(0, "LineNrBelow", { fg = ui.fg[3] })
+hl(0, "LineNrAbove", { fg = ui.fg[4] })
+hl(0, "LineNrBelow", { fg = ui.fg[4] })
 
 hl(0, "NormalFloat", { bg = ui.bg[4] })
 hl(0, "Pmenu", { bg = ui.bg[4], fg = ui.fg[1] })
@@ -137,21 +137,20 @@ hl(0, "PmenuKind", { fg = ui.fg[2] })
 hl(0, "WildMenu", { bg = search.bg[1], fg = search.fg[2] })
 
 hl(0, "Folded", { bg = ui.bg[2], fg = ui.fg[3] })
-hl(0, "FoldColumn", { fg = ui.fg[3] })
+hl(0, "FoldColumn", { fg = ui.fg[4] })
 
 hl(0, "TabLine", { bg = ui.bg[2], fg = ui.fg[3] })
 hl(0, "TabLineFill", { bg = ui.bg[2] })
-hl(0, "TabLineSel", { bg = ui.bg[5], fg = ui.fg[1] })
+hl(0, "TabLineSel", { bg = ui.bg[4], fg = ui.fg[1] })
 
 hl(0, "StatusLine", { bg = ui.bg[3], fg = ui.fg[1] })
 hl(0, "StatusLineNC", { bg = ui.bg[3], fg = ui.fg[3] })
 -- StatusLineTerm
 -- StatusLineTermNC
 hl(0, "WinSeparator", { fg = ui.bg[2] })
-hl(0, "QuickFixLine", { fg = ui.bg[2] })
 
 -- QuickFix
-hl(0, "QuickFixLine", { bg = ui.bg[2] })
+hl(0, "QuickFixLine", { bg = ui.bg[4] })
 hl(0, "qfLineNr", { fg = ui.fg[3] })
 hl(0, "qfText", { fg = code[1] })
 hl(0, "qfSeparator1", { fg = code[6] })
@@ -233,14 +232,19 @@ hl(0, "Structure", { fg = code[8] })
 hl(0, "Macro", { fg = code[1] })
 hl(0, "PreProc", { fg = code[6] })
 
--- comment
+-- Comment
 hl(0, "@comment.documentation", { fg = ui.fg[7] })
 hl(0, "@lsp.type.event", { fg = ui.fg[7] })
 hl(0, "@lsp.typemod.keyword.documentation", { fg = ui.fg[7] })
 
+hl(0, "@keyword.modifier", { fg = code[6] })
 hl(0, "@lsp.type.property", { fg = code[4] })
 
 hl(0, "@constructor", { fg = code[2] })
 hl(0, "@variable", { fg = code[5] })
 
 hl(0, "@lsp.type", { fg = code[8] })
+
+-- Rust
+hl(0, "@lsp.type.selfKeyword", { fg = code[2] })
+hl(0, "@lsp.type.macro", { fg = code[3] })

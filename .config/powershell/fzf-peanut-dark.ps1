@@ -1,23 +1,23 @@
 $palette = @{
-	fg        = "#d5cbb8" # main text color
-	bg        = "#312c29" # panel background
+	fg        = "#8a9aa1" # main text color
+	bg        = "#141618" # panel background
 	hl        = "#d4a76d" # match highlight (search match)
-	fgPlus    = "#e2d8c0" # selected line fg (bright)
-	bgPlus    = "#463f3b" # selected line background (active)
-	hlPlus    = "#e5bf90" # selected match highlight (search current)
+	fgPlus    = "#b0c5cb" # selected line fg (bright)
+	bgPlus    = "#1e262a" # selected line background (active)
+	hlPlus    = "#e6b17f" # selected match highlight (search current)
 	info      = "#6ca3ca" # info line
-	prompt    = "#bdb49f" # prompt symbol (bright)
-	pointer   = "#e5bf90" # current selection arrow (search current)
+	prompt    = "#8a9aa1" # prompt symbol (bright)
+	pointer   = "#e6b17f" # current selection arrow (search current)
 	marker    = "#d4a76d" # multi-select marker (search match)
 	spinner   = "#1e2a30" # spinner while searching (muted)
-	header    = "#e2d8c0" # header lines (bright)
-	border    = "#463f3b" # border color (subtle edge)
-	label     = "#bdb49f" # panel titles (bright)
+	header    = "#b0c5cb" # header lines (bright)
+	border    = "#1e262a" # border color (subtle edge)
+	label     = "#8a9aa1" # panel titles (bright)
 	query     = "#d4a76d" # search text (main fg)
-	gutter    = "#312c29" # pointer area (bg)
-	separator = "#463f3b" # line between list and prompt (border)
-	scrollbar = "#463f3b" # scroll bar in search list (active)
-	disabled  = "#574f4d" # disabled/nontext
+	gutter    = "#141618" # pointer area (bg)
+	separator = "#1e262a" # line between list and prompt (border)
+	scrollbar = "#1e262a" # scroll bar in search list (active)
+	disabled  = "#626e72" # disabled/nontext
 }
 
 $env:FZF_DEFAULT_OPTS = @"
