@@ -23,21 +23,21 @@ local ui = {
 }
 
 local msg = {
-	"#e07660", -- 1: error
-	"#d9a858", -- 2: warn
-	"#6ca3ca", -- 3: info (more)
-	"#8eb199", -- 4: hint (mode)
-	"#e07660", -- 5: spell
+	"#c8826f", -- 1: error
+	"#c29e68", -- 2: warn
+	"#7a94ab", -- 3: info (more)
+	"#8a9e8e", -- 4: hint (mode)
+	"#c8826f", -- 5: spell
 }
 
 local search = {
 	bg = {
-		"#3a3628", -- 1: match
-		"#453f2c", -- 2: current
+		"#353129", -- 1: match
+		"#3e382c", -- 2: current
 	},
 	fg = {
-		"#d4a76d", -- 1: match
-		"#e5bf90", -- 2: current
+		"#bfa070", -- 1: match
+		"#d0b185", -- 2: current
 	},
 }
 
@@ -50,11 +50,11 @@ local lsp = {
 		"#232d25", -- 5: ok
 	},
 	fg = {
-		"#e07660", -- 1: error
-		"#d9a858", -- 2: warn
-		"#6ca3ca", -- 3: info
-		"#8eb199", -- 4: hint
-		"#7cb589", -- 5: ok
+		"#c8826f", -- 1: error
+		"#c29e68", -- 2: warn
+		"#7a94ab", -- 3: info
+		"#8a9e8e", -- 4: hint
+		"#7a9e85", -- 5: ok
 	},
 }
 
@@ -66,10 +66,10 @@ local vcs = {
 		"#2d251a", -- 4: changed text
 	},
 	fg = {
-		"#7cb589", -- 1: add
-		"#6ca3ca", -- 2: change
-		"#e07660", -- 3: delete
-		"#c99d67", -- 4: changed text
+		"#7a9e85", -- 1: add
+		"#7a94ab", -- 2: change
+		"#c8826f", -- 3: delete
+		"#b8936a", -- 4: changed text
 	},
 }
 

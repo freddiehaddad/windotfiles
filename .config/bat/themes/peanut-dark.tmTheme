@@ -28,9 +28,9 @@
 				<key>lineHighlight</key>
 				<string>#1b2123</string>
 				<key>selection</key>
-				<string>#3a3628</string>
+				<string>#353129</string>
 				<key>selectionBorder</key>
-				<string>#453f2c</string>
+				<string>#3e382c</string>
 				<key>guide</key>
 				<string>#181b1d</string>
 				<key>activeGuide</key>
@@ -38,11 +38,11 @@
 				<key>stackGuide</key>
 				<string>#181b1d</string>
 				<key>findHighlight</key>
-				<string>#3a3628</string>
+				<string>#353129</string>
 				<key>findHighlightForeground</key>
-				<string>#d4a76d</string>
+				<string>#bfa070</string>
 				<key>misspelling</key>
-				<string>#e07660</string>
+				<string>#c8826f</string>
 			</dict>
 		</dict>
 		<dict>
@@ -320,7 +320,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#6ca3ca</string>
+				<string>#7a94ab</string>
 				<key>fontStyle</key>
 				<string>underline</string>
 			</dict>
@@ -389,7 +389,7 @@
 				<key>background</key>
 				<string>#232d25</string>
 				<key>foreground</key>
-				<string>#7cb589</string>
+				<string>#7a9e85</string>
 			</dict>
 		</dict>
 		<dict>
@@ -402,7 +402,7 @@
 				<key>background</key>
 				<string>#2d211f</string>
 				<key>foreground</key>
-				<string>#e07660</string>
+				<string>#c8826f</string>
 			</dict>
 		</dict>
 		<dict>
@@ -415,7 +415,7 @@
 				<key>background</key>
 				<string>#1e2a30</string>
 				<key>foreground</key>
-				<string>#6ca3ca</string>
+				<string>#7a94ab</string>
 			</dict>
 		</dict>
 		<dict>
