@@ -86,6 +86,9 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 # Set the main FZF theme
 . "$env:USERPROFILE\.config\powershell\fzf-peanut-dark.ps1"
 
+# Load FZF functions
+. "$env:USERPROFILE\.config\powershell\fzf-functions.ps1"
+
 # Set Powershell theme
 . "$env:USERPROFILE\.config\powershell\pwsh-peanut-dark.ps1"
 
