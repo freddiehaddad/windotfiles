@@ -7,86 +7,83 @@ vim.g.colors_name = "peanut dark"
 
 local ui = {
 	bg = {
-		"#141618", -- 1: base background
-		"#181b1d", -- 2: inactive tabs, window splits
-		"#1b2123", -- 3: statuslines, cursorline
-		"#272e31", -- 4: menus, popups, active tabs
-		"#303a3e", -- 5: menu hover, active tabs
+		"#161a1f", -- 1: dark
+		"#1e242b", -- 2: darker
+		"#1e2836", -- 3: normal
+		"#2b394d", -- 4: bright
 	},
 	fg = {
-		"#8a9aa1", -- 1: primary, statusline, menu text, active tabs
-		"#b0c5cb", -- 2: labels, secondary menu items
-		"#626e72", -- 3: inactive tabs, disabled items
-		"#343d41", -- 4: line/fold gutter text
-		"#e2d8c0", -- 5: titles, emphasized
+		"#374250", -- 1: dark
+		"#424f5f", -- 2: darker
+		"#4e5e71", -- 3: normal
+		"#60738a", -- 4: bright
+		"#788aa1", -- 5: brighter
 	},
 }
 
 local msg = {
-	"#c8826f", -- 1: error
-	"#c29e68", -- 2: warn
-	"#7a94ab", -- 3: info (more)
-	"#8a9e8e", -- 4: hint (mode)
-	"#c8826f", -- 5: spell
+	"#ff5c80", -- 1: error
+	"#b0a347", -- 2: warn
+	"#00c4d6", -- 3: more (info)
+	"#2bc9a8", -- 4: mode (hint)
+	"#ff5c80", -- 5: spell
 }
 
 local search = {
 	bg = {
-		"#353129", -- 1: match
-		"#3e382c", -- 2: current
+		"#003d54", -- 1: match
+		"#7a3212", -- 2: current
+		"#3d4f1a", -- 3: selection
 	},
 	fg = {
-		"#bfa070", -- 1: match
-		"#d0b185", -- 2: current
+		"#00b0f7", -- 1: match
+		"#ff8d4d", -- 2: current
+		"#b8e05c", -- 3: selection
 	},
 }
 
 local lsp = {
 	bg = {
-		"#2d211f", -- 1: error
-		"#2d2519", -- 2: warn
-		"#1e2a30", -- 3: info
-		"#222a24", -- 4: hint
-		"#232d25", -- 5: ok
+		"#7a1c2e", -- 1: error
+		"#4a4012", -- 2: warn
+		"#004750", -- 3: info
+		"#0d473c", -- 4: hint
+		"#175717", -- 5: ok
 	},
 	fg = {
-		"#c8826f", -- 1: error
-		"#c29e68", -- 2: warn
-		"#7a94ab", -- 3: info
-		"#8a9e8e", -- 4: hint
-		"#7a9e85", -- 5: ok
+		"#ff5c80", -- 1: error
+		"#b0a347", -- 2: warn
+		"#00c4d6", -- 3: info
+		"#2bc9a8", -- 4: hint
+		"#40e040", -- 5: ok
 	},
 }
 
 local vcs = {
 	bg = {
-		"#232d25", -- 1: add
-		"#1e2a30", -- 2: change
-		"#2d211f", -- 3: delete
-		"#2d251a", -- 4: changed text
+		"#1a4f30", -- 1: add
+		"#56420e", -- 2: change
+		"#7a2e1c", -- 3: delete
+		"#522666", -- 4: changed text
 	},
 	fg = {
-		"#7a9e85", -- 1: add
-		"#7a94ab", -- 2: change
-		"#c8826f", -- 3: delete
-		"#b8936a", -- 4: changed text
+		"#4dd085", -- 1: add
+		"#d6af47", -- 2: change
+		"#ff7a5c", -- 3: delete
+		"#d171f7", -- 4: changed text
 	},
 }
 
 local code = {
-	"#8faac8", -- 1: constants, numbers, booleans, macros
-	"#9a8f7f", -- 2: keywords, constructors
-	"#b89c68", -- 3: functions, method names
-	"#c5bfb0", -- 4: properties, fields, parameters
-	"#bfac88", -- 5: identifiers, plain variables
-	"#665a50", -- 6: operators, punctuation, delimiters
-	"#3e4e57", -- 7: comments, nontext
-	"#828b98", -- 8: types, type annotations
-	"#e6dcc6", -- 9: emphasis
+	"#0099cc", -- 1: keywords (if, match, return, mut, ref, unsafe)
+	"#b85fcc", -- 2: types & functions (struct, enum, trait, impl, fn names)
+	"#4d555e", -- 3: muted (comments, doc comments, delimiters)
+	"#9da3a6", -- 4: base foreground (variables, operators, punctuation)
+	"#a7a59c", -- 5: emphasized (strings, numbers, constants, macros)
 }
 
 -- UI
-hl(0, "Normal", { bg = ui.bg[1], fg = ui.fg[1] })
+hl(0, "Normal", { bg = ui.bg[1], fg = ui.fg[3] })
 hl(0, "Title", { fg = ui.fg[5] })
 
 hl(0, "Error", { fg = msg[1] })
@@ -94,10 +91,10 @@ hl(0, "ErrorMsg", { fg = msg[1] })
 hl(0, "WarningMsg", { fg = msg[2] })
 hl(0, "MoreMsg", { fg = msg[3] })
 hl(0, "ModeMsg", { fg = msg[3] })
-hl(0, "Question", { fg = msg[3] })
-hl(0, "Directory", { fg = msg[3] })
+hl(0, "Question", { fg = msg[2] })
+hl(0, "Directory", { fg = msg[2] })
 
-hl(0, "Visual", { bg = search.bg[1], fg = search.fg[1] })
+hl(0, "Visual", { bg = search.bg[3], fg = search.fg[3] })
 -- VisualNOS
 
 hl(0, "Search", { bg = search.bg[1], fg = search.fg[1] })
@@ -111,50 +108,50 @@ hl(0, "Cursor", { bg = ui.fg[1], fg = ui.bg[1] })
 -- hl(0, "lCursor", { bg = ui.bg.cursor, fg = ui.fg.cursor })
 -- CursorIM
 
-hl(0, "CursorLine", { bg = ui.bg[3] })
-hl(0, "CursorLineNr", { bg = ui.bg[3], fg = ui.fg[1] })
-hl(0, "CursorLineSign", { bg = ui.bg[3] })
-hl(0, "CursorLineFold", { bg = ui.bg[3], fg = ui.fg[3] })
+hl(0, "CursorLine", { bg = ui.bg[2] })
+hl(0, "CursorLineNr", { bg = ui.bg[2], fg = search.fg[2] })
+hl(0, "CursorLineSign", { bg = ui.bg[2] })
+hl(0, "CursorLineFold", { bg = ui.bg[2], fg = ui.fg[1] })
 
-hl(0, "CursorColumn", { bg = ui.bg[3] })
+hl(0, "CursorColumn", { bg = ui.bg[2] })
 hl(0, "ColorColumn", { bg = ui.bg[2] })
 
 hl(0, "LineNr", { fg = ui.fg[1] })
-hl(0, "LineNrAbove", { fg = ui.fg[4] })
-hl(0, "LineNrBelow", { fg = ui.fg[4] })
+hl(0, "LineNrAbove", { fg = ui.fg[1] })
+hl(0, "LineNrBelow", { fg = ui.fg[1] })
 
-hl(0, "NormalFloat", { bg = ui.bg[4] })
-hl(0, "Pmenu", { bg = ui.bg[4], fg = ui.fg[1] })
-hl(0, "PmenuSel", { bg = ui.bg[5] })
-hl(0, "PmenuThumb", { bg = ui.bg[5] })
-hl(0, "PmenuExtra", { fg = ui.fg[2] })
+hl(0, "NormalFloat", { bg = ui.bg[3] })
+hl(0, "Pmenu", { bg = ui.bg[3], fg = ui.fg[4] })
+hl(0, "PmenuSel", { bg = ui.bg[4] })
+hl(0, "PmenuThumb", { bg = ui.bg[4] })
+hl(0, "PmenuExtra", { fg = ui.fg[1] })
 -- PmenuExtraSel
-hl(0, "PmenuKind", { fg = ui.fg[2] })
+hl(0, "PmenuKind", { fg = ui.fg[1] })
 -- PmenuKindSel
 -- PmenuMatch
 -- PmenuMatchSel
 -- PmenuSbar
 hl(0, "WildMenu", { bg = search.bg[1], fg = search.fg[2] })
 
-hl(0, "Folded", { bg = ui.bg[2], fg = ui.fg[3] })
-hl(0, "FoldColumn", { fg = ui.fg[4] })
+hl(0, "Folded", { bg = ui.bg[3], fg = ui.fg[5] })
+hl(0, "FoldColumn", { fg = ui.fg[1] })
 
-hl(0, "TabLine", { bg = ui.bg[2], fg = ui.fg[3] })
-hl(0, "TabLineFill", { bg = ui.bg[2] })
-hl(0, "TabLineSel", { bg = ui.bg[4], fg = ui.fg[1] })
+hl(0, "TabLine", { bg = ui.bg[1], fg = ui.fg[2] })
+hl(0, "TabLineFill", { bg = ui.bg[1] })
+hl(0, "TabLineSel", { bg = ui.bg[3], fg = ui.fg[4] })
 
-hl(0, "StatusLine", { bg = ui.bg[3], fg = ui.fg[1] })
-hl(0, "StatusLineNC", { bg = ui.bg[3], fg = ui.fg[3] })
+hl(0, "StatusLine", { bg = ui.bg[1], fg = ui.fg[4] })
+hl(0, "StatusLineNC", { bg = ui.bg[1], fg = ui.fg[2] })
 -- StatusLineTerm
 -- StatusLineTermNC
-hl(0, "WinSeparator", { fg = ui.bg[2] })
+hl(0, "WinSeparator", { fg = ui.bg[1] })
 
 -- QuickFix
-hl(0, "QuickFixLine", { bg = ui.bg[4] })
+hl(0, "QuickFixLine", { bg = ui.bg[2] })
 hl(0, "qfLineNr", { fg = ui.fg[3] })
-hl(0, "qfText", { fg = code[1] })
-hl(0, "qfSeparator1", { fg = code[6] })
-hl(0, "qfSeparator2", { fg = code[6] })
+hl(0, "qfText", { fg = ui.fg[4] })
+hl(0, "qfSeparator1", { fg = ui.fg[1] })
+hl(0, "qfSeparator2", { fg = ui.fg[1] })
 
 -- LSP
 -- DiagnosticDeprecated
@@ -163,11 +160,11 @@ hl(0, "DiagnosticWarn", { fg = lsp.fg[2] })
 hl(0, "DiagnosticInfo", { fg = lsp.fg[3] })
 hl(0, "DiagnosticHint", { fg = lsp.fg[4] })
 hl(0, "DiagnosticOk", { fg = lsp.fg[5] })
--- DiagnosticFloatingError
--- DiagnosticFloatingWarn
--- DiagnosticFloatingInfo
--- DiagnosticFloatingHint
--- DiagnosticFloatingOk
+hl(0, "DiagnosticFloatingError", { fg = lsp.fg[1], bg = lsp.bg[1] })
+hl(0, "DiagnosticFloatingWarn", { fg = lsp.fg[2], bg = lsp.bg[2] })
+hl(0, "DiagnosticFloatingInfo", { fg = lsp.fg[3], bg = lsp.bg[3] })
+hl(0, "DiagnosticFloatingHint", { fg = lsp.fg[4], bg = lsp.bg[4] })
+hl(0, "DiagnosticFloatingOk", { fg = lsp.fg[5], bg = lsp.bg[5] })
 -- DiagnosticSignError
 -- DiagnosticSignWarn
 -- DiagnosticSignInfo
@@ -205,46 +202,40 @@ hl(0, "DiffDelete", { bg = vcs.bg[3], fg = vcs.fg[3] })
 hl(0, "DiffText", { bg = vcs.bg[4], fg = vcs.fg[4] })
 
 -- Syntax
-hl(0, "Todo", { fg = ui.fg[2] })
-hl(0, "Comment", { fg = code[7] })
-
-hl(0, "Identifier", { fg = code[5] })
-hl(0, "Variable", { fg = code[5] })
+hl(0, "Comment", { fg = code[3] })
+hl(0, "Identifier", { fg = code[4] })
+hl(0, "Variable", { fg = code[4] })
 hl(0, "Property", { fg = code[4] })
 hl(0, "Field", { fg = code[4] })
-hl(0, "Function", { fg = code[3] })
-hl(0, "Keyword", { fg = code[2] })
+hl(0, "Function", { fg = code[2] })
+hl(0, "Keyword", { fg = code[1] })
 hl(0, "Include", { fg = code[1] })
 hl(0, "Statement", { fg = code[1] })
-hl(0, "Operator", { fg = code[6] })
-hl(0, "Special", { fg = code[2] })
-hl(0, "Delimiter", { fg = code[6] })
-hl(0, "Boolean", { fg = code[1] })
-hl(0, "Character", { fg = code[1] })
-hl(0, "Constant", { fg = code[1] })
-hl(0, "Number", { fg = code[1] })
-hl(0, "Float", { fg = code[1] })
-hl(0, "String", { fg = code[1] })
-hl(0, "Type", { fg = code[8] })
-hl(0, "Typedef", { fg = code[8] })
+hl(0, "Operator", { fg = code[4] })
+hl(0, "Special", { fg = code[5] })
+hl(0, "Delimiter", { fg = code[3] })
+hl(0, "Boolean", { fg = code[5] })
+hl(0, "Character", { fg = code[5] })
+hl(0, "Constant", { fg = code[5] })
+hl(0, "Number", { fg = code[5] })
+hl(0, "Float", { fg = code[5] })
+hl(0, "String", { fg = code[5] })
+hl(0, "Type", { fg = code[2] })
+hl(0, "Typedef", { fg = code[2] })
 hl(0, "Constructor", { fg = code[2] })
-hl(0, "Structure", { fg = code[8] })
-hl(0, "Macro", { fg = code[1] })
-hl(0, "PreProc", { fg = code[6] })
+hl(0, "Structure", { fg = code[2] })
+hl(0, "Macro", { fg = code[5] })
+hl(0, "PreProc", { fg = code[1] })
 
--- Comment
-hl(0, "@comment.documentation", { fg = ui.fg[7] })
-hl(0, "@lsp.type.event", { fg = ui.fg[7] })
-hl(0, "@lsp.typemod.keyword.documentation", { fg = ui.fg[7] })
+-- Treesitter tokens
+hl(0, "@variable", { fg = code[4] })
 
-hl(0, "@keyword.modifier", { fg = code[6] })
+-- LSP semantic tokens
+hl(0, "@lsp.type.const", { fg = code[5] })
+hl(0, "@lsp.type.macro", { fg = code[5] })
+hl(0, "@lsp.type.method", { fg = code[2] })
+hl(0, "@lsp.type.namespace", { fg = code[4] })
+hl(0, "@lsp.type.parameter", { fg = code[4] })
 hl(0, "@lsp.type.property", { fg = code[4] })
-
-hl(0, "@constructor", { fg = code[2] })
-hl(0, "@variable", { fg = code[5] })
-
-hl(0, "@lsp.type", { fg = code[8] })
-
--- Rust
-hl(0, "@lsp.type.selfKeyword", { fg = code[2] })
-hl(0, "@lsp.type.macro", { fg = code[3] })
+hl(0, "@lsp.type.selfKeyword", { fg = code[1] })
+hl(0, "@lsp.type.struct", { fg = code[2] })

@@ -15,7 +15,7 @@ vim.opt.smartcase = true
 
 vim.opt.cursorline = true
 
-vim.opt.foldcolumn = "1"
+vim.opt.foldcolumn = "0"
 vim.opt.foldlevel = 99
 
 vim.opt.number = true
