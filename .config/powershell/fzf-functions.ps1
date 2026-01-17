@@ -11,7 +11,7 @@
 .EXAMPLE
     vf *.lua
 #>
-function vf {
+function Invoke-FuzzyEditor {
 	param(
 		[string]$Filter = "*"
 	)
@@ -29,3 +29,5 @@ function vf {
 		$ $env:EDITOR $selection
 	}
 }
+
+Set-Alias -Name vfe -Value Invoke-FuzzyEditor
