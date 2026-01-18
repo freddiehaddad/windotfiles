@@ -127,6 +127,8 @@ provide the steps to install and configure third-party software.
    Download and install the
    [SeriousShanns Nerd Font](https://github.com/kaBeech/serious-shanns).
 
+   > I'm using [Comic Code](https://tosche.net/fonts/comic-code) which is a commercial font now.
+
    ```console
    winget install --id Microsoft.PowerShell
    winget install --id Starship.Starship
@@ -135,7 +137,6 @@ provide the steps to install and configure third-party software.
    winget install --id ajeetdsouza.zoxide
    winget install --id junegunn.fzf
    winget install --id BurntSushi.ripgrep.MSVC
-   winget install --id wez.wezterm
    ```
 
 1. Neovim Configuration
@@ -146,7 +147,6 @@ provide the steps to install and configure third-party software.
    winget install --id Rustlang.Rustup
    winget install --id OpenJS.NodeJS.LTS
    winget install --id Python.Python.3.12
-   winget install --id GoLang.Go
    ```
 
    After installing the BuildTools, open Visual Studio Installer, click Modify
@@ -166,22 +166,9 @@ provide the steps to install and configure third-party software.
    cargo install tree-sitter-cli
    ```
 
-1. Install `mdformat` and plugins:
-
-   ```console
-   pip install --user pipx
-   pipx install mdformat
-   pipx inject mdformat mdformat-gfm mdformat-frontmatter mdformat-footnote mdformat-gfm-alerts
-   ```
-
-   See the
-   [documention](https://rust-lang.github.io/rustup/installation/windows.html)
-   for rustup on configuring the default host for CodeLLDB debugger support.
-
 1. Additional Packages
 
    ```console
-   winget install openrgb
    winget inatall --id Nvidia.GeForceExperience
    winget install --id Logitech.GHUB
    winget install --id Microsoft.PowerToys
