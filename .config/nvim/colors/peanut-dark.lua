@@ -7,17 +7,17 @@ vim.g.colors_name = "peanut dark"
 
 local ui = {
 	bg = {
-		"#161a1f", -- 1: dark
-		"#1e242b", -- 2: darker
-		"#1e2836", -- 3: normal
-		"#2b394d", -- 4: bright
+		"#161a1f", -- 1: 100
+		"#1e242b", -- 2: 200
+		"#1e2836", -- 3: 300
+		"#2b394d", -- 4: 400
 	},
 	fg = {
-		"#374250", -- 1: dark
-		"#424f5f", -- 2: darker
-		"#4e5e71", -- 3: normal
-		"#60738a", -- 4: bright
-		"#788aa1", -- 5: brighter
+		"#465056", -- 1: 100
+		"#556067", -- 2: 200
+		"#637079", -- 3: 300
+		"#76848f", -- 4: 400
+		"#8d99a2", -- 5: 500
 	},
 }
 
@@ -121,12 +121,12 @@ hl(0, "LineNrAbove", { fg = ui.fg[1] })
 hl(0, "LineNrBelow", { fg = ui.fg[1] })
 
 hl(0, "NormalFloat", { bg = ui.bg[3] })
-hl(0, "Pmenu", { bg = ui.bg[3], fg = ui.fg[4] })
+hl(0, "Pmenu", { bg = ui.bg[3], fg = ui.fg[5] })
 hl(0, "PmenuSel", { bg = ui.bg[4] })
 hl(0, "PmenuThumb", { bg = ui.bg[4] })
-hl(0, "PmenuExtra", { fg = ui.fg[1] })
+hl(0, "PmenuExtra", { fg = code[1] })
+hl(0, "PmenuKind", { fg = code[2] })
 -- PmenuExtraSel
-hl(0, "PmenuKind", { fg = ui.fg[1] })
 -- PmenuKindSel
 -- PmenuMatch
 -- PmenuMatchSel
@@ -148,10 +148,10 @@ hl(0, "WinSeparator", { fg = ui.bg[1] })
 
 -- QuickFix
 hl(0, "QuickFixLine", { bg = ui.bg[2] })
-hl(0, "qfLineNr", { fg = ui.fg[3] })
-hl(0, "qfText", { fg = ui.fg[4] })
-hl(0, "qfSeparator1", { fg = ui.fg[1] })
-hl(0, "qfSeparator2", { fg = ui.fg[1] })
+hl(0, "qfLineNr", { fg = code[4] })
+hl(0, "qfText", { fg = code[2] })
+hl(0, "qfSeparator1", { fg = code[3] })
+hl(0, "qfSeparator2", { fg = code[3] })
 
 -- LSP
 -- DiagnosticDeprecated

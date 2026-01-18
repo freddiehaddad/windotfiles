@@ -67,7 +67,40 @@ require("blink.cmp").setup({
 		["<C-k>"] = { "show", "show_documentation", "hide_documentation" },
 		["<C-e>"] = { "hide", "show" },
 	},
+	appearance = {
+		kind_icons = {
+			Text = "¶", -- U+00B6 (Pilcrow)
+			Method = "ƒ", -- U+0192 (Function symbol)
+			Function = "λ", -- U+03BB (Lambda)
+			Constructor = "⚙", -- U+2699 (Gear)
+
+			Field = "□", -- U+25FB (White square)
+			Variable = "x", -- Standard ASCII
+			Property = "☖", -- U+2616 (Shogi piece)
+
+			Class = "◈", -- U+25C8 (Diamond)
+			Interface = "◇", -- U+25C7 (Empty diamond)
+			Struct = "◪", -- U+25EA (Square with half-fill)
+			Module = "📦", -- U+1F4E6 (Package emoji)
+
+			Unit = "⏀", -- U+23C0 (Unit)
+			Value = "v", -- Standard ASCII
+			Enum = "≡", -- U+2261 (Equivalent)
+			EnumMember = "•", -- U+2022 (Bullet)
+
+			Keyword = "🔑", -- U+1F511 (Key emoji)
+			Constant = "π", -- U+03C0 (Pi)
+
+			Snippet = "⁁", -- U+2041 (Caret insertion)
+			Color = "🎨", -- U+1F3A8 (Palette emoji)
+			File = "📄", -- U+1F4C4 (Page)
+			Reference = "🔗", -- U+1F517 (Link)
+			Folder = "📁", -- U+1F4C1 (Folder)
+			Event = "⚡", -- U+26A1 (High voltage)
+			Operator = "±", -- U+00B1 (Plus-minus)
+			TypeParameter = "T", -- Standard ASCII
+		},
+	},
 })
 
 vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })
-

@@ -1,23 +1,23 @@
 $palette = @{
-	fg        = "#4e5e71" # ui.fg[3] - main text color
+	fg        = "#637079" # ui.fg[3] - main text color
 	bg        = "#1e2836" # ui.bg[3] - panel background
 	hl        = "#00b0f7" # search.fg[1] - match highlight (search match)
-	fgPlus    = "#788aa1" # ui.fg[5] - selected line fg (bright)
+	fgPlus    = "#8d99a2" # ui.fg[5] - selected line fg (bright)
 	bgPlus    = "#2b394d" # ui.bg[4] - selected line background (active)
 	hlPlus    = "#ff8d4d" # search.fg[2] - selected match highlight (search current)
 	info      = "#00c4d6" # msg[3] - info line
-	prompt    = "#60738a" # ui.fg[4] - prompt symbol (bright)
+	prompt    = "#76848f" # ui.fg[4] - prompt symbol (bright)
 	pointer   = "#ff8d4d" # search.fg[2] - current selection arrow (search current)
 	marker    = "#00b0f7" # search.fg[1] - multi-select marker (search match)
-	spinner   = "#374250" # ui.fg[1] - spinner while searching (muted)
-	header    = "#788aa1" # ui.fg[5] - header lines (bright)
+	spinner   = "#465056" # ui.fg[1] - spinner while searching (muted)
+	header    = "#8d99a2" # ui.fg[5] - header lines (bright)
 	border    = "#2b394d" # ui.bg[4] - border color (subtle edge)
-	label     = "#788aa1" # ui.fg[5] - panel titles (bright)
-	query     = "#4e5e71" # ui.fg[3] - search text (main fg)
+	label     = "#8d99a2" # ui.fg[5] - panel titles (bright)
+	query     = "#637079" # ui.fg[3] - search text (main fg)
 	gutter    = "#1e2836" # ui.bg[3] - pointer area (bg)
 	separator = "#2b394d" # ui.bg[4] - line between list and prompt (border)
 	scrollbar = "#2b394d" # ui.bg[4] - scroll bar in search list (active)
-	disabled  = "#424f5f" # ui.fg[2] - disabled/nontext
+	disabled  = "#556067" # ui.fg[2] - disabled/nontext
 }
 
 $env:FZF_DEFAULT_OPTS = @"
