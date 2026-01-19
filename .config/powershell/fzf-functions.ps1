@@ -23,10 +23,10 @@ function Invoke-FuzzyEditor {
 		return
 	}
 
-	$selection = (Get-ChildItem -Recurse -File -Filter $Filter -ErrorAction SilentlyContinue).FullName | fzf --height 100% --preview "bat -n --color always {}"
+	$selection = & rg --files --glob $Filter | fzf --height 100% --preview "bat -n --color always {}"
 
 	if ($selection) {
-		$ $env:EDITOR $selection
+		& $env:EDITOR $selection
 	}
 }
 
