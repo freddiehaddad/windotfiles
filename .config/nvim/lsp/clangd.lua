@@ -14,7 +14,7 @@ return {
 		"--log=verbose",
 		"--pretty",
 	},
-	filetypes = { "c", "cpp", "h" },
+	filetypes = { "c", "cpp" },
 	root_markers = { ".git", ".clangd", "compile_commands.json" },
 	settings = {
 		Lua = {

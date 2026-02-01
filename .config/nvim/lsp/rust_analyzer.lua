@@ -21,15 +21,15 @@ return {
 					-- Verify it is a floating window
 					if vim.api.nvim_win_get_config(win).relative ~= "" then
 						vim.wo[win].sidescrolloff = 0
-						vim.wo[win].wrap = true
+						-- vim.wo[win].wrap = false
 					end
 				end,
 			})
 
 			-- Trigger the request
 			vim.lsp.buf.hover({
-				max_width = 80,
-				wrap = true,
+				max_width = 100,
+				wrap = false,
 			})
 		end, { buffer = bufnr, desc = "vim.lsp.buf.hover()" })
 	end,

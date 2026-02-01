@@ -25,7 +25,8 @@ vim.opt.sidescrolloff = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.opt.statuscolumn = "%C %s%=%{v:relnum==0 ? v:lnum : v:relnum} "
+vim.opt.fillchars:append({ vert = " " })
+vim.opt.statuscolumn = "%s%=%{v:relnum==0 ? v:lnum : v:relnum} "
 
 -- Windows shell setup
 if vim.fn.has("win32") == 1 then
@@ -68,7 +69,15 @@ require("blink.cmp").setup({
 		["<C-e>"] = { "hide", "show" },
 	},
 	appearance = {
-		nerd_font_variant = 'normal', -- use mono for Nerd Font Mono font
+		nerd_font_variant = "normal", -- use mono for Nerd Font Mono font
+	},
+})
+
+require("mini.pairs").setup({
+	mappings = {
+		["<"] = { action = "open", pair = "<>", neigh_pattern = "[%a:]." },
+		[">"] = { action = "close", pair = "<>", neigh_pattern = "[^\\]." },
+		["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^<&]." },
 	},
 })
 

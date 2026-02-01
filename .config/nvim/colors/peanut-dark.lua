@@ -83,7 +83,7 @@ local code = {
 }
 
 -- UI
-hl(0, "Normal", { bg = ui.bg[1], fg = ui.fg[3] })
+hl(0, "Normal", { fg = ui.fg[3] })
 hl(0, "Title", { fg = ui.fg[5] })
 
 hl(0, "Error", { fg = msg[1] })
@@ -140,8 +140,8 @@ hl(0, "TabLine", { bg = ui.bg[1], fg = ui.fg[2] })
 hl(0, "TabLineFill", { bg = ui.bg[1] })
 hl(0, "TabLineSel", { bg = ui.bg[3], fg = ui.fg[4] })
 
-hl(0, "StatusLine", { bg = ui.bg[1], fg = ui.fg[4] })
-hl(0, "StatusLineNC", { bg = ui.bg[1], fg = ui.fg[2] })
+hl(0, "StatusLine", { fg = ui.fg[4] })
+hl(0, "StatusLineNC", { fg = ui.fg[2] })
 -- StatusLineTerm
 -- StatusLineTermNC
 hl(0, "WinSeparator", { fg = ui.bg[1] })
