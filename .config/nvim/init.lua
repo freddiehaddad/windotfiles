@@ -15,7 +15,7 @@ vim.opt.smartcase = true
 
 vim.opt.cursorline = true
 
-vim.opt.foldcolumn = "0"
+vim.opt.foldcolumn = "auto:1"
 vim.opt.foldlevel = 99
 
 vim.opt.number = true
@@ -25,8 +25,8 @@ vim.opt.sidescrolloff = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.opt.fillchars:append({ vert = " " })
-vim.opt.statuscolumn = "%s%=%{v:relnum==0 ? v:lnum : v:relnum} "
+vim.opt.fillchars:append({ eob = " ", foldclose = "󰅂", foldopen = "󰅀", foldsep = " ", vert = " " })
+vim.opt.statuscolumn = "%c %s%=%{v:relnum==0 ? v:lnum : v:relnum} "
 
 -- Windows shell setup
 if vim.fn.has("win32") == 1 then
