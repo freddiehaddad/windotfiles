@@ -1,7 +1,5 @@
 ---@diagnostic disable: undefined-global
 
-vim.cmd.colorscheme("peanut-dark")
-
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 
@@ -15,8 +13,9 @@ vim.opt.smartcase = true
 
 vim.opt.cursorline = true
 
-vim.opt.foldcolumn = "auto:1"
 vim.opt.foldlevel = 99
+vim.opt.foldtext =
+	[['󰅂 '.getline(v:foldstart).' ... '.trim(getline(v:foldend)).' | '.(v:foldend-v:foldstart+1).' lines']]
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -25,8 +24,8 @@ vim.opt.sidescrolloff = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.opt.fillchars:append({ eob = " ", foldclose = "󰅂", foldopen = "󰅀", foldsep = " ", vert = " " })
-vim.opt.statuscolumn = "%c %s%=%{v:relnum==0 ? v:lnum : v:relnum} "
+vim.opt.fillchars:append({ eob = " ", fold = " ", foldclose = "󰅂", foldopen = "󰅀", foldsep = " ", vert = " " })
+vim.opt.statuscolumn = "%s%=%{v:relnum==0 ? v:lnum : v:relnum} "
 
 -- Windows shell setup
 if vim.fn.has("win32") == 1 then
@@ -80,5 +79,12 @@ require("mini.pairs").setup({
 		["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^<&]." },
 	},
 })
+
+require("ayu").setup({
+	overrides = {
+		Comment = { italic = false },
+	},
+})
+vim.cmd.colorscheme("ayu")
 
 vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })

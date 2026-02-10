@@ -78,13 +78,13 @@ function lt {
 Set-Alias -Name cat -Value bat
 
 $env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
-$env:BAT_THEME="peanut-dark"
+$env:BAT_THEME="ayu-dark"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
-. "$env:USERPROFILE\.config\powershell\fzf-peanut-dark.ps1"
+. "$env:USERPROFILE\.config\powershell\fzf-ayu-dark.ps1"
 
 # Load FZF functions
 . "$env:USERPROFILE\.config\powershell\fzf-functions.ps1"
