@@ -1,0 +1,48 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "scrollbar": {
+    "axes": {
+      "horizontal": false,
+      "vertical": false,
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "buffer_font_family": "Comic Code",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "experimental.theme_overrides": {
+    "background": "#0a0e14ff",
+    "editor.background": "#0a0e14ff",
+    "editor.gutter.background": "#0a0e14ff",
+    "border": "#0a0e14ff",
+    "pane_group.border": "#0a0e14ff",
+    "border.variant": "#0a0e14ff",
+    "title_bar.background": "#0a0e14ff",
+    "status_bar.background": "#0a0e14ff",
+  },
+}

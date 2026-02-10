@@ -216,3 +216,12 @@ provide the steps to install and configure third-party software.
    ExclusionPath : {C:\, S:\, T:\}
    ExclusionProcess: {git.exe, nvim.exe, pwsh.exe, starship.exe}
    ```
+
+1. Zed
+   1.  Press Win + X and select System.
+   1.  Click Advanced system settings.
+   1.  Click Environment Variables.
+   1.  Under User variables, click New...
+       * Variable name: `ZED_CONFIG_DIR`
+       * Variable value: `S:\projects\git\windotfiles\.config\zed`
+   1.  Click OK and restart your terminal/Zed.
