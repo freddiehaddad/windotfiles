@@ -31,7 +31,7 @@ rustup completions powershell | Out-String | Invoke-Expression
 op completion powershell | Out-String | Invoke-Expression
 
 # Neovim
-$env:VISUAL = "nvim"
+$env:VISUAL = "zed --wait"
 $env:EDITOR = $env:VISUAL
 $env:XDG_CONFIG_HOME = Join-Path $env:USERPROFILE ".config"
 
