@@ -139,10 +139,23 @@ provide the steps to install and configure third-party software.
    winget install --id BurntSushi.ripgrep.MSVC
    ```
 
+1. Developer Tools
+
+   ```console
+   winget install --id Microsoft.VisualStudio.2022.BuildTools --override "--passive --wait
+   --add Microsoft.VisualStudio.Component.VC.CMake.Project \
+   --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 \
+   --add Microsoft.VisualStudio.Component.Windows11SDK.26100 \
+   --add Microsoft.VisualStudio.Component.VC.Llvm.Clang \
+   --add Microsoft.VisualStudio.Component.VC.Llvm.MSBuild \
+   --add Microsoft.VisualStudio.Component.VC.CoreBuildTools \
+   --add Microsoft.VisualStudio.Component.VC.ASan \
+   --add Microsoft.VisualStudio.Component.Windows10SDK.10240"
+   ```
+
 1. Neovim Configuration
 
    ```console
-   winget install --id Microsoft.VisualStudio.2022.BuildTools
    winget install --id Neovim.Neovim
    winget install --id Rustlang.Rustup
    winget install --id OpenJS.NodeJS.LTS
