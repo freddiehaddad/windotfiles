@@ -111,6 +111,46 @@ provide the steps to install and configure third-party software.
    gh auth setup-git
    ```
 
+   > My current `.gitconfig`
+
+   ```gitconfig
+   [user]
+       name = Freddie Haddad
+       email = my@email.com
+       signingKey = <stored in 1Password>
+   [filter "lfs"]
+       clean = git-lfs clean -- %f
+       smudge = git-lfs smudge -- %f
+       process = git-lfs filter-process
+       required = true
+   [core]
+       editor = zed
+       sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+       autocrlf = true
+   [merge]
+       ff = only
+       tool = zed
+   [mergetool]
+       keepBackup = false
+   [mergetool "zed"]
+       cmd = zed --wait $MERGED
+   [gpg]
+       format = ssh
+   [commit]
+       gpgsign = true
+   [credential "https://github.com"]
+       helper = 
+       helper = !'C:\\Program Files\\GitHub CLI\\gh.exe' auth git-credential
+   [credential "https://gist.github.com"]
+       helper = 
+       helper = !'C:\\Program Files\\GitHub CLI\\gh.exe' auth git-credential
+   [gpg "ssh"]
+       # Install location via direct download
+       # program = C:\\Users\\fhaddad\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+       # Install location via winget
+       program = C:\\Users\\fhaddad\\AppData\\Local\\Microsoft\\WindowsApps\\Agilebits.1Password_amwd9z03whsfe\\op-ssh-sign.exe
+   ```
+
 1. Create symbolic links
 
    After setting up sudo and Powershell:
