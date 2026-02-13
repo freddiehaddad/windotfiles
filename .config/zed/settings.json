@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cursor_blink": false,
   "scrollbar": {
     "axes": {
       "horizontal": false,
@@ -41,6 +42,7 @@
     "editor.gutter.background": "#0a0e14ff",
     "border": "#0a0e14ff",
     "pane_group.border": "#0a0e14ff",
+    "panel.background": "#0a0e14ff",
     "border.variant": "#0a0e14ff",
     "title_bar.background": "#0a0e14ff",
     "status_bar.background": "#0a0e14ff",
