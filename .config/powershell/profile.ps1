@@ -90,7 +90,7 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 . "$env:USERPROFILE\.config\powershell\fzf-functions.ps1"
 
 # Set Powershell theme
-. "$env:USERPROFILE\.config\powershell\pwsh-peanut-dark.ps1"
+. "$env:USERPROFILE\.config\powershell\pwsh-ayu-dark.ps1"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"
