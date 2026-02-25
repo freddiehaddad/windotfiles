@@ -1,0 +1,575 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "id": "User.resizePane.6CD791B"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "resetFontSize",
+            "id": "User.resetFontSize"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "id": "User.moveFocus.87C324ED"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "id": "User.switchToTab.D3F0B923"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 1
+            },
+            "id": "User.switchToTab.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "id": "User.adjustFontSize.E2698FAA"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "id": "User.resizePane.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "id": "User.moveFocus.F747588A"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "id": "User.resizePane.F747588A"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "id": "User.moveFocus.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "id": "User.moveFocus.6CD791B"
+        },
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": 1
+            },
+            "id": "User.adjustFontSize.E04D5229"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "id": "User.resizePane.87C324ED"
+        },
+        {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        }
+    ],
+    "alwaysShowNotificationIcon": false,
+    "centerOnLaunch": true,
+    "copyFormatting": "none",
+    "copyOnSelect": true,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "initialPosition": "200,40",
+    "initialRows": 60,
+    "keybindings": 
+    [
+        {
+            "id": null,
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "id": null,
+            "keys": "alt+enter"
+        },
+        {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+alt+h"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+9"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+8"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": "User.adjustFontSize.E04D5229",
+            "keys": "ctrl+shift+plus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": null,
+            "keys": "alt+space"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad0"
+        },
+        {
+            "id": "User.toggleFocusMode",
+            "keys": "f11"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+7"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+home"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+end"
+        },
+        {
+            "id": "User.resizePane.87C324ED",
+            "keys": "ctrl+alt+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+0"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+comma"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+c"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "shift+insert"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+space"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+comma"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+tab"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+down"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+9"
+        },
+        {
+            "id": "User.resizePane.6CD791B",
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+8"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+insert"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "id": "User.moveFocus.6CD791B",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "id": null,
+            "keys": "alt+down"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.adjustFontSize.E2698FAA",
+            "keys": "ctrl+minus"
+        },
+        {
+            "id": "User.resetFontSize",
+            "keys": "ctrl+plus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "id": null,
+            "keys": "alt+left"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_minus"
+        },
+        {
+            "id": null,
+            "keys": "alt+right"
+        },
+        {
+            "id": null,
+            "keys": "alt+up"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_plus"
+        },
+        {
+            "id": null,
+            "keys": "alt+f4"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+up"
+        },
+        {
+            "id": "User.resizePane.2A0DA8E0",
+            "keys": "ctrl+alt+left"
+        },
+        {
+            "id": "User.moveFocus.F747588A",
+            "keys": "ctrl+alt+j"
+        },
+        {
+            "id": "User.resizePane.F747588A",
+            "keys": "ctrl+alt+down"
+        },
+        {
+            "id": "User.switchToTab.D3F0B923",
+            "keys": "f1"
+        },
+        {
+            "id": "User.switchToTab.2A0DA8E0",
+            "keys": "f2"
+        }
+    ],
+    "launchMode": "focus",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "bellStyle": "taskbar",
+            "colorScheme": "Ayu Dark",
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "cellHeight": "1.5",
+                "face": "ComicCode Nerd Font",
+                "size": 12
+            },
+            "historySize": 100000,
+            "opacity": 100,
+            "padding": "4",
+            "scrollbarState": "hidden",
+            "startingDirectory": "S:\\projects\\git",
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoLogo -NoProfileLoadTime -NoExit -File C:\\\\Users\\\\fhaddad\\\\.config\\\\powershell\\\\profile.ps1",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "font": 
+                {
+                    "size": 10
+                },
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{db1d8c35-5f1f-5c6e-bf9b-ade86c5c16c4}",
+                "hidden": false,
+                "name": "QMK MSYS",
+                "source": "QMK"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
+                "guid": "{70caa17b-af38-50aa-a15a-7f847ba4dc53}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{1c53d8b2-0c42-59a9-ba10-2ca268f1eebb}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{3254a338-7543-5729-8ac1-ad866bcd78f5}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{9bedfa98-a259-55e5-b589-e85a09c6df48}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{f7f54389-f6c1-559b-8eed-5a41b05eb713}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{bb93bc1f-05b2-573e-b35e-f4450d1b46fe}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#0A0E14",
+            "black": "#01060E",
+            "blue": "#53BDFA",
+            "brightBlack": "#686868",
+            "brightBlue": "#59C2FF",
+            "brightCyan": "#95E6CB",
+            "brightGreen": "#C2D94C",
+            "brightPurple": "#FFEE99",
+            "brightRed": "#F07178",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFB454",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#90E1C6",
+            "foreground": "#B3B1AD",
+            "green": "#91B362",
+            "name": "Ayu Dark",
+            "purple": "#FAE994",
+            "red": "#EA6C73",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C7C7C7",
+            "yellow": "#F9AF4F"
+        },
+        {
+            "background": "#161A1F",
+            "black": "#465056",
+            "blue": "#00A3B3",
+            "brightBlack": "#556067",
+            "brightBlue": "#00C4D6",
+            "brightCyan": "#2BC9A8",
+            "brightGreen": "#4DD085",
+            "brightPurple": "#D171F7",
+            "brightRed": "#FF5C80",
+            "brightWhite": "#8D99A2",
+            "brightYellow": "#D6AF47",
+            "cursorColor": "#FF8D4D",
+            "cyan": "#24A889",
+            "foreground": "#637079",
+            "green": "#3DB36D",
+            "name": "Peanut Dark",
+            "purple": "#B85CD9",
+            "red": "#D94766",
+            "selectionBackground": "#3D4F1A",
+            "white": "#76848F",
+            "yellow": "#B8943B"
+        }
+    ],
+    "showTabsInTitlebar": true,
+    "theme": "system",
+    "themes": [],
+    "trimBlockSelection": true,
+    "trimPaste": true,
+    "useAcrylicInTabRow": true
+}

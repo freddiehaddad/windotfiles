@@ -179,6 +179,8 @@ provide the steps to install and configure third-party software.
    winget install --id BurntSushi.ripgrep.MSVC
    ```
 
+   > NOTE: The `settings.json` file needs to be overridden with the version in the repo.
+
 1. Developer Tools
 
    ```console
