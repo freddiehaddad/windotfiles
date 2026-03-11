@@ -78,19 +78,19 @@ function lt {
 Set-Alias -Name cat -Value bat
 
 $env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
-$env:BAT_THEME="ayu-dark"
+$env:BAT_THEME="ferric"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
-. "$env:USERPROFILE\.config\powershell\fzf-ayu-dark.ps1"
+. "$env:USERPROFILE\.config\powershell\ferric.fzf.ps1"
 
 # Load FZF functions
 . "$env:USERPROFILE\.config\powershell\fzf-functions.ps1"
 
 # Set Powershell theme
-. "$env:USERPROFILE\.config\powershell\pwsh-ayu-dark.ps1"
+# . "$env:USERPROFILE\.config\powershell\pwsh-neofusion.ps1"
 
 # Starship
 $env:STARSHIP_CONFIG = "$env:USERPROFILE\.config\starship\starship.toml"

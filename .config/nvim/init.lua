@@ -80,11 +80,15 @@ require("mini.pairs").setup({
 	},
 })
 
-require("ayu").setup({
-	overrides = {
-		Comment = { italic = false },
+require("ferric").setup({
+	italic = {
+		strings = false,
+		emphasis = false,
+		comments = false,
+		operators = false,
+		folds = false,
 	},
 })
-vim.cmd.colorscheme("ayu")
+vim.cmd.colorscheme("ferric")
 
 vim.lsp.enable({ "clangd", "luals", "rust_analyzer" })
