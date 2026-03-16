@@ -6,22 +6,30 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "id": "User.resizePane.6CD791B"
-        },
-        {
-            "command": 
-            {
                 "action": "copy",
                 "singleLine": false
             },
             "id": "User.copy.644BA8F2"
         },
         {
-            "command": "resetFontSize",
-            "id": "User.resetFontSize"
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "id": "User.resizePane.6CD791B"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "id": "User.adjustFontSize.E2698FAA"
         },
         {
             "command": 
@@ -48,16 +56,8 @@
             "id": "User.switchToTab.2A0DA8E0"
         },
         {
-            "command": 
-            {
-                "action": "adjustFontSize",
-                "delta": -1
-            },
-            "id": "User.adjustFontSize.E2698FAA"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
+            "command": "resetFontSize",
+            "id": "User.resetFontSize"
         },
         {
             "command": 
@@ -131,6 +131,14 @@
         {
             "command": "toggleFocusMode",
             "id": "User.toggleFocusMode"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "\u001b\r"
+            },
+            "id": "User.sendInput.8F63D3A9"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -143,12 +151,8 @@
     "keybindings": 
     [
         {
-            "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+5"
+            "id": "User.sendInput.8F63D3A9",
+            "keys": "shift+enter"
         },
         {
             "id": null,
@@ -160,7 +164,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+3"
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
         },
         {
             "id": null,
@@ -172,11 +180,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+8"
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
-            "keys": "ctrl+alt+4"
+            "keys": "ctrl+alt+8"
         },
         {
             "id": null,
@@ -184,11 +192,15 @@
         },
         {
             "id": null,
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "id": null,
             "keys": "ctrl+alt+6"
         },
         {
             "id": null,
-            "keys": "alt+shift+left"
+            "keys": "ctrl+alt+1"
         },
         {
             "id": "User.adjustFontSize.E04D5229",
@@ -196,7 +208,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+1"
+            "keys": "alt+shift+left"
         },
         {
             "id": null,
@@ -204,15 +216,23 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+plus"
-        },
-        {
-            "id": null,
             "keys": "alt+space"
         },
         {
             "id": null,
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+up"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgup"
         },
         {
             "id": null,
@@ -224,11 +244,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+pgup"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+pgdn"
+            "keys": "ctrl+shift+home"
         },
         {
             "id": null,
@@ -236,11 +252,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+home"
+            "keys": "ctrl+shift+end"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+end"
+            "keys": "ctrl+shift+down"
         },
         {
             "id": "User.resizePane.87C324ED",
@@ -248,7 +264,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+down"
+            "keys": "ctrl+shift+comma"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+0"
         },
         {
             "id": null,
@@ -260,15 +280,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+0"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+comma"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+c"
+            "keys": "ctrl+shift+d"
         },
         {
             "id": null,
@@ -276,19 +288,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+d"
+            "keys": "ctrl+c"
         },
         {
             "id": null,
             "keys": "shift+insert"
         },
         {
-            "id": null,
-            "keys": "ctrl+v"
-        },
-        {
             "id": "User.find",
             "keys": "ctrl+shift+f"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+v"
         },
         {
             "id": null,
@@ -300,11 +312,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+tab"
+            "keys": "alt+shift+down"
         },
         {
             "id": null,
-            "keys": "alt+shift+down"
+            "keys": "ctrl+tab"
         },
         {
             "id": null,
@@ -320,15 +332,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+insert"
-        },
-        {
-            "id": null,
             "keys": "ctrl+shift+6"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+4"
+            "keys": "ctrl+insert"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": null,
+            "keys": "alt+down"
         },
         {
             "id": "User.moveFocus.6CD791B",
@@ -340,27 +356,23 @@
         },
         {
             "id": null,
-            "keys": "alt+down"
-        },
-        {
-            "id": "User.moveFocus.87C324ED",
-            "keys": "ctrl+alt+l"
+            "keys": "ctrl+shift+4"
         },
         {
             "id": null,
-            "keys": "alt+shift+d"
-        },
-        {
-            "id": "User.adjustFontSize.E2698FAA",
-            "keys": "ctrl+minus"
+            "keys": "ctrl+shift+3"
         },
         {
             "id": "User.resetFontSize",
             "keys": "ctrl+plus"
         },
         {
+            "id": "User.adjustFontSize.E2698FAA",
+            "keys": "ctrl+minus"
+        },
+        {
             "id": null,
-            "keys": "ctrl+shift+3"
+            "keys": "alt+shift+d"
         },
         {
             "id": null,
@@ -372,11 +384,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad_minus"
+            "keys": "alt+right"
         },
         {
             "id": null,
-            "keys": "alt+right"
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
@@ -427,7 +439,7 @@
         "defaults": 
         {
             "bellStyle": "taskbar",
-            "colorScheme": "Ayu Dark",
+            "colorScheme": "Ferric",
             "cursorShape": "filledBox",
             "font": 
             {
@@ -520,50 +532,27 @@
     "schemes": 
     [
         {
-            "background": "#0A0E14",
-            "black": "#01060E",
-            "blue": "#53BDFA",
-            "brightBlack": "#686868",
-            "brightBlue": "#59C2FF",
-            "brightCyan": "#95E6CB",
-            "brightGreen": "#C2D94C",
-            "brightPurple": "#FFEE99",
-            "brightRed": "#F07178",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FFB454",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#90E1C6",
-            "foreground": "#B3B1AD",
-            "green": "#91B362",
-            "name": "Ayu Dark",
-            "purple": "#FAE994",
-            "red": "#EA6C73",
-            "selectionBackground": "#FFFFFF",
-            "white": "#C7C7C7",
-            "yellow": "#F9AF4F"
-        },
-        {
-            "background": "#161A1F",
-            "black": "#465056",
-            "blue": "#00A3B3",
-            "brightBlack": "#556067",
-            "brightBlue": "#00C4D6",
-            "brightCyan": "#2BC9A8",
-            "brightGreen": "#4DD085",
-            "brightPurple": "#D171F7",
-            "brightRed": "#FF5C80",
-            "brightWhite": "#8D99A2",
-            "brightYellow": "#D6AF47",
-            "cursorColor": "#FF8D4D",
-            "cyan": "#24A889",
-            "foreground": "#637079",
-            "green": "#3DB36D",
-            "name": "Peanut Dark",
-            "purple": "#B85CD9",
-            "red": "#D94766",
-            "selectionBackground": "#3D4F1A",
-            "white": "#76848F",
-            "yellow": "#B8943B"
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#6A88B0",
+            "brightBlack": "#565050",
+            "brightBlue": "#8AA8C8",
+            "brightCyan": "#80B8B0",
+            "brightGreen": "#80C8A8",
+            "brightPurple": "#B888A0",
+            "brightRed": "#D87068",
+            "brightWhite": "#E8E0D0",
+            "brightYellow": "#D8B860",
+            "cursorColor": "#CC5030",
+            "cyan": "#5A9890",
+            "foreground": "#D0C8B8",
+            "green": "#5AAA88",
+            "name": "Ferric",
+            "purple": "#A06888",
+            "red": "#C44838",
+            "selectionBackground": "#322A26",
+            "white": "#D0C8B8",
+            "yellow": "#C8A040"
         }
     ],
     "showTabsInTitlebar": true,

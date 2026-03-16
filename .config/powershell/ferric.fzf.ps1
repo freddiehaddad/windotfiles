@@ -1,7 +1,5 @@
 $env:FZF_DEFAULT_OPTS = @"
 --border=sharp
---border-label=" fzf "
---border-label-pos="0"
 --preview-window="border-sharp"
 --margin=1
 --padding=0
@@ -19,7 +17,8 @@ $env:FZF_DEFAULT_OPTS = @"
 --bind="ctrl-b:preview-page-up"
 --bind="shift-up:preview-up"
 --bind="shift-down:preview-down"
---color=bg+:#141010,bg:#000000,spinner:#CC5030,hl:#C8A040
---color=fg:#565050,header:#D0C8B8,info:#5AAA88,pointer:#CC5030
---color=marker:#C8A040,fg+:#D0C8B8,prompt:#CC5030,hl+:#A86848
+--color=bg+:#322A26,bg:#141010,spinner:#CC5030,hl:#6A88B0
+--color=fg:#D0C8B8,header:#D0C8B8,info:#5AAA88,pointer:#CC5030
+--color=marker:#C8A040,fg+:#D0C8B8,prompt:#CC5030,hl+:#6A88B0
+--color=border:#141010,preview-border:#141010,gutter:#141010
 "@

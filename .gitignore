@@ -1,4 +1,5 @@
 /.config/op
 /.config/opencode
-/.config/.copilot/
-/.config/github-copilot/
+/.config/.copilot
+/.config/github-copilot
+/.config/nvim

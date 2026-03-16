@@ -1,0 +1,23 @@
+{
+    "background": "#000000",
+    "black": "#000000",
+    "blue": "#6A88B0",
+    "brightBlack": "#565050",
+    "brightBlue": "#8AA8C8",
+    "brightCyan": "#80B8B0",
+    "brightGreen": "#80C8A8",
+    "brightPurple": "#B888A0",
+    "brightRed": "#D87068",
+    "brightWhite": "#E8E0D0",
+    "brightYellow": "#D8B860",
+    "cursorColor": "#CC5030",
+    "cyan": "#5A9890",
+    "foreground": "#D0C8B8",
+    "green": "#5AAA88",
+    "name": "Ferric",
+    "purple": "#A06888",
+    "red": "#C44838",
+    "selectionBackground": "#322A26",
+    "white": "#D0C8B8",
+    "yellow": "#C8A040"
+}
