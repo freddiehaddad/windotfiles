@@ -313,9 +313,9 @@ keybindings:
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1", "focus --workspace 1"]
-    bindings: ["lwin+alt++1"]
+    bindings: ["lwin+alt+1"]
   - commands: ["move --workspace 2", "focus --workspace 2"]
-    bindings: ["lwin+alt++2"]
+    bindings: ["lwin+alt+2"]
   - commands: ["move --workspace 3", "focus --workspace 3"]
     bindings: ["lwin+alt+3"]
   - commands: ["move --workspace 4", "focus --workspace 4"]
