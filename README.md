@@ -11,11 +11,16 @@ provide the steps to install and configure third-party software.
    winget upgrade --all --accept-source-agreements --accept-package-agreements
    ```
 
-1. Configure Terminal Settings
+1. Configure Terminal/Environment Settings
 
    ```console
    setx COLORTERM truecolor
    setx TERM xterm-256color
+   setx EDITOR nvim
+   setx VISUAL nvim
+   setx XDG_CONFIG_HOME "$(Join-Path $env:USERPROFILE .config)"
+   setx BAT_CONFIG_DIR "$(Join-Path $env:USERPROFILE .config\bat)"
+   setx GLAZEWM_CONFIG_PATH "$(Join-Path $env:USERPROFILE .config\glazewm)"
    ```
 
    > Restart Windows Terminal
@@ -249,17 +254,7 @@ provide the steps to install and configure third-party software.
    winget install --id glazr-io.glazewm
    ```
 
-   Open File Explorer and navigate to `C:\Program Files\glzr.io\GlazeWM`. Right
-   click on `glazewm.exe` and select `Create shortcut` (the shortcut will get
-   created on the desktop). Edit the shortcut and append the following after
-   `C:\Program Files\glzr.io\GlazeWM\glazewm.exe"` in the `Target:` field:
-
-   ```console
-   start --config "%USERPROFILE%\.config\glazewm\glazewm.yaml"
-   ```
-
-   In the File Explorer window address bar, type `shell:startup` and paste the
-   shortcut to that location.
+   Start GlazeWM, right click tray icon, and check Run on system startup.
 
 1. Windows Defender
 

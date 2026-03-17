@@ -30,13 +30,8 @@ rustup completions powershell | Out-String | Invoke-Expression
 # 1Password
 op completion powershell | Out-String | Invoke-Expression
 
-# Neovim
-$env:VISUAL = "zed --wait"
-$env:EDITOR = $env:VISUAL
-$env:XDG_CONFIG_HOME = Join-Path $env:USERPROFILE ".config"
-
 # EZA theme directory
-$env:EZA_CONFIG_DIR = "$env:USERPROFILE\.config\eza"
+# $env:EZA_CONFIG_DIR = "$env:USERPROFILE\.config\eza"
 # $env:EZA_ICON_SPACING = "2"
 # $env:EZA_ICONS_AUTO = $true
 
@@ -76,9 +71,6 @@ function lt {
 
 # On new setups, be sure to type "bat cache --build"
 Set-Alias -Name cat -Value bat
-
-$env:BAT_CONFIG_DIR = Join-Path $env:USERPROFILE ".config\bat"
-$env:BAT_THEME="ferric"
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
