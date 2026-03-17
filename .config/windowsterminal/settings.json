@@ -6,22 +6,22 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": 
-            {
                 "action": "resizePane",
                 "direction": "up"
             },
             "id": "User.resizePane.6CD791B"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "resetFontSize",
+            "id": "User.resetFontSize"
         },
         {
             "command": 
@@ -34,10 +34,10 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "right"
+                "action": "switchToTab",
+                "index": 1
             },
-            "id": "User.moveFocus.87C324ED"
+            "id": "User.switchToTab.2A0DA8E0"
         },
         {
             "command": 
@@ -50,22 +50,14 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 1
+                "action": "moveFocus",
+                "direction": "right"
             },
-            "id": "User.switchToTab.2A0DA8E0"
+            "id": "User.moveFocus.87C324ED"
         },
         {
-            "command": "resetFontSize",
-            "id": "User.resetFontSize"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "id": "User.resizePane.2A0DA8E0"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -74,6 +66,14 @@
                 "direction": "down"
             },
             "id": "User.moveFocus.F747588A"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "id": "User.resizePane.2A0DA8E0"
         },
         {
             "command": "find",
@@ -91,18 +91,18 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "down"
-            },
-            "id": "User.resizePane.F747588A"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "left"
             },
             "id": "User.moveFocus.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "id": "User.resizePane.F747588A"
         },
         {
             "command": 
@@ -156,7 +156,11 @@
         },
         {
             "id": null,
-            "keys": "alt+enter"
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
         },
         {
             "id": "User.moveFocus.2A0DA8E0",
@@ -164,11 +168,11 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+right"
+            "keys": "alt+enter"
         },
         {
             "id": null,
-            "keys": "ctrl+alt+5"
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
@@ -177,10 +181,6 @@
         {
             "id": null,
             "keys": "ctrl+alt+9"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
@@ -199,16 +199,16 @@
             "keys": "ctrl+alt+6"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+1"
-        },
-        {
             "id": "User.adjustFontSize.E04D5229",
             "keys": "ctrl+shift+plus"
         },
         {
             "id": null,
             "keys": "alt+shift+left"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
         },
         {
             "id": null,
@@ -227,6 +227,14 @@
             "keys": "ctrl+shift+up"
         },
         {
+            "id": "User.toggleFocusMode",
+            "keys": "f11"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad0"
+        },
+        {
             "id": null,
             "keys": "ctrl+shift+pgdn"
         },
@@ -236,11 +244,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad0"
-        },
-        {
-            "id": "User.toggleFocusMode",
-            "keys": "f11"
+            "keys": "ctrl+shift+7"
         },
         {
             "id": null,
@@ -248,19 +252,23 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+7"
+            "keys": "ctrl+shift+end"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+end"
+            "id": "User.resizePane.87C324ED",
+            "keys": "ctrl+alt+right"
         },
         {
             "id": null,
             "keys": "ctrl+shift+down"
         },
         {
-            "id": "User.resizePane.87C324ED",
-            "keys": "ctrl+alt+right"
+            "id": null,
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+2"
         },
         {
             "id": null,
@@ -272,11 +280,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+2"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+5"
+            "keys": "ctrl+c"
         },
         {
             "id": null,
@@ -285,10 +289,6 @@
         {
             "id": null,
             "keys": "ctrl+shift+tab"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+c"
         },
         {
             "id": null,
@@ -323,12 +323,16 @@
             "keys": "ctrl+shift+9"
         },
         {
+            "id": null,
+            "keys": "ctrl+shift+8"
+        },
+        {
             "id": "User.resizePane.6CD791B",
             "keys": "ctrl+alt+up"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+8"
+            "keys": "ctrl+insert"
         },
         {
             "id": null,
@@ -336,7 +340,15 @@
         },
         {
             "id": null,
-            "keys": "ctrl+insert"
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "id": "User.moveFocus.6CD791B",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+4"
         },
         {
             "id": "User.moveFocus.87C324ED",
@@ -345,22 +357,6 @@
         {
             "id": null,
             "keys": "alt+down"
-        },
-        {
-            "id": "User.moveFocus.6CD791B",
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+4"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+3"
         },
         {
             "id": "User.resetFontSize",
@@ -376,6 +372,10 @@
         },
         {
             "id": null,
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+1"
         },
         {
@@ -384,11 +384,11 @@
         },
         {
             "id": null,
-            "keys": "alt+right"
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
-            "keys": "ctrl+numpad_minus"
+            "keys": "alt+right"
         },
         {
             "id": null,
@@ -444,15 +444,15 @@
             "font": 
             {
                 "cellHeight": "1.5",
-                "face": "ComicCode Nerd Font",
+                "face": "Comic Code",
                 "size": 12
             },
             "historySize": 100000,
-            "opacity": 100,
+            "opacity": 97,
             "padding": "4",
             "scrollbarState": "hidden",
             "startingDirectory": "S:\\projects\\git",
-            "useAcrylic": true
+            "useAcrylic": false
         },
         "list": 
         [
