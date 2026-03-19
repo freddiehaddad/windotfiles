@@ -146,7 +146,6 @@ window_rules:
       - window_title: { equals: "Command Palette" }
       - window_title: { equals: "Calculator" }
       - window_title: { equals: "Azure VPN Client" }
-      - window_title: { equals: "MSI Center" }
 
       # Dell Peripheral Manager
       - window_title: { equals: "PowerMon" }
@@ -155,18 +154,18 @@ window_rules:
   # ---------------------------------------------
   # Floating Rules
   # ---------------------------------------------
-  - commands: ["set-floating"]
-    match:
-      - window_process: { equals: "Ascension Launcher" }
+  # - commands: ["set-floating"]
+  #   match:
+  #     - window_process: { equals: "Ascension Launcher" }
  
   # ---------------------------------------------
   # Full Screen
   # ---------------------------------------------
-  - commands: ["set-fullscreen"]
-    match:
-      - window_process: { equals: "Ascension" }
-      # - window_process: { equals: "PathOfExile" }
-      - window_title: { equals: "Path of Exile 2" }
+  # - commands: ["set-fullscreen"]
+  #   match:
+  #     - window_process: { equals: "Ascension" }
+  #     # - window_process: { equals: "PathOfExile" }
+  #     - window_title: { equals: "Path of Exile 2" }
 
 
 binding_modes:
