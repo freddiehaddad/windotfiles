@@ -22,11 +22,11 @@
           <key>invisibles</key>
           <string>#d0c8b826</string>
           <key>lineHighlight</key>
-          <string>#1c1614</string>
+          <string>#2c1a16</string>
           <key>selection</key>
-          <string>#1c1614</string>
+          <string>#3c2a1e</string>
           <key>inactiveSelection</key>
-          <string>#1c1614</string>
+          <string>#2c1a16</string>
           <key>guide</key>
           <string>#d0c8b826</string>
           <key>activeGuide</key>
@@ -54,11 +54,11 @@
           <key>tagsOptions</key>
           <string>underline</string>
           <key>selectionBorder</key>
-          <string>#1c1614</string>
+          <string>#3c2a1e</string>
           <key>popupCss</key>
           <string>
             html {
-              background-color: #0c0808;
+              background-color: #1e1614;
               color: #d0c8b8;
               padding: 12px;
             }
@@ -1346,7 +1346,7 @@
           <key>foreground</key>
           <string>#c08050</string>
           <key>background</key>
-          <string>#1c1614</string>
+          <string>#2c1a16</string>
         </dict>
       </dict>
       <dict>
