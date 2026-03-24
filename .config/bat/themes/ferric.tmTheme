@@ -58,7 +58,7 @@
           <key>popupCss</key>
           <string>
             html {
-              background-color: #1e1614;
+              background-color: #121a18;
               color: #d0c8b8;
               padding: 12px;
             }
