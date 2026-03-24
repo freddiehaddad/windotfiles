@@ -21,6 +21,7 @@ provide the steps to install and configure third-party software.
    setx XDG_CONFIG_HOME "$(Join-Path $env:USERPROFILE .config)"
    setx BAT_CONFIG_DIR "$(Join-Path $env:USERPROFILE .config\bat)"
    setx GLAZEWM_CONFIG_PATH "$(Join-Path $env:USERPROFILE .config\glazewm)"
+   setx STARSHIP_CONFIG "$(Join-Path $env:USERPROFILE .config\starship\starship.toml)"
    ```
 
    > Restart Windows Terminal
