@@ -84,9 +84,7 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 # Set Powershell theme
 # . "$env:USERPROFILE\.config\powershell\pwsh-neofusion.ps1"
 
-# Invoke-Expression (&starship init powershell)
-
-# Invoke-Expression (& { (wezterm shell-completion --shell power-shell | Out-String) })
+Invoke-Expression (&starship init powershell)
 
 # keep this line last
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
