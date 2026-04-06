@@ -130,16 +130,14 @@ provide the steps to install and configure third-party software.
        process = git-lfs filter-process
        required = true
    [core]
-       editor = zed
+       editor = nvim
        sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
        autocrlf = true
    [merge]
        ff = only
-       tool = zed
+       tool = nvimdiff
    [mergetool]
        keepBackup = false
-   [mergetool "zed"]
-       cmd = zed --wait $MERGED
    [gpg]
        format = ssh
    [commit]
