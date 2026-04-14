@@ -1,16 +1,20 @@
-# 1Password (Wezterm nightly overrides this value)
-$env:SSH_AUTH_SOCK="\\.\pipe\openssh-ssh-agent"
-
 # For mdformat 
 $env:PATH += ";C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users\fhaddad\.local\bin"
 
-# For C/CPP
-$VCToolsVersion = "14.44.35207"
-$WindowsSdkVersion = "10.0.26100.0"
-$DotNetFrameworkVersion = "4.0.30319"
-$env:PATH += ";C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\$VCToolsVersion\bin\HostX64\x64;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\bin\Roslyn;C:\Program Files (x86)\Windows Kits\10\bin\$WindowsSdkVersion\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v$DotNetFrameworkVersion;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\Tools\;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja"
-$env:INCLUDE = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\$VCToolsVersion\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\$WindowsSdkVersion\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\um;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\shared;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\$WindowsSdkVersion\\cppwinrt"
-$env:LIB = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\$VCToolsVersion\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\$WindowsSdkVersion\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\$WindowsSdkVersion\\um\x64"
+# For C/CPP development
+# Automatically load MSVC Build Tools environment
+$vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+$vsPath = & $vswhere -latest -products * -requires Microsoft.Component.MSBuild -property installationPath
+if ($vsPath) {
+	$vsDevCmd = Join-Path $vsPath "Common7\Tools\VsDevCmd.bat"
+
+	cmd /c "`"$vsDevCmd`" -no_logo -arch=x64 && set" | ForEach-Object {
+		if ($_ -match "=") {
+			$name, $value = $_ -split "=", 2
+			[System.Environment]::SetEnvironmentVariable($name, $value)
+		}
+	}
+}
 
 # For Treesitter installed via Rust/Cargo
 # cargo install tree-sitter-cli
@@ -35,7 +39,7 @@ op completion powershell | Out-String | Invoke-Expression
 # $env:EZA_ICON_SPACING = "2"
 # $env:EZA_ICONS_AUTO = $true
 
-# LSD Shortcuts (aliases)
+# EZA Shortcuts (aliases)
 Remove-Item Alias:ls
 function ls {
     param (
