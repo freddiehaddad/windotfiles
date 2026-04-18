@@ -1,5 +1,5 @@
-# For mdformat 
-$env:PATH += ";C:\Users\fhaddad\AppData\Roaming\Python\Python312\Scripts;C:\Users\fhaddad\.local\bin"
+# For local binaries not installed by regular programs 
+$env:PATH += ";C:\Users\fhaddad\.local\bin"
 
 # For C/CPP development
 # Automatically load MSVC Build Tools environment
@@ -86,7 +86,7 @@ Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 . (Join-Path $env:USERPROFILE .config powershell fzf-functions.ps1)
 
 # Set Powershell theme
-# . (Join-Path $env:USERPROFILE .config powershell pwsh-neofusion.ps1)
+. (Join-Path $env:USERPROFILE .config powershell ferric-pwsh.ps1)
 
 # Load the Azure helper functions
 . (Join-Path $env:USERPROFILE .config powershell azure-helpers.ps1)
