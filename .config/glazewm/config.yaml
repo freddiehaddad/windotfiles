@@ -151,6 +151,9 @@ window_rules:
       - window_title: { equals: "PowerMon" }
       - window_title: { equals: "InfoWindow" }
 
+      # Unknown Window
+      - window_title: { equals: "MainWindow" }
+
   # ---------------------------------------------
   # Floating Rules
   # ---------------------------------------------
