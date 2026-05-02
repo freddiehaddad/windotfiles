@@ -1,0 +1,80 @@
+theme_background = false
+rounded_corners = true
+proc_reversed = true
+proc_tree = false
+proc_colors = true
+proc_gradient = true
+proc_per_core = false
+proc_mem_bytes = true
+proc_left = false
+proc_aggregate = false
+keep_dead_proc_usage = false
+cpu_invert_lower = true
+cpu_single_graph = false
+cpu_bottom = false
+show_uptime = true
+show_cpu_watts = true
+check_temp = true
+show_coretemp = true
+show_cpu_freq = true
+mem_below_net = false
+show_swap = true
+show_io_stat = true
+io_mode = false
+io_graph_combined = false
+swap_upload_download = false
+base_10_sizes = false
+net_auto = true
+net_sync = false
+vim_keys = true
+background_update = true
+terminal_sync = true
+save_config_on_exit = true
+disk_io_mode = false
+update_ms = 2000
+cpu_update_ms = 0
+mem_update_ms = 0
+disk_update_ms = 0
+net_update_ms = 0
+gpu_update_ms = 0
+proc_update_ms = 0
+net_download = 100
+net_upload = 100
+current_preset = 0
+color_theme = "default"
+shown_boxes = [
+    "cpu",
+    "mem",
+    "net",
+    "proc",
+    "disk",
+    "gpu0",
+]
+graph_symbol = "braille"
+graph_symbol_cpu = "default"
+graph_symbol_gpu = "default"
+graph_symbol_net = "default"
+graph_symbol_proc = "default"
+graph_symbol_disk = "default"
+proc_sorting = "cpu lazy"
+cpu_graph_upper = "user"
+cpu_graph_lower = "system"
+temp_scale = "celsius"
+clock_format = "%X"
+custom_cpu_name = ""
+disks_filter = ""
+io_graph_speeds = ""
+net_iface = "auto"
+log_level = "trace"
+proc_filter = ""
+presets = "cpu:0:default,proc:0:default cpu:0:default,mem:0:default,disk:0:default cpu:0:default,net:0:default,proc:0:default"
+custom_gpu_names = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+]
