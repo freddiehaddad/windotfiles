@@ -40,41 +40,28 @@ op completion powershell | Out-String | Invoke-Expression
 # $env:EZA_ICONS_AUTO = $true
 
 # EZA Shortcuts (aliases)
-Remove-Item Alias:ls
+Remove-Alias -Name ls
 function ls {
-    param (
-        [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$_args
-    )
-    eza @_args
+    eza @args
 }
 
 function ll {
-    param (
-        [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$_args
-    )
-    eza -l @_args
+    eza -l @args
 }
 
 function lla {
-    param (
-        [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$_args
-    )
-    eza -l -a @_args
+    eza -l -a @args
 }
 
 function lt {
-    param (
-        [Parameter(ValueFromRemainingArguments=$true)]
-        [string[]]$_args
-    )
-    eza --tree @_args
+    eza --tree @args
 }
 
 # On new setups, be sure to type "bat cache --build"
-Set-Alias -Name cat -Value bat
+Remove-Alias -Name cat
+function cat {
+    bat @args
+}
 
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
