@@ -63,6 +63,11 @@ function cat {
     bat @args
 }
 
+# Helper to reset the terminal
+function reset {
+    Write-Host "`ec"
+}
+
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
