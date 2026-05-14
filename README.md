@@ -111,6 +111,8 @@ provide the steps to install and configure third-party software.
    git config --global core.editor nvim
    git config --global merge.tool nvimdiff
    git config --global mergetool.keepBackup false
+   git config --global diff.tool nvimdiff
+   git config --global difftool.prompt false
    git config --global core.eol lf
    git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
    gh auth login
@@ -138,6 +140,12 @@ provide the steps to install and configure third-party software.
        tool = nvimdiff
    [mergetool]
        keepBackup = false
+   [diff]
+       tool = nvimdiff
+   [difftool "nvimdiff"]
+       cmd = nvim -d "$LOCAL" "$REMOTE"
+   [difftool]
+       prompt = false
    [gpg]
        format = ssh
    [commit]
