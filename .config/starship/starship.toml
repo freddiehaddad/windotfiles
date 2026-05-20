@@ -164,6 +164,7 @@ Zorin = " "
 
 [package]
 symbol = "󰏗 "
+style = "fg:#c8a040"
 
 [perl]
 symbol = " "

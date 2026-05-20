@@ -72,13 +72,13 @@ function reset {
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Set the main FZF theme
-. (Join-Path $env:USERPROFILE .config powershell ferric.fzf.ps1)
+. (Join-Path $env:USERPROFILE .config powershell ferric-fzf-light.ps1)
 
 # Load FZF functions
 . (Join-Path $env:USERPROFILE .config powershell fzf-functions.ps1)
 
 # Set Powershell theme
-. (Join-Path $env:USERPROFILE .config powershell ferric-pwsh.ps1)
+. (Join-Path $env:USERPROFILE .config powershell ferric-pwsh-light.ps1)
 
 # Load the Azure helper functions
 . (Join-Path $env:USERPROFILE .config powershell azure-helpers.ps1)

@@ -18,21 +18,21 @@
           <key>caret</key>
           <string>#cc5030</string>
           <key>foreground</key>
-          <string>#d0c8b880</string>
+          <string>#d0c8b8</string>
           <key>invisibles</key>
-          <string>#d0c8b826</string>
+          <string>#484040</string>
           <key>lineHighlight</key>
-          <string>#2c1a16</string>
+          <string>#142420</string>
           <key>selection</key>
           <string>#3c2a1e</string>
           <key>inactiveSelection</key>
-          <string>#2c1a16</string>
+          <string>#142420</string>
           <key>guide</key>
-          <string>#d0c8b826</string>
+          <string>#484040</string>
           <key>activeGuide</key>
-          <string>#d0c8b880</string>
+          <string>#706860</string>
           <key>stackGuide</key>
-          <string>#d0c8b840</string>
+          <string>#3e3430</string>
           <key>bracketContentsOptions</key>
           <string>underline</string>
           <key>bracketContentsForeground</key>
@@ -113,7 +113,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#585050</string>
+          <string>#565050</string>
         </dict>
       </dict>
       <dict>
@@ -137,7 +137,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#646060</string>
+          <string>#706860</string>
         </dict>
       </dict>
       <dict>
@@ -148,7 +148,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#646060</string>
+          <string>#706860</string>
         </dict>
       </dict>
       <dict>
@@ -436,7 +436,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#b5a060</string>
+          <string>#c8a040</string>
         </dict>
       </dict>
       <dict>
@@ -524,7 +524,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#585050</string>
+          <string>#565050</string>
         </dict>
       </dict>
       <dict>
@@ -535,7 +535,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#585050</string>
+          <string>#565050</string>
         </dict>
       </dict>
       <dict>
@@ -944,7 +944,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#686058</string>
+          <string>#607068</string>
         </dict>
       </dict>
       <dict>
@@ -1322,7 +1322,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#d0c8b826</string>
+          <string>#484040</string>
         </dict>
       </dict>
       <dict>
@@ -1333,7 +1333,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#d0c8b826</string>
+          <string>#484040</string>
         </dict>
       </dict>
       <dict>
@@ -1346,7 +1346,7 @@
           <key>foreground</key>
           <string>#c08050</string>
           <key>background</key>
-          <string>#2c1a16</string>
+          <string>#142420</string>
         </dict>
       </dict>
       <dict>
