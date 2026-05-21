@@ -436,10 +436,8 @@
             "cursorShape": "filledBox",
             "font": 
             {
-                "cellHeight": "1.5",
                 "colorGlyphs": true,
                 "face": "ComicCode Nerd Font Mono",
-                "size": 13,
                 "weight": "normal"
             },
             "historySize": 100000,
