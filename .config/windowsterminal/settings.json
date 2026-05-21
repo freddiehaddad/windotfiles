@@ -6,30 +6,22 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "id": "User.resizePane.6CD791B"
-        },
-        {
-            "command": 
-            {
                 "action": "copy",
                 "singleLine": false
             },
             "id": "User.copy.644BA8F2"
         },
         {
-            "command": "resetFontSize",
-            "id": "User.resetFontSize"
-        },
-        {
             "command": 
             {
-                "action": "adjustFontSize",
-                "delta": -1
+                "action": "resizePane",
+                "direction": "up"
             },
-            "id": "User.adjustFontSize.E2698FAA"
+            "id": "User.resizePane.6CD791B"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -56,8 +48,16 @@
             "id": "User.moveFocus.87C324ED"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "id": "User.adjustFontSize.E2698FAA"
+        },
+        {
+            "command": "resetFontSize",
+            "id": "User.resetFontSize"
         },
         {
             "command": 
@@ -142,7 +142,7 @@
         }
     ],
     "alwaysShowNotificationIcon": false,
-    "centerOnLaunch": true,
+    "centerOnLaunch": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -155,14 +155,6 @@
             "keys": "shift+enter"
         },
         {
-            "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+5"
-        },
-        {
             "id": "User.moveFocus.2A0DA8E0",
             "keys": "ctrl+alt+h"
         },
@@ -172,7 +164,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+3"
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
         },
         {
             "id": null,
@@ -184,11 +180,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+8"
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
-            "keys": "ctrl+alt+7"
+            "keys": "ctrl+alt+8"
         },
         {
             "id": null,
@@ -196,15 +192,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+6"
-        },
-        {
-            "id": "User.adjustFontSize.E04D5229",
-            "keys": "ctrl+shift+plus"
+            "keys": "ctrl+alt+7"
         },
         {
             "id": null,
-            "keys": "alt+shift+left"
+            "keys": "ctrl+alt+6"
         },
         {
             "id": null,
@@ -212,11 +204,15 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+minus"
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": "User.adjustFontSize.E04D5229",
+            "keys": "ctrl+shift+plus"
         },
         {
             "id": null,
-            "keys": "alt+space"
+            "keys": "alt+shift+minus"
         },
         {
             "id": null,
@@ -224,7 +220,19 @@
         },
         {
             "id": null,
+            "keys": "alt+space"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+up"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgdn"
         },
         {
             "id": "User.toggleFocusMode",
@@ -236,11 +244,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+pgdn"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+pgup"
+            "keys": "ctrl+shift+home"
         },
         {
             "id": null,
@@ -248,11 +252,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+home"
+            "keys": "ctrl+shift+end"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+end"
+            "keys": "ctrl+shift+down"
         },
         {
             "id": "User.resizePane.87C324ED",
@@ -260,7 +264,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+down"
+            "keys": "ctrl+0"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+comma"
         },
         {
             "id": null,
@@ -272,15 +280,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+comma"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+0"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+c"
+            "keys": "ctrl+shift+tab"
         },
         {
             "id": null,
@@ -288,19 +288,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+tab"
+            "keys": "ctrl+c"
         },
         {
             "id": null,
             "keys": "shift+insert"
         },
         {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "id": null,
             "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": null,
@@ -312,11 +312,11 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+down"
+            "keys": "ctrl+tab"
         },
         {
             "id": null,
-            "keys": "ctrl+tab"
+            "keys": "alt+shift+down"
         },
         {
             "id": null,
@@ -332,11 +332,23 @@
         },
         {
             "id": null,
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "id": null,
             "keys": "ctrl+insert"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+6"
+            "keys": "alt+down"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+4"
         },
         {
             "id": null,
@@ -348,31 +360,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+4"
-        },
-        {
-            "id": "User.moveFocus.87C324ED",
-            "keys": "ctrl+alt+l"
-        },
-        {
-            "id": null,
-            "keys": "alt+down"
-        },
-        {
-            "id": "User.resetFontSize",
-            "keys": "ctrl+plus"
-        },
-        {
-            "id": "User.adjustFontSize.E2698FAA",
-            "keys": "ctrl+minus"
+            "keys": "ctrl+shift+3"
         },
         {
             "id": null,
             "keys": "alt+shift+d"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+3"
+            "id": "User.adjustFontSize.E2698FAA",
+            "keys": "ctrl+minus"
+        },
+        {
+            "id": "User.resetFontSize",
+            "keys": "ctrl+plus"
         },
         {
             "id": null,
@@ -384,11 +384,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad_minus"
+            "keys": "alt+right"
         },
         {
             "id": null,
-            "keys": "alt+right"
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
@@ -417,14 +417,6 @@
         {
             "id": "User.resizePane.F747588A",
             "keys": "ctrl+alt+down"
-        },
-        {
-            "id": "User.switchToTab.D3F0B923",
-            "keys": "f1"
-        },
-        {
-            "id": "User.switchToTab.2A0DA8E0",
-            "keys": "f2"
         }
     ],
     "launchMode": "focus",
@@ -438,17 +430,20 @@
     {
         "defaults": 
         {
+            "background": null,
             "bellStyle": "taskbar",
-            "colorScheme": "Ferric",
+            "colorScheme": "Ferric Light",
             "cursorShape": "filledBox",
             "font": 
             {
                 "cellHeight": "1.5",
-                "face": "Comic Code",
-                "size": 12
+                "colorGlyphs": true,
+                "face": "ComicCode Nerd Font Mono",
+                "size": 13,
+                "weight": "normal"
             },
             "historySize": 100000,
-            "opacity": 97,
+            "opacity": 100,
             "padding": "4",
             "scrollbarState": "hidden",
             "startingDirectory": "S:\\projects\\git",
@@ -526,16 +521,22 @@
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{5fb123f1-af88-5b5c-8953-d14a8def1978}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "source": "Windows.Terminal.PowershellCore"
             }
         ]
     },
     "schemes": 
     [
         {
-            "background": "#000000",
-            "black": "#000000",
+            "background": "#0E0C0A",
+            "black": "#0E0C0A",
             "blue": "#6A88B0",
-            "brightBlack": "#565050",
+            "brightBlack": "#8A8073",
             "brightBlue": "#8AA8C8",
             "brightCyan": "#80B8B0",
             "brightGreen": "#80C8A8",
@@ -543,16 +544,39 @@
             "brightRed": "#D87068",
             "brightWhite": "#E8E0D0",
             "brightYellow": "#D8B860",
-            "cursorColor": "#CC5030",
-            "cyan": "#5A9890",
+            "cursorColor": "#C15C42",
+            "cyan": "#5A98A0",
             "foreground": "#D0C8B8",
             "green": "#5AAA88",
-            "name": "Ferric",
-            "purple": "#A06888",
-            "red": "#C44838",
-            "selectionBackground": "#322A26",
+            "name": "Ferric Dark",
+            "purple": "#A16A89",
+            "red": "#CA5546",
+            "selectionBackground": "#3C2A1E",
             "white": "#D0C8B8",
             "yellow": "#C8A040"
+        },
+        {
+            "background": "#F4ECDC",
+            "black": "#1F1A12",
+            "blue": "#3A5A8C",
+            "brightBlack": "#6A5E50",
+            "brightBlue": "#304A73",
+            "brightCyan": "#18515E",
+            "brightGreen": "#1B523F",
+            "brightPurple": "#6C3858",
+            "brightRed": "#753929",
+            "brightWhite": "#FCF6E2",
+            "brightYellow": "#614507",
+            "cursorColor": "#8F4632",
+            "cyan": "#1F6878",
+            "foreground": "#1F1A12",
+            "green": "#1C5440",
+            "name": "Ferric Light",
+            "purple": "#8A4870",
+            "red": "#A04030",
+            "selectionBackground": "#E6D4B4",
+            "white": "#EBE2CC",
+            "yellow": "#6A4C08"
         }
     ],
     "showTabsInTitlebar": true,

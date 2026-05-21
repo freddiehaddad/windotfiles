@@ -32,6 +32,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+style = "bold blue"
 
 [docker_context]
 symbol = " "
@@ -164,7 +165,7 @@ Zorin = " "
 
 [package]
 symbol = "󰏗 "
-style = "fg:#c8a040"
+style = "fg:blue"
 
 [perl]
 symbol = " "
