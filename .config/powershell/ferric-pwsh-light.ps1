@@ -1,4 +1,4 @@
-$PSStyle.FileInfo.Directory = "`e[38;2;11;85;203m" # #0b55cb - cobalt (Directory)
+$PSStyle.FileInfo.Directory = "`e[38;2;42;74;120m" # #2a4a78 - cobalt (Directory)
 
 Set-PSReadLineOption -Colors @{
         InlinePrediction = "`e[38;2;176;164;142m" # #b0a48e - special (ghost text)
@@ -6,7 +6,7 @@ Set-PSReadLineOption -Colors @{
         Parameter = "`e[38;2;6;102;121m"         # #066679 - patina (Type)
         Command = "`e[38;2;3;104;54m"             # #036836 - verdigris (Function)
         String = "`e[38;2;106;76;8m"              # #6a4c08 - forge_amber (String)
-        Number = "`e[38;2;11;85;203m"             # #0b55cb - cobalt (@number)
+        Number = "`e[38;2;42;74;120m"             # #2a4a78 - cobalt (@number)
         Variable = "`e[38;2;31;26;18m"            # #1f1a12 - limestone (@variable)
         Member = "`e[38;2;106;94;80m"             # #6a5e50 - tarnish (Identifier)
         Type = "`e[38;2;6;102;121m"              # #066679 - patina (Type)

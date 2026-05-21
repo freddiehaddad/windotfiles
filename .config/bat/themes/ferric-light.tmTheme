@@ -64,7 +64,7 @@
             }
 
             a {
-              color: #0b55cb;
+              color: #2a4a78;
             }
 
             .error, .deleted {
@@ -513,7 +513,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0b55cb</string>
+          <string>#2a4a78</string>
         </dict>
       </dict>
       <dict>
@@ -913,7 +913,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0b55cb</string>
+          <string>#2a4a78</string>
         </dict>
       </dict>
       <dict>
@@ -1098,7 +1098,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0b55cb</string>
+          <string>#2a4a78</string>
         </dict>
       </dict>
       <dict>
@@ -1486,7 +1486,7 @@
         <key>settings</key>
         <dict>
           <key>foreground</key>
-          <string>#0b55cb</string>
+          <string>#2a4a78</string>
         </dict>
       </dict>
       <dict>
