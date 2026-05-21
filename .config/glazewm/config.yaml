@@ -51,7 +51,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: '#7a3212'  # Secondary for focus
+      color: "#036836"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -61,7 +61,7 @@ window_effects:
     # Change the corner style of the window's frame.
     # ** Exclusive to Windows 11 due to API limitations.
     corner_style:
-      enabled: false
+      enabled: true
       # Allowed values: 'square', 'rounded', 'small_rounded'.
       style: "square"
 
@@ -76,11 +76,11 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: '#161a1f'  # Subtle cool neutral
+      color: "#7e6848"
     hide_title_bar:
       enabled: false
     corner_style:
-      enabled: false
+      enabled: true
       style: "square"
 
 window_behavior:
@@ -119,7 +119,7 @@ window_rules:
   # ---------------------------------------------
   - commands: ["set-tiling"]
     match:
-      - window_process: { equals: "Code" }
+      - window_process: {equals: "Code"}
     on: ["manage"]
 
   # ---------------------------------------------
@@ -128,39 +128,38 @@ window_rules:
   - commands: ["ignore"]
     match:
       # Ignores PiP windows in browsers.
-      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
-        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
+      - window_title: {regex: "[Pp]icture.in.[Pp]icture"}
+        window_class: {regex: "Chrome_WidgetWin_1|MozillaDialogClass"}
 
       # PowerToys
-      - window_process: { equals: "PowerToys" }
-        window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
-      - window_process: { equals: "PowerToys" }
-        window_title: { regex: ".*? - Peek" }
+      - window_process: {equals: "PowerToys"}
+        window_class: {regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]'}
+      - window_process: {equals: "PowerToys"}
+        window_title: {regex: ".*? - Peek"}
 
       # Lively
-      - window_process: { equals: "Lively" }
-        window_class: { regex: "HwndWrapper" }
+      - window_process: {equals: "Lively"}
+        window_class: {regex: "HwndWrapper"}
 
       # Misc utilities
-      - window_title: { equals: "Snipping Tool" }
-      - window_title: { equals: "Command Palette" }
-      - window_title: { equals: "Calculator" }
-      - window_title: { equals: "Azure VPN Client" }
+      - window_title: {equals: "Snipping Tool"}
+      - window_title: {equals: "Command Palette"}
+      - window_title: {equals: "Calculator"}
+      - window_title: {equals: "Azure VPN Client"}
 
       # Dell Peripheral Manager
-      - window_title: { equals: "PowerMon" }
-      - window_title: { equals: "InfoWindow" }
+      - window_title: {equals: "PowerMon"}
+      - window_title: {equals: "InfoWindow"}
 
       # Unknown Window
-      - window_title: { equals: "MainWindow" }
-
+      - window_title: {equals: "MainWindow"}
   # ---------------------------------------------
   # Floating Rules
   # ---------------------------------------------
   # - commands: ["set-floating"]
   #   match:
   #     - window_process: { equals: "Ascension Launcher" }
- 
+
   # ---------------------------------------------
   # Full Screen
   # ---------------------------------------------
@@ -171,8 +170,8 @@ window_rules:
   #     - window_title: { equals: "Path of Exile 2" }
 
 
-binding_modes:
-#   # When enabled, the focused window can be resized via arrow keys or HJKL.
+binding_modes: #   # When enabled, the focused window can be resized via arrow keys or HJKL.
+
 #   - name: 'resize'
 #     keybindings:
 #       - commands: ['resize --width -2%']
