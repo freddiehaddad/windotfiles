@@ -1,0 +1,243 @@
+# Ferric — eza theme
+#
+# Aligns eza's file/UI colours with the Ferric Neovim colorscheme. Uses named
+# ANSI colour slots (Blue, Green, Yellow, ...) rather than hardcoded hex so the
+# theme auto-adapts to whichever Windows Terminal scheme is active:
+#
+#   Ferric Dark  → terminal "blue" = cobalt #6A88B0, "green" = verdigris #5AAA88, …
+#   Ferric Light → terminal "blue" = cobalt #3A5A8C, "green" = verdigris #1C5440, …
+#
+# Role assignments mirror ferric.nvim:
+#
+#   Blue        → cobalt    (Directory, @number, links)        — directories, numbers
+#   Cyan        → patina    (Type, diffIndexLine, @string.esc) — symlinks, types, refs
+#   Green       → verdigris (Function, Added, DiagnosticOk)    — executables, new git
+#   Yellow      → forge_amber (String, Changed, DiagnosticWarn) — pipes, modified git
+#   Red         → brick     (Removed, terminal red)            — write perm, deleted git
+#   Magenta     → oxidized  (PreProc, @variable.builtin)       — sockets, special files
+#   LightYellow → bright_amber                                 — emphasized warnings
+#   LightRed    → bright_rust                                  — strong alerts
+#   LightBlue   → bright_cobalt                                — emphasized links
+#   LightGreen  → bright_verdigris                             — crypto / bright accent
+#   LightMagenta → bright_ember                                — videos / strong purple
+#   DarkGray    → slag (dark) / tarnish (light)                — dim/secondary metadata
+#   White       → limestone                                    — primary text
+#   Default     → terminal default fg                          — let normal text breathe
+#
+# All assignments respect the role chart established in ferric.nvim init.lua so
+# switching between editor + terminal feels coherent.
+
+filekinds:
+  normal:
+    foreground: Default
+  directory:
+    foreground: Blue
+    is_bold: true
+  symlink:
+    foreground: Cyan
+  pipe:
+    foreground: Yellow
+  block_device:
+    foreground: Yellow
+    is_bold: true
+  char_device:
+    foreground: Yellow
+    is_bold: true
+  socket:
+    foreground: Magenta
+  special:
+    foreground: Magenta
+  executable:
+    foreground: Green
+    is_bold: true
+  mount_point:
+    foreground: LightBlue
+    is_bold: true
+
+# ls/eza convention: read=yellow, write=red, execute=green.
+# Your-own perms are bold; group/other perms are unbold and dimmer.
+perms:
+  user_read:
+    foreground: Yellow
+    is_bold: true
+  user_write:
+    foreground: Red
+    is_bold: true
+  user_execute_file:
+    foreground: Green
+    is_bold: true
+  user_execute_other:
+    foreground: Green
+    is_bold: true
+  group_read:
+    foreground: Yellow
+  group_write:
+    foreground: Red
+  group_execute:
+    foreground: Green
+  other_read:
+    foreground: Yellow
+  other_write:
+    foreground: Red
+  other_execute:
+    foreground: Green
+  special_user_file:
+    foreground: LightRed
+    is_bold: true
+  special_other:
+    foreground: LightYellow
+  attribute:
+    foreground: Cyan
+
+# Size: numbers stay neutral; magnitude communicated by colour escalation.
+# Bytes are dim (rarely interesting); GB+ shifts to amber/red as a soft warning.
+size:
+  number_byte:
+    foreground: DarkGray
+  number_kilo:
+    foreground: Green
+  number_mega:
+    foreground: Yellow
+  number_giga:
+    foreground: LightYellow
+    is_bold: true
+  number_huge:
+    foreground: Red
+    is_bold: true
+  unit_byte:
+    foreground: DarkGray
+  unit_kilo:
+    foreground: Green
+  unit_mega:
+    foreground: Yellow
+  unit_giga:
+    foreground: LightYellow
+  unit_huge:
+    foreground: Red
+
+users:
+  user_you:
+    foreground: Yellow
+    is_bold: true
+  user_root:
+    foreground: Red
+    is_bold: true
+  user_other:
+    foreground: Default
+  group_yours:
+    foreground: Yellow
+  group_other:
+    foreground: Default
+  group_root:
+    foreground: Red
+
+links:
+  normal:
+    foreground: Cyan
+  multi_link_file:
+    foreground: LightRed
+
+# Mirrors ferric.nvim: Added=verdigris, Changed=forge_amber, Removed=brick,
+# Renamed=patina (same as diffIndexLine), Ignored=slag-dim, Conflicted=alert.
+git:
+  new:
+    foreground: Green
+  modified:
+    foreground: Yellow
+  deleted:
+    foreground: Red
+  renamed:
+    foreground: Cyan
+  ignored:
+    foreground: DarkGray
+  conflicted:
+    foreground: LightRed
+    is_bold: true
+
+git_repo:
+  branch_main:
+    foreground: Green
+    is_bold: true
+  branch_other:
+    foreground: Yellow
+  git_clean:
+    foreground: Green
+  git_dirty:
+    foreground: Yellow
+
+# eza categorises files automatically. These follow the upstream conventions
+# (images=purple, video=purpler, music=blue, crypto=bright green, etc.) but
+# remapped to ferric's palette via named slots.
+file_type:
+  image:
+    foreground: Magenta
+  video:
+    foreground: LightMagenta
+  music:
+    foreground: Blue
+  crypto:
+    foreground: LightGreen
+    is_bold: true
+  document:
+    foreground: Green
+  compressed:
+    foreground: Red
+  temp:
+    foreground: DarkGray
+    is_italic: true
+  compiled:
+    foreground: Yellow
+  build:
+    foreground: Yellow
+    is_bold: true
+    is_underline: true
+  source:
+    foreground: LightYellow
+
+punctuation:
+  foreground: DarkGray
+
+date:
+  foreground: DarkGray
+
+inode:
+  foreground: DarkGray
+
+blocks:
+  foreground: DarkGray
+
+# Table headers — matches ferric.nvim Title = verdigris + bold
+header:
+  foreground: Green
+  is_bold: true
+
+octal:
+  foreground: Cyan
+
+flags:
+  foreground: Yellow
+
+control_char:
+  foreground: Red
+
+broken_symlink:
+  foreground: Red
+  is_bold: true
+
+broken_path_overlay:
+  foreground: Red
+
+security_context:
+  none:
+    foreground: Default
+  selinux:
+    colon:
+      foreground: DarkGray
+    user:
+      foreground: Yellow
+    role:
+      foreground: Green
+    typ:
+      foreground: Cyan
+    range:
+      foreground: Blue
