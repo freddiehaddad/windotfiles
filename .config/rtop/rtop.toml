@@ -1,6 +1,6 @@
 theme_background = true
-rounded_corners = true
-color_theme = "default"
+rounded_corners = false
+color_theme = "ferric_light"
 vim_keys = true
 terminal_sync = true
 background_update = true
@@ -39,7 +39,7 @@ show_io_stat = true
 io_graph_combined = false
 disk_io_mode = false
 disk_filter = []
-log_level = "warn"
+log_level = "trace"
 proc_tree = false
 proc_reversed = true
 proc_per_core = false
