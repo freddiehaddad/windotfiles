@@ -4,7 +4,11 @@ general:
   # Example: The below command launches Zebar.
   # startup_commands: ['shell-exec zebar']
 
-  # hide or cloak all windows from all workspaces on the task bar
+  # How windows should be hidden when switching workspaces.
+  # - 'cloak': (Windows-only) Recommended option for Windows.
+  # - 'hide': (Windows-only) Legacy option for Windows. Has stability issues with some apps.
+  # - 'place_in_corner': Artifically hides the window by placing it in the corner of the
+  #   monitor. On macOS, this is always used instead of cloak/hide.
   hide_method: "cloak"
 
   # Commands to run just before the WM is shutdown.
@@ -32,17 +36,17 @@ general:
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
-  scale_with_dpi: false
+  scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: "10px"
+  inner_gap: "5px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "10px"
-    right: "10px"
-    bottom: "10px"
-    left: "10px"
+    top: "5px"
+    right: "5px"
+    bottom: "5px"
+    left: "5px"
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -153,6 +157,7 @@ window_rules:
 
       # Unknown Window
       - window_title: {equals: "MainWindow"}
+      - window_title: {equals: "ColorPresetBorker" }
   # ---------------------------------------------
   # Floating Rules
   # ---------------------------------------------
