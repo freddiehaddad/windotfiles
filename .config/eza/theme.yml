@@ -20,8 +20,8 @@
 #   LightBlue   → bright_cobalt                                — emphasized links
 #   LightGreen  → bright_verdigris                             — crypto / bright accent
 #   LightMagenta → bright_ember                                — videos / strong purple
-#   DarkGray    → slag (dark) / tarnish (light)                — dim/secondary metadata
-#   White       → limestone                                    — primary text
+#   DarkGray    → slag (dark) / muted (light)                  — dim/secondary metadata
+#   White       → limestone (dark) / tarnish (light)            — primary text
 #   Default     → terminal default fg                          — let normal text breathe
 #
 # All assignments respect the role chart established in ferric.nvim init.lua so

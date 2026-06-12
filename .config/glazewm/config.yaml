@@ -158,22 +158,17 @@ window_rules:
       # Unknown Window
       - window_title: {equals: "MainWindow"}
       - window_title: {equals: "ColorPresetBorker" }
-  # ---------------------------------------------
-  # Floating Rules
-  # ---------------------------------------------
-  # - commands: ["set-floating"]
-  #   match:
-  #     - window_process: { equals: "Ascension Launcher" }
+
+      # Games
+      - window_process: { equals: "PathOfExile" }
 
   # ---------------------------------------------
   # Full Screen
   # ---------------------------------------------
   # - commands: ["set-fullscreen"]
   #   match:
-  #     - window_process: { equals: "Ascension" }
-  #     # - window_process: { equals: "PathOfExile" }
-  #     - window_title: { equals: "Path of Exile 2" }
-
+  #     # Games
+  #     - window_process: { equals: "PathOfExile" }
 
 binding_modes: #   # When enabled, the focused window can be resized via arrow keys or HJKL.
 
