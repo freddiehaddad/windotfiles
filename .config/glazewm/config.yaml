@@ -66,8 +66,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     corner_style:
       enabled: true
-      # Allowed values: 'square', 'rounded', 'small_rounded'.
-      style: "square"
+      style: "default"
 
     # Change the transparency of the window.
     transparency:
@@ -85,7 +84,7 @@ window_effects:
       enabled: false
     corner_style:
       enabled: true
-      style: "square"
+      style: "default"
 
 window_behavior:
   # New windows are created in this state whenever possible.

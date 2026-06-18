@@ -1,49 +1,85 @@
+# Powershell script to handle JIT requests from the CLI.
+#
+# Subscription defaults to  xperflabs , port to  22
+#
+# Examples:
+#
+# Request-JitAccess -VMName dz-client0 -ResourceGroup TachyonLanceDB
+# Request-JitAccess dz-client0 TachyonLanceDB
+#
+# Overrides when you need them:
+#
+# Request-JitAccess dz-client0 TachyonLanceDB -Port 3389 -DurationHours 6
+# Request-JitAccess myvm OtherRG -Subscription someOtherFriendlyName -SourceAddress 10.0.0.5/32
+
 function Request-JitAccess {
-    param(
-        [Parameter(Mandatory)]
-        [string] $VmName,
+	[CmdletBinding(SupportsShouldProcess)]
+	param(
+		[Parameter(Mandatory, Position = 0)]
+		[string]$VMName,
 
-        [Parameter(Mandatory)]
-        [string] $ResourceGroup,
+		[Parameter(Mandatory, Position = 1)]
+		[Alias('rg', 'ResourceGroup')]
+		[string]$ResourceGroupName,
 
-        [Parameter(Mandatory)]
-        [string] $SubscriptionId
-    )
+		[int[]]$Port = 22,
 
-    az account set --subscription $SubscriptionId | Out-Null
+		[string]$Subscription = 'xperflabs',
 
-    $vm = az vm show `
-      -g $ResourceGroup `
-      -n $VmName `
-      --query "{id:id, location:location}" `
-      -o json | ConvertFrom-Json
+		[string]$TenantId,
 
-    $VM_ID    = $vm.id
-    $LOCATION = $vm.location
+		[ValidateRange(1, 24)]
+		[int]$DurationHours = 3,
 
-    $MY_IP = (Invoke-RestMethod "https://ifconfig.me/ip").Trim()
+		[string]$SourceAddress
+	)
 
-    $bodyObj = @{
-      virtualMachines = @(
-        @{
-          id    = $VM_ID
-          ports = @(
-            @{
-              number = 22
-              duration = "PT3H"
-              allowedSourceAddressPrefix = $MY_IP
-            }
-          )
-        }
-      )
-      justification = "SSH access"
-    }
+	# Friendly name -> subscription Id (+ optional Tenant). Fill Tenant to fully
+	# avoid the cross-tenant token prompt; leave it blank to just silence it.
+	$SubscriptionMap = @{
+		'xperflabs' = @{ Id = '1a58628a-3aa1-4ed2-b89d-abf073ad7c1c'; Tenant = '72f988bf-86f1-41af-91ab-2d7cd011db47' }
+	}
 
-    $bodyFile = Join-Path $env:TEMP "jit-request.json"
-    $bodyObj | ConvertTo-Json -Depth 10 | Set-Content -Path $bodyFile -Encoding utf8
+	if ($SubscriptionMap.ContainsKey($Subscription)) {
+		$subId = $SubscriptionMap[$Subscription].Id
+		if (-not $TenantId) { $TenantId = $SubscriptionMap[$Subscription].Tenant }
+	} else {
+		$subId = $Subscription
+	}
 
-    az rest `
-      --method post `
-      --uri "https://management.azure.com/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroup/providers/Microsoft.Security/locations/$LOCATION/jitNetworkAccessPolicies/default/initiate?api-version=2020-01-01" `
-      --body ("@" + $bodyFile)
+	Import-Module Az.Security -ErrorAction Stop
+
+	$ctxSplat = @{ WarningAction = 'SilentlyContinue'; ErrorAction = 'Stop' }
+	if ($TenantId) { $ctxSplat['Tenant'] = $TenantId }
+
+	if (-not (Get-AzContext)) {
+		$connectSplat = @{ ErrorAction = 'Stop' }
+		if ($TenantId) { $connectSplat['Tenant'] = $TenantId }
+		Connect-AzAccount @connectSplat | Out-Null
+	}
+	Set-AzContext -Subscription $subId @ctxSplat | Out-Null
+
+	$vm = Get-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -ErrorAction Stop
+
+	if (-not $SourceAddress) {
+		$SourceAddress = Invoke-RestMethod -Uri 'https://api.ipify.org' -ErrorAction Stop
+	}
+	$endTime = (Get-Date).AddHours($DurationHours).ToUniversalTime()
+
+	$ports = foreach ($p in $Port) {
+		$o = New-Object Microsoft.Azure.Commands.Security.Models.JitNetworkAccessPolicies.PSSecurityJitNetworkAccessPolicyInitiatePort
+		$o.Number                     = $p
+		$o.AllowedSourceAddressPrefix = $SourceAddress
+		$o.EndTimeUtc                 = $endTime
+		$o
+	}
+
+	$vmRequest = New-Object Microsoft.Azure.Commands.Security.Models.JitNetworkAccessPolicies.PSSecurityJitNetworkAccessPolicyInitiateVirtualMachine
+	$vmRequest.Id    = $vm.Id
+	$vmRequest.Ports = @($ports)
+
+	if ($PSCmdlet.ShouldProcess($VMName, "JIT access on port(s) $($Port -join ', ') from $SourceAddress for $DurationHours h")) {
+		Start-AzJitNetworkAccessPolicy -ResourceGroupName $ResourceGroupName -Location $vm.Location -Name 'default' -VirtualMachine @($vmRequest) | Out-Null
+		Write-Host "JIT requested for '$VMName' port(s) $($Port -join ', ') from $SourceAddress until $endTime UTC." -ForegroundColor Green
+	}
 }
