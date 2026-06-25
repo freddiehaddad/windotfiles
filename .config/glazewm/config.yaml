@@ -55,7 +55,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#036836"
+      color: "#c48e3f"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -79,7 +79,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: "#7e6848"
+      color: "#958a81"
     hide_title_bar:
       enabled: false
     corner_style:
@@ -153,6 +153,7 @@ window_rules:
       # Dell Peripheral Manager
       - window_title: {equals: "PowerMon"}
       - window_title: {equals: "InfoWindow"}
+      - window_title: {equals: "Dell Display and Peripheral Manager"}
 
       # Unknown Window
       - window_title: {equals: "MainWindow"}

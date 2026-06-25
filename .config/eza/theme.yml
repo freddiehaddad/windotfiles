@@ -4,25 +4,25 @@
 # ANSI colour slots (Blue, Green, Yellow, ...) rather than hardcoded hex so the
 # theme auto-adapts to whichever Windows Terminal scheme is active:
 #
-#   Ferric Dark  → terminal "blue" = cobalt #6A88B0, "green" = verdigris #5AAA88, …
-#   Ferric Light → terminal "blue" = cobalt #2A4A78, "green" = verdigris #036836, …
+#   Ferric Dark  → terminal "blue" = cobalt #5290D3, "green" = verdigris #50B27A, …
+#   Ferric Light → terminal "blue" = cobalt #1E5D9C, "green" = verdigris #007C48, …
 #
 # Role assignments mirror ferric.nvim:
 #
-#   Blue        → cobalt    (Directory, @number, links)        — directories, numbers
-#   Cyan        → patina    (Type, diffIndexLine, @string.esc) — symlinks, types, refs
-#   Green       → verdigris (Function, Added, DiagnosticOk)    — executables, new git
-#   Yellow      → forge_amber (String, Changed, DiagnosticWarn) — pipes, modified git
-#   Red         → brick     (Removed, terminal red)            — write perm, deleted git
-#   Magenta     → oxidized  (PreProc, @variable.builtin)       — sockets, special files
-#   LightYellow → bright_amber                                 — emphasized warnings
-#   LightRed    → bright_rust                                  — strong alerts
-#   LightBlue   → bright_cobalt                                — emphasized links
-#   LightGreen  → bright_verdigris                             — crypto / bright accent
-#   LightMagenta → bright_ember                                — videos / strong purple
-#   DarkGray    → slag (dark) / muted (light)                  — dim/secondary metadata
+#   Blue        → cobalt      (function defs, links)            — directories
+#   Cyan        → patina      (types, constructors)             — symlinks, refs
+#   Green       → verdigris   (strings, git added)              — executables, new git
+#   Yellow      → forge_amber (comments, git changed)           — pipes, modified git
+#   Red         → brick       (errors-as-text, git removed)     — write perm, deleted git
+#   Magenta     → oxidized    (hazard / unsafe — reserved)      — sockets, special files
+#   LightYellow → bright_amber                                  — emphasized warnings
+#   LightRed    → bright_rust                                   — strong alerts
+#   LightBlue   → bright_cobalt                                 — emphasized links
+#   LightGreen  → bright_verdigris                              — crypto / bright accent
+#   LightMagenta → bright_oxidized                              — videos / strong purple
+#   DarkGray    → slag (dark) / muted (light)                   — dim/secondary metadata
 #   White       → limestone (dark) / tarnish (light)            — primary text
-#   Default     → terminal default fg                          — let normal text breathe
+#   Default     → terminal default fg                           — let normal text breathe
 #
 # All assignments respect the role chart established in ferric.nvim init.lua so
 # switching between editor + terminal feels coherent.
