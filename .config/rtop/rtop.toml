@@ -1,6 +1,6 @@
 theme_background = true
 rounded_corners = false
-color_theme = "ferric_light"
+color_theme = "ferric_dark"
 vim_keys = true
 terminal_sync = true
 background_update = true

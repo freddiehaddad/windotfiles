@@ -6,22 +6,30 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": 
-            {
                 "action": "resizePane",
                 "direction": "up"
             },
             "id": "User.resizePane.6CD791B"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "resetFontSize",
+            "id": "User.resetFontSize"
+        },
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "id": "User.adjustFontSize.E2698FAA"
         },
         {
             "command": 
@@ -48,16 +56,8 @@
             "id": "User.moveFocus.87C324ED"
         },
         {
-            "command": 
-            {
-                "action": "adjustFontSize",
-                "delta": -1
-            },
-            "id": "User.adjustFontSize.E2698FAA"
-        },
-        {
-            "command": "resetFontSize",
-            "id": "User.resetFontSize"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -155,6 +155,14 @@
             "keys": "shift+enter"
         },
         {
+            "id": null,
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
             "id": "User.moveFocus.2A0DA8E0",
             "keys": "ctrl+alt+h"
         },
@@ -164,11 +172,7 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+5"
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
@@ -180,15 +184,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+3"
-        },
-        {
-            "id": null,
             "keys": "ctrl+alt+8"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+4"
         },
         {
             "id": null,
@@ -196,15 +192,11 @@
         },
         {
             "id": null,
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "id": null,
             "keys": "ctrl+alt+6"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+1"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+left"
         },
         {
             "id": "User.adjustFontSize.E04D5229",
@@ -212,11 +204,15 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+minus"
+            "keys": "alt+shift+left"
         },
         {
             "id": null,
-            "keys": "alt+shift+plus"
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+minus"
         },
         {
             "id": null,
@@ -224,15 +220,11 @@
         },
         {
             "id": null,
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+up"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+pgup"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+pgdn"
         },
         {
             "id": "User.toggleFocusMode",
@@ -244,7 +236,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+home"
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+pgup"
         },
         {
             "id": null,
@@ -252,11 +248,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+end"
+            "keys": "ctrl+shift+home"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+down"
+            "keys": "ctrl+shift+end"
         },
         {
             "id": "User.resizePane.87C324ED",
@@ -264,11 +260,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+0"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+comma"
+            "keys": "ctrl+shift+down"
         },
         {
             "id": null,
@@ -280,11 +272,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+tab"
+            "keys": "ctrl+shift+comma"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+d"
+            "keys": "ctrl+0"
         },
         {
             "id": null,
@@ -292,15 +284,23 @@
         },
         {
             "id": null,
-            "keys": "shift+insert"
+            "keys": "ctrl+shift+d"
         },
         {
             "id": null,
-            "keys": "ctrl+v"
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "id": null,
+            "keys": "shift+insert"
         },
         {
             "id": "User.find",
             "keys": "ctrl+shift+f"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+v"
         },
         {
             "id": null,
@@ -312,11 +312,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+tab"
+            "keys": "alt+shift+down"
         },
         {
             "id": null,
-            "keys": "alt+shift+down"
+            "keys": "ctrl+tab"
         },
         {
             "id": null,
@@ -332,23 +332,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+6"
-        },
-        {
-            "id": null,
             "keys": "ctrl+insert"
         },
         {
             "id": null,
-            "keys": "alt+down"
-        },
-        {
-            "id": "User.moveFocus.87C324ED",
-            "keys": "ctrl+alt+l"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+4"
+            "keys": "ctrl+shift+6"
         },
         {
             "id": null,
@@ -360,19 +348,31 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+3"
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+alt+l"
         },
         {
             "id": null,
-            "keys": "alt+shift+d"
+            "keys": "alt+down"
+        },
+        {
+            "id": "User.resetFontSize",
+            "keys": "ctrl+plus"
         },
         {
             "id": "User.adjustFontSize.E2698FAA",
             "keys": "ctrl+minus"
         },
         {
-            "id": "User.resetFontSize",
-            "keys": "ctrl+plus"
+            "id": null,
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+3"
         },
         {
             "id": null,
@@ -384,11 +384,11 @@
         },
         {
             "id": null,
-            "keys": "alt+right"
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
-            "keys": "ctrl+numpad_minus"
+            "keys": "alt+right"
         },
         {
             "id": null,
@@ -430,15 +430,15 @@
     {
         "defaults": 
         {
-            "background": null,
             "bellStyle": "taskbar",
-            "colorScheme": "Ferric Light",
+            "colorScheme": "Ferric Dark",
             "cursorShape": "filledBox",
             "font": 
             {
                 "colorGlyphs": true,
                 "face": "ComicCode Nerd Font Mono",
-                "weight": "normal"
+                "size": 13,
+                "weight": "medium"
             },
             "historySize": 100000,
             "opacity": 100,
@@ -525,6 +525,12 @@
                 "hidden": false,
                 "name": "PowerShell 7",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{e050b725-6321-5cdd-8f84-c44d8b635d36}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
             }
         ]
     },
