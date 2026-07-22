@@ -16,6 +16,9 @@ if ($vsPath) {
 	}
 }
 
+# Add development version of Neovim to PATH
+$env:PATH = "C:\Users\fhaddad\.local\bin\nvim-win64\bin;" + $env:PATH
+
 # For Treesitter installed via Rust/Cargo
 # cargo install tree-sitter-cli
 $env:LIBCLANG_PATH = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin"
