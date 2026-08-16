@@ -32,7 +32,6 @@ net_download = 100
 net_upload = 100
 proc_aggregate = false
 proc_colors = true
-proc_gradient = true
 proc_mem_bytes = true
 graph_symbol_disk = "default"
 show_io_stat = true
