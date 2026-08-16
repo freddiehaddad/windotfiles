@@ -111,8 +111,9 @@ provide the steps to install and configure third-party software.
    git config --global user.email your@email.com
    git config --global core.editor nvim
    git config --global merge.tool nvimdiff
-   git config --global mergetool.keepBackup false
    git config --global diff.tool nvimdiff
+   git config --global mergetool.keepBackup false
+   git config --global merge.conflictstyle zdiff3
    git config --global difftool.prompt false
    git config --global core.eol lf
    git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
@@ -126,7 +127,7 @@ provide the steps to install and configure third-party software.
    [user]
        name = Freddie Haddad
        email = my@email.com
-       signingKey = <stored in 1Password>
+       signingkey = C:/Users/fhaddad/.ssh/id_ed25519
    [filter "lfs"]
        clean = git-lfs clean -- %f
        smudge = git-lfs smudge -- %f
@@ -134,11 +135,11 @@ provide the steps to install and configure third-party software.
        required = true
    [core]
        editor = nvim
-       sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
        autocrlf = true
    [merge]
        ff = only
        tool = nvimdiff
+       conflictstyle = zdiff3
    [mergetool]
        keepBackup = false
    [diff]
@@ -158,10 +159,7 @@ provide the steps to install and configure third-party software.
        helper = 
        helper = !'C:\\Program Files\\GitHub CLI\\gh.exe' auth git-credential
    [gpg "ssh"]
-       # Install location via direct download
-       # program = C:\\Users\\fhaddad\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
-       # Install location via winget
-       program = C:\\Users\\fhaddad\\AppData\\Local\\Microsoft\\WindowsApps\\Agilebits.1Password_amwd9z03whsfe\\op-ssh-sign.exe
+       allowedSignersFile = C:/Users/fhaddad/.ssh/allowed_signers
    ```
 
 1. Create symbolic links
