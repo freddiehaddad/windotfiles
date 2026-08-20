@@ -17,8 +17,8 @@ $env:FZF_DEFAULT_OPTS = @"
 --bind="ctrl-b:preview-page-up"
 --bind="shift-up:preview-up"
 --bind="shift-down:preview-down"
---color=bg+:#2E564A,bg:#16201E,spinner:#C48E3F,hl:#5290D3
---color=fg:#8A8073,header:#C48E3F,info:#8A8073,pointer:#C48E3F
---color=marker:#50B27A,fg+:#D0C8B8,prompt:#C48E3F,hl+:#5290D3
---color=border:#3A4240,preview-border:#3A4240,gutter:#16201E
+--color=bg+:#2d3033,bg:#1b1c1d,spinner:#b77a50,hl:#b77a50
+--color=fg:#7b7d80,header:#b77a50,info:#898985,pointer:#b77a50
+--color=marker:#7f986d,fg+:#d2d1cd,prompt:#b77a50,hl+:#b77a50
+--color=border:#4d5155,preview-border:#4d5155,gutter:#1b1c1d
 "@

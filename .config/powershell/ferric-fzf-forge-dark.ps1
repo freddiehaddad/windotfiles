@@ -1,0 +1,24 @@
+$env:FZF_DEFAULT_OPTS = @"
+--border=sharp
+--preview-window="border-sharp"
+--margin=1
+--padding=0
+--prompt="❯ "
+--marker="✓"
+--pointer="❯"
+--separator="─"
+--scrollbar="│"
+--info="right"
+--height="40%"
+--bind="ctrl-/:toggle-preview"
+--bind="ctrl-u:preview-half-page-up"
+--bind="ctrl-d:preview-half-page-down"
+--bind="ctrl-f:preview-page-down"
+--bind="ctrl-b:preview-page-up"
+--bind="shift-up:preview-up"
+--bind="shift-down:preview-down"
+--color=bg+:#33251d,bg:#1a1512,spinner:#c08b57,hl:#c08b57
+--color=fg:#877c72,header:#c08b57,info:#8e8479,pointer:#c08b57
+--color=marker:#7e9d69,fg+:#d4ccc0,prompt:#c08b57,hl+:#c08b57
+--color=border:#53463f,preview-border:#53463f,gutter:#1a1512
+"@
