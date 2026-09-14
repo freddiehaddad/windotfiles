@@ -155,12 +155,15 @@ window_rules:
       - window_title: {equals: "InfoWindow"}
       - window_title: {equals: "Dell Display and Peripheral Manager"}
 
+      # Zen browser
+      - window_title: { equals: "Library" }
+
       # Unknown Window
       - window_title: {equals: "MainWindow"}
       - window_title: {equals: "ColorPresetBorker" }
 
       # Games
-      - window_process: { equals: "PathOfExile" }
+      - window_title: { equals: "Battle.net" }
 
   # ---------------------------------------------
   # Full Screen
