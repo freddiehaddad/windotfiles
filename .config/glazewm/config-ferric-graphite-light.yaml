@@ -122,7 +122,7 @@ window_rules:
   # ---------------------------------------------
   - commands: ["set-tiling"]
     match:
-      - window_process: {equals: "Code"}
+      - window_process: { equals: "Code" }
     on: ["manage"]
 
   # ---------------------------------------------
@@ -131,39 +131,40 @@ window_rules:
   - commands: ["ignore"]
     match:
       # Ignores PiP windows in browsers.
-      - window_title: {regex: "[Pp]icture.in.[Pp]icture"}
-        window_class: {regex: "Chrome_WidgetWin_1|MozillaDialogClass"}
+      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
+        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
       # PowerToys
-      - window_process: {equals: "PowerToys"}
-        window_class: {regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]'}
-      - window_process: {equals: "PowerToys"}
-        window_title: {regex: ".*? - Peek"}
+      - window_process: { equals: "PowerToys" }
+        window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
+      - window_process: { equals: "PowerToys" }
+        window_title: { regex: ".*? - Peek" }
 
       # Lively
-      - window_process: {equals: "Lively"}
-        window_class: {regex: "HwndWrapper"}
+      - window_process: { equals: "Lively" }
+        window_class: { regex: "HwndWrapper" }
 
       # Misc utilities
-      - window_title: {equals: "Snipping Tool"}
-      - window_title: {equals: "Command Palette"}
-      - window_title: {equals: "Calculator"}
-      - window_title: {equals: "Azure VPN Client"}
+      - window_title: { equals: "Snipping Tool" }
+      - window_title: { equals: "Command Palette" }
+      - window_title: { equals: "Calculator" }
+      - window_title: { equals: "Azure VPN Client" }
 
       # Dell Peripheral Manager
-      - window_title: {equals: "PowerMon"}
-      - window_title: {equals: "InfoWindow"}
-      - window_title: {equals: "Dell Display and Peripheral Manager"}
+      - window_title: { equals: "PowerMon" }
+      - window_title: { equals: "InfoWindow" }
+      - window_title: { equals: "Dell Display and Peripheral Manager" }
 
       # Zen browser
       - window_title: { equals: "Library" }
 
       # Unknown Window
-      - window_title: {equals: "MainWindow"}
-      - window_title: {equals: "ColorPresetBorker" }
+      - window_title: { equals: "MainWindow" }
+      - window_title: { equals: "ColorPresetBorker" }
 
       # Games
       - window_title: { equals: "Battle.net" }
+      - window_title: { equals: "World of Warcraft" }
 
   # ---------------------------------------------
   # Full Screen
@@ -247,16 +248,16 @@ keybindings:
   #   bindings: ['alt+space']
 
   # Change the focused window to be floating.
-  - commands: ['toggle-floating --centered']
-    bindings: ['lwin+ctrl+shift+f']
+  - commands: ["toggle-floating --centered"]
+    bindings: ["lwin+ctrl+shift+f"]
 
   # Change the focused window to be tiling.
   # - commands: ['toggle-tiling']
   #   bindings: ['lwin+ctrl+shift+f']
 
   # Change the focused window to be fullscreen.
-  - commands: ['toggle-fullscreen']
-    bindings: ['lwin+ctrl+shift+m']
+  - commands: ["toggle-fullscreen"]
+    bindings: ["lwin+ctrl+shift+m"]
 
   # Minimize focused window.
   # - commands: ['toggle-minimized']
