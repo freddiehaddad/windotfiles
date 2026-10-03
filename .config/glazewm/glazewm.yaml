@@ -55,7 +55,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#8a5a2c"
+      color: "#c08b57"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -79,7 +79,7 @@ window_effects:
   other_windows:
     border:
       enabled: true
-      color: "#aaa099"
+      color: "#4e4945"
     hide_title_bar:
       enabled: false
     corner_style:
@@ -117,62 +117,23 @@ workspaces:
   - name: "4"
 
 window_rules:
+  # To identify window names:
+  #   glazewm.exe query windows 
+
   # ---------------------------------------------
-  # Force tiling
+  # Force floating
   # ---------------------------------------------
-  - commands: ["set-tiling"]
+  - commands: ["set-floating"]
     match:
-      - window_process: { equals: "Code" }
-    on: ["manage"]
-
-  # ---------------------------------------------
-  # Global ignore rules
-  # ---------------------------------------------
-  - commands: ["ignore"]
-    match:
-      # Ignores PiP windows in browsers.
-      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
-        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
-
-      # PowerToys
-      - window_process: { equals: "PowerToys" }
-        window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
-      - window_process: { equals: "PowerToys" }
-        window_title: { regex: ".*? - Peek" }
-
-      # Lively
-      - window_process: { equals: "Lively" }
-        window_class: { regex: "HwndWrapper" }
-
-      # Misc utilities
-      - window_title: { equals: "Snipping Tool" }
-      - window_title: { equals: "Command Palette" }
-      - window_title: { equals: "Calculator" }
-      - window_title: { equals: "Azure VPN Client" }
-
-      # Dell Peripheral Manager
-      - window_title: { equals: "PowerMon" }
-      - window_title: { equals: "InfoWindow" }
-      - window_title: { equals: "Dell Display and Peripheral Manager" }
-
-      # Zen browser
-      - window_title: { equals: "Library" }
-
-      # Unknown Window
-      - window_title: { equals: "MainWindow" }
-      - window_title: { equals: "ColorPresetBorker" }
+      # Notepad Print Dialog
+      - window_tile: { equals: "Notepad - Print" }
+        window_class: { equals: "ApplicationFrameWindow" }
 
       # Games
       - window_title: { equals: "Battle.net" }
+        window_class: { equals: "Chrome_WidgetWin_0" }
       - window_title: { equals: "World of Warcraft" }
-
-  # ---------------------------------------------
-  # Full Screen
-  # ---------------------------------------------
-  # - commands: ["set-fullscreen"]
-  #   match:
-  #     # Games
-  #     - window_process: { equals: "PathOfExile" }
+        window_class: { equals: "waApplication Window" }
 
 binding_modes: #   # When enabled, the focused window can be resized via arrow keys or HJKL.
 

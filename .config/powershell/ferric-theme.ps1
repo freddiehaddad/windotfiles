@@ -14,7 +14,7 @@ if ($Theme -notin $themes) {
 $env:FERRIC_THEME = $Theme
 $env:BAT_THEME = "ferric-$Theme"
 $env:STARSHIP_CONFIG = Join-Path $env:USERPROFILE ".config\starship\starship-ferric-$Theme.toml"
-$env:GLAZEWM_CONFIG_PATH = Join-Path $env:USERPROFILE ".config\glazewm\config-ferric-$Theme.yaml"
+$env:GLAZEWM_CONFIG_PATH = Join-Path $env:USERPROFILE ".config\glazewm\glazewm.yaml"
 
 if ($Persist) {
     [Environment]::SetEnvironmentVariable("FERRIC_THEME", $env:FERRIC_THEME, "User")
