@@ -132,6 +132,13 @@ window_rules:
       # Games
       - window_title: { equals: "Battle.net" }
         window_class: { equals: "Chrome_WidgetWin_0" }
+
+  # ---------------------------------------------
+  # Force fullscreen
+  # ---------------------------------------------
+  - commands: ["set-fullscreen"]
+    match:
+      # Games
       - window_title: { equals: "World of Warcraft" }
         window_class: { equals: "waApplication Window" }
 
