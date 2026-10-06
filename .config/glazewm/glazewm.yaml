@@ -129,7 +129,12 @@ window_rules:
       - window_tile: { equals: "Notepad - Print" }
         window_class: { equals: "ApplicationFrameWindow" }
 
-      # Games
+      # Snipping Tool
+      - window_title: { equals: "Snipping Tool" }
+        window_class: { equals: "XamlWindow" }
+        window_process: { equals: "SnippingTool" }
+
+      # Battle.net
       - window_title: { equals: "Battle.net" }
         window_class: { equals: "Chrome_WidgetWin_0" }
 
