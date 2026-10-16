@@ -74,8 +74,9 @@ function reset {
 # Install-Module -Name PSFzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
 
-# Set Ferric theme for PowerShell, fzf, bat, and Starship.
-. (Join-Path $env:USERPROFILE .config powershell ferric-theme.ps1)
+# Set theme for PowerShell and fzf.
+. (Join-Path $PSScriptRoot "sanzo-fzf.ps1")
+. (Join-Path $PSScriptRoot "sanzo-pwsh.ps1")
 
 # Load FZF functions
 . (Join-Path $env:USERPROFILE .config powershell fzf-functions.ps1)

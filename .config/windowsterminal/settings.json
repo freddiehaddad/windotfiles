@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "resizePane",
                 "direction": "up"
@@ -12,7 +12,7 @@
             "id": "User.resizePane.6CD791B"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
@@ -24,7 +24,7 @@
             "id": "User.resetFontSize"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "adjustFontSize",
                 "delta": -1
@@ -32,7 +32,7 @@
             "id": "User.adjustFontSize.E2698FAA"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "switchToTab",
                 "index": 1
@@ -40,7 +40,7 @@
             "id": "User.switchToTab.2A0DA8E0"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "switchToTab",
                 "index": 0
@@ -48,7 +48,7 @@
             "id": "User.switchToTab.D3F0B923"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "right"
@@ -60,7 +60,7 @@
             "id": "User.paste"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "down"
@@ -68,7 +68,7 @@
             "id": "User.moveFocus.F747588A"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "resizePane",
                 "direction": "left"
@@ -80,7 +80,7 @@
             "id": "User.find"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -89,7 +89,7 @@
             "id": "User.splitPane.A6751878"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "left"
@@ -97,7 +97,7 @@
             "id": "User.moveFocus.2A0DA8E0"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "resizePane",
                 "direction": "down"
@@ -105,7 +105,7 @@
             "id": "User.resizePane.F747588A"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "moveFocus",
                 "direction": "up"
@@ -113,7 +113,7 @@
             "id": "User.moveFocus.6CD791B"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "adjustFontSize",
                 "delta": 1
@@ -121,7 +121,7 @@
             "id": "User.adjustFontSize.E04D5229"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "resizePane",
                 "direction": "right"
@@ -133,7 +133,7 @@
             "id": "User.toggleFocusMode"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "sendInput",
                 "input": "\u001b\r"
@@ -141,7 +141,7 @@
             "id": "User.sendInput.8F63D3A9"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "sendInput",
                 "input": "\u001b"
@@ -156,7 +156,7 @@
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialPosition": "200,40",
     "initialRows": 60,
-    "keybindings": 
+    "keybindings":
     [
         {
             "id": "User.sendInput.8F63D3A9",
@@ -432,20 +432,20 @@
         }
     ],
     "launchMode": "focus",
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "bellStyle": "taskbar",
-            "colorScheme": "Ferric Forge Dark",
+            "colorScheme": "Sanzo",
             "cursorShape": "filledBox",
-            "font": 
+            "font":
             {
                 "colorGlyphs": true,
                 "face": "ComicCode Nerd Font Mono",
@@ -458,7 +458,7 @@
             "startingDirectory": "S:\\projects\\git",
             "useAcrylic": false
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoLogo -NoProfileLoadTime -NoExit -File C:\\\\Users\\\\fhaddad\\\\.config\\\\powershell\\\\profile.ps1",
@@ -469,7 +469,7 @@
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "font": 
+                "font":
                 {
                     "size": 10
                 },
@@ -482,12 +482,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{db1d8c35-5f1f-5c6e-bf9b-ade86c5c16c4}",
-                "hidden": false,
-                "name": "QMK MSYS",
-                "source": "QMK"
             },
             {
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
@@ -545,145 +539,30 @@
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
-            "background": "#100D0B",
-            "black": "#100D0B",
-            "blue": "#7096B3",
-            "brightBlack": "#877C72",
-            "brightBlue": "#8DB1CC",
-            "brightCyan": "#77B3AC",
-            "brightGreen": "#99B581",
-            "brightPurple": "#C49CAF",
-            "brightRed": "#DF7D70",
-            "brightWhite": "#EEE6DA",
-            "brightYellow": "#D0B579",
-            "cursorColor": "#C08B57",
-            "cyan": "#5B9A94",
-            "foreground": "#D4CCC0",
-            "green": "#7E9D69",
-            "name": "Ferric Forge Dark",
-            "purple": "#A78391",
-            "red": "#B9534B",
-            "selectionBackground": "#33251D",
-            "white": "#D4CCC0",
-            "yellow": "#B89A5D"
-        },
-        {
-            "background": "#F7F1E7",
-            "black": "#28231E",
-            "blue": "#3B607C",
-            "brightBlack": "#756C63",
-            "brightBlue": "#2A4960",
-            "brightCyan": "#21534F",
-            "brightGreen": "#36532D",
-            "brightPurple": "#543C4D",
-            "brightRed": "#712D28",
-            "brightWhite": "#18130F",
-            "brightYellow": "#59431B",
-            "cursorColor": "#8A5A2C",
-            "cyan": "#2F6A66",
-            "foreground": "#28231E",
-            "green": "#49673C",
-            "name": "Ferric Forge Light",
-            "purple": "#6D5064",
-            "red": "#85362F",
-            "selectionBackground": "#E4D3C4",
-            "white": "#6D6259",
-            "yellow": "#755B25"
-        },
-        {
-            "background": "#121212",
-            "black": "#121212",
-            "blue": "#7494AD",
-            "brightBlack": "#7B7D80",
-            "brightBlue": "#91AEC4",
-            "brightCyan": "#7BADA8",
-            "brightGreen": "#99B184",
-            "brightPurple": "#C3A3C1",
-            "brightRed": "#DC7971",
-            "brightWhite": "#ECEBE7",
-            "brightYellow": "#C7AB78",
-            "cursorColor": "#B77A50",
-            "cyan": "#63928E",
-            "foreground": "#D2D1CD",
-            "green": "#7F986D",
-            "name": "Ferric Graphite Dark",
-            "purple": "#A987A7",
-            "red": "#B9514C",
-            "selectionBackground": "#2D3033",
-            "white": "#D2D1CD",
-            "yellow": "#AD915E"
-        },
-        {
-            "background": "#F4F3EF",
-            "black": "#292A29",
-            "blue": "#3F6078",
-            "brightBlack": "#70716F",
-            "brightBlue": "#2F485C",
-            "brightCyan": "#2A5551",
-            "brightGreen": "#405631",
-            "brightPurple": "#503A52",
-            "brightRed": "#702D29",
-            "brightWhite": "#181918",
-            "brightYellow": "#57431F",
-            "cursorColor": "#8A4E2F",
-            "cyan": "#396B67",
-            "foreground": "#292A29",
-            "green": "#52693F",
-            "name": "Ferric Graphite Light",
-            "purple": "#674E69",
-            "red": "#833630",
-            "selectionBackground": "#D8D9DA",
-            "white": "#70716F",
-            "yellow": "#745B2E"
-        },
-        {
-            "background": "#11151A",
-            "black": "#11151A",
-            "blue": "#87A8C2",
-            "brightBlack": "#7F8A92",
-            "brightBlue": "#A2C1D8",
-            "brightCyan": "#80B9B3",
-            "brightGreen": "#A3BD8C",
-            "brightPurple": "#C9ADD0",
-            "brightRed": "#E9877C",
-            "brightWhite": "#EDF3F5",
-            "brightYellow": "#D8BA7D",
-            "cursorColor": "#6F9FC4",
-            "cyan": "#66A19B",
-            "foreground": "#D5DDE2",
-            "green": "#88A672",
-            "name": "Ferric Steel Dark",
-            "purple": "#B095B5",
-            "red": "#C85F59",
-            "selectionBackground": "#273542",
-            "white": "#D5DDE2",
-            "yellow": "#C0A063"
-        },
-        {
-            "background": "#F2F5F6",
-            "black": "#232A2E",
-            "blue": "#3B627E",
-            "brightBlack": "#69757C",
-            "brightBlue": "#294A61",
-            "brightCyan": "#245650",
-            "brightGreen": "#36582E",
-            "brightPurple": "#503B59",
-            "brightRed": "#702D28",
-            "brightWhite": "#151B1E",
-            "brightYellow": "#59451F",
-            "cursorColor": "#386887",
-            "cyan": "#326D68",
-            "foreground": "#232A2E",
-            "green": "#496C3D",
-            "name": "Ferric Steel Light",
-            "purple": "#674F72",
-            "red": "#84342F",
-            "selectionBackground": "#D5E0E6",
-            "white": "#69757C",
-            "yellow": "#765D2D"
+            "background": "#2B2A2A",
+            "black": "#2B2A2A",
+            "blue": "#859099",
+            "brightBlack": "#6F6F6B",
+            "brightBlue": "#93A5A0",
+            "brightCyan": "#B2B8BC",
+            "brightGreen": "#B2C3B2",
+            "brightPurple": "#B3A6B0",
+            "brightRed": "#CCA598",
+            "brightWhite": "#E8E8D3",
+            "brightYellow": "#DCBD93",
+            "cursorColor": "#E8E8D3",
+            "cyan": "#A8B0B8",
+            "foreground": "#E8E8D3",
+            "green": "#A8BCAC",
+            "name": "Sanzo",
+            "purple": "#9E8F9C",
+            "red": "#CC9A98",
+            "selectionBackground": "#4D4D4D",
+            "white": "#D7D7C6",
+            "yellow": "#CEBFA1"
         }
     ],
     "showTabsInTitlebar": true,

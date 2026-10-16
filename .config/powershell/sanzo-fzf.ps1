@@ -17,8 +17,11 @@ $env:FZF_DEFAULT_OPTS = @"
 --bind="ctrl-b:preview-page-up"
 --bind="shift-up:preview-up"
 --bind="shift-down:preview-down"
---color=bg+:#2d3033,bg:#1b1c1d,spinner:#b77a50,hl:#b77a50
---color=fg:#7b7d80,header:#b77a50,info:#898985,pointer:#b77a50
---color=marker:#7f986d,fg+:#d2d1cd,prompt:#b77a50,hl+:#b77a50
---color=border:#4d5155,preview-border:#4d5155,gutter:#1b1c1d
+--color=dark,bg:#353434,fg:#e8e8d3,bg+:#404040,fg+:#dcbd93
+--color=hl:#dcbd93,hl+:#dcbd93,prompt:#dcbd93,pointer:#dcbd93
+--color=marker:#dcbd93,spinner:#dcbd93,header:#a8b0b8,info:#6f6f6b
+--color=border:#5a5a5a,preview-border:#5a5a5a,gutter:#353434
+--color=preview-bg:#353434,preview-fg:#e8e8d3,input-fg:#e8e8d3
+--color=scrollbar:#6f6f6b,preview-scrollbar:#6f6f6b,separator:#5a5a5a
+--color=label:#e8e8d3,footer:#6f6f6b
 "@

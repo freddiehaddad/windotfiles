@@ -1,228 +1,211 @@
-# Ferric eza theme
-#
-# Uses semantic ANSI slots so this one file follows all Forge, Steel, and
-# Graphite terminal schemes in both dark and light variants:
-#
-#   Blue         functions, directories, links
-#   Cyan         types, symlinks, references
-#   Green        strings, executables, Git additions
-#   Yellow       constants, warnings, Git changes
-#   Red          errors, write permission, Git deletions
-#   Magenta      links, sockets, and special files
-#   DarkGray     quiet metadata and punctuation
-#   Default      normal text
+# Sanzo eza theme. Ordinary text inherits the terminal foreground.
+# Actions use function colors, resources use type colors, and values use constants.
 
 filekinds:
   normal:
     foreground: Default
   directory:
-    foreground: Blue
+    foreground: "#dcbd93"
     is_bold: true
   symlink:
-    foreground: Cyan
+    foreground: "#a8b0b8"
   pipe:
-    foreground: Yellow
+    foreground: "#859099"
   block_device:
-    foreground: Yellow
+    foreground: "#859099"
     is_bold: true
   char_device:
-    foreground: Yellow
+    foreground: "#859099"
     is_bold: true
   socket:
-    foreground: Magenta
+    foreground: "#859099"
   special:
-    foreground: Magenta
+    foreground: "#859099"
   executable:
-    foreground: Green
+    foreground: "#dcbd93"
     is_bold: true
   mount_point:
-    foreground: LightBlue
+    foreground: "#dcbd93"
     is_bold: true
 
-# ls/eza convention: read=yellow, write=red, execute=green.
-# Your-own perms are bold; group/other perms are unbold and dimmer.
+# Readable data, mutation modifiers, and executable actions have distinct roles.
 perms:
   user_read:
-    foreground: Yellow
+    foreground: "#a8bcac"
     is_bold: true
   user_write:
-    foreground: Red
+    foreground: "#b3a6b0"
     is_bold: true
   user_execute_file:
-    foreground: Green
+    foreground: "#dcbd93"
     is_bold: true
   user_execute_other:
-    foreground: Green
+    foreground: "#dcbd93"
     is_bold: true
   group_read:
-    foreground: Yellow
+    foreground: "#a8bcac"
   group_write:
-    foreground: Red
+    foreground: "#b3a6b0"
   group_execute:
-    foreground: Green
+    foreground: "#dcbd93"
   other_read:
-    foreground: Yellow
+    foreground: "#a8bcac"
   other_write:
-    foreground: Red
+    foreground: "#b3a6b0"
   other_execute:
-    foreground: Green
+    foreground: "#dcbd93"
   special_user_file:
-    foreground: LightRed
+    foreground: "#dcbd93"
     is_bold: true
   special_other:
-    foreground: LightYellow
+    foreground: "#dcbd93"
   attribute:
-    foreground: Cyan
+    foreground: "#a8b0b8"
 
-# Size: numbers stay neutral; magnitude communicated by colour escalation.
-# Bytes are dim (rarely interesting); GB+ shifts to amber/red as a soft warning.
+# All numeric sizes are constants; units remain secondary text.
 size:
   number_byte:
-    foreground: DarkGray
+    foreground: "#cca598"
   number_kilo:
-    foreground: Green
+    foreground: "#cca598"
   number_mega:
-    foreground: Yellow
+    foreground: "#cca598"
   number_giga:
-    foreground: LightYellow
+    foreground: "#cca598"
     is_bold: true
   number_huge:
-    foreground: Red
+    foreground: "#cca598"
     is_bold: true
   unit_byte:
-    foreground: DarkGray
+    foreground: "#6f6f6b"
   unit_kilo:
-    foreground: Green
+    foreground: "#6f6f6b"
   unit_mega:
-    foreground: Yellow
+    foreground: "#6f6f6b"
   unit_giga:
-    foreground: LightYellow
+    foreground: "#6f6f6b"
   unit_huge:
-    foreground: Red
+    foreground: "#6f6f6b"
 
 users:
   user_you:
-    foreground: Yellow
+    foreground: Default
     is_bold: true
   user_root:
-    foreground: Red
+    foreground: "#dcbd93"
     is_bold: true
   user_other:
     foreground: Default
   group_yours:
-    foreground: Yellow
+    foreground: "#d7d7c6"
   group_other:
-    foreground: Default
+    foreground: "#d7d7c6"
   group_root:
-    foreground: Red
+    foreground: "#dcbd93"
 
 links:
   normal:
-    foreground: Cyan
+    foreground: "#cca598"
   multi_link_file:
-    foreground: LightRed
+    foreground: "#cca598"
 
-# Mirrors Ferric Git roles: add=green, change=yellow, delete=red,
-# rename=cyan, ignored=dim, conflict=bright red.
+# Match Sanzo's added, changed, deleted, and diagnostic colors.
 git:
   new:
-    foreground: Green
+    foreground: "#a8bcac"
   modified:
-    foreground: Yellow
+    foreground: "#a8b0b8"
   deleted:
-    foreground: Red
+    foreground: "#cca598"
   renamed:
-    foreground: Cyan
+    foreground: "#a8b0b8"
   ignored:
-    foreground: DarkGray
+    foreground: "#6f6f6b"
   conflicted:
-    foreground: LightRed
+    foreground: "#cca598"
     is_bold: true
 
 git_repo:
   branch_main:
-    foreground: Green
+    foreground: "#a8b0b8"
     is_bold: true
   branch_other:
-    foreground: Yellow
+    foreground: "#a8b0b8"
   git_clean:
-    foreground: Green
+    foreground: "#a8bcac"
   git_dirty:
-    foreground: Yellow
+    foreground: "#dcbd93"
 
-# eza categorises files automatically. These follow the upstream conventions
-# (images=purple, video=purpler, music=blue, crypto=bright green, etc.) but
-# remapped to ferric's palette via named slots.
+# Classify content by role rather than assigning each format an arbitrary hue.
 file_type:
   image:
-    foreground: Magenta
+    foreground: "#93a5a0"
   video:
-    foreground: LightMagenta
+    foreground: "#93a5a0"
   music:
-    foreground: Blue
+    foreground: "#93a5a0"
   crypto:
-    foreground: LightGreen
+    foreground: "#93a5a0"
     is_bold: true
   document:
-    foreground: Green
+    foreground: "#a8bcac"
   compressed:
-    foreground: Red
+    foreground: "#cca598"
   temp:
-    foreground: DarkGray
+    foreground: "#6f6f6b"
     is_italic: true
   compiled:
-    foreground: Yellow
+    foreground: "#cca598"
   build:
-    foreground: Yellow
+    foreground: "#dcbd93"
     is_bold: true
     is_underline: true
   source:
-    foreground: LightYellow
+    foreground: "#93a5a0"
 
 punctuation:
-  foreground: DarkGray
+  foreground: "#acaca2"
 
 date:
-  foreground: DarkGray
+  foreground: "#cca598"
 
 inode:
-  foreground: DarkGray
+  foreground: "#cca598"
 
 blocks:
-  foreground: DarkGray
+  foreground: "#cca598"
 
-# Table headers use the emphasized link/function slot.
 header:
-  foreground: LightBlue
+  foreground: "#dcbd93"
   is_bold: true
 
 octal:
-  foreground: Cyan
+  foreground: "#cca598"
 
 flags:
-  foreground: Yellow
+  foreground: "#b3a6b0"
 
 control_char:
-  foreground: Red
+  foreground: "#cca598"
 
 broken_symlink:
-  foreground: Red
+  foreground: "#cca598"
   is_bold: true
 
 broken_path_overlay:
-  foreground: Red
+  foreground: "#cca598"
 
 security_context:
   none:
     foreground: Default
   selinux:
     colon:
-      foreground: DarkGray
+      foreground: "#acaca2"
     user:
-      foreground: Yellow
+      foreground: Default
     role:
-      foreground: Green
+      foreground: "#a8b0b8"
     typ:
-      foreground: Cyan
+      foreground: "#93a5a0"
     range:
-      foreground: Blue
+      foreground: "#cca598"

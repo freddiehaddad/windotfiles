@@ -28,34 +28,9 @@ provide the steps to install and configure third-party software.
 
    > Restart Windows Terminal
 
-   Ferric provides `forge`, `steel`, and `graphite` families in `dark` and
-   `light` variants. PowerShell reads `FERRIC_THEME` and synchronizes its
-   PSReadLine, fzf, bat, Starship, and GlazeWM paths. Valid values are:
-
-   ```text
-   forge-dark
-   forge-light
-   steel-dark
-   steel-light
-   graphite-dark
-   graphite-light
-   ```
-
-   Select the matching `Ferric <Family> <Mode>` scheme in Windows Terminal
-   after changing `FERRIC_THEME`. To persist a new family and mode for
-   PowerShell, bat, Starship, and GlazeWM:
-
-   ```console
-   . (Join-Path $env:USERPROFILE .config\powershell\ferric-theme.ps1) -Theme forge-light -Persist
-   ```
-
-   Restart Windows Terminal and GlazeWM, select the matching Windows Terminal
-   scheme, then rebuild bat's cache:
-
    ```console
    bat cache --build
    ```
-   
 
 1. Go to System Settings > System > For developers
 

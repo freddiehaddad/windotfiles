@@ -1,24 +1,27 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "ferric"
+palette = "Sanzo"
 
-[palettes.ferric]
-foreground = "#292a29"
-muted = "#70716f"
-function = "#3f6078"
-type = "#396b67"
-string = "#52693f"
-constant = "#745b2e"
-keyword = "#8a4e2f"
-accent = "#8a4e2f"
-success = "#52693f"
-warning = "#745b2e"
-error = "#923e38"
+[palettes.Sanzo]
+foreground = "#e8e8d3"
+muted = "#6f6f6b"
+function = "#dcbd93"
+type = "#93a5a0"
+string = "#a8bcac"
+constant = "#cca598"
+keyword = "#b3a6b0"
+control = "#9e8f9c"
+accent = "#a8b0b8"
+success = "#a8bcac"
+warning = "#dcbd93"
+error = "#cca598"
 
 [aws]
+style = "bold accent"
 symbol = " "
 
 [azure]
+style = "accent bold"
 symbol = " "
 
 [battery]
@@ -29,73 +32,96 @@ unknown_symbol = "󰂑 "
 empty_symbol = "󰂎 "
 
 [buf]
+style = "bold type"
 symbol = " "
 
 [bun]
+style = "bold type"
 symbol = " "
 
 [c]
+style = "type bold"
 symbol = " "
 
 [cpp]
+style = "type bold"
 symbol = " "
 
 [cmake]
+style = "bold type"
 symbol = " "
 
 [cobol]
+style = "bold type"
 symbol = " "
 
 [conda]
+style = "accent bold"
 symbol = " "
 
 [container]
+style = "accent bold dimmed"
 symbol = " "
 
 [crystal]
+style = "bold type"
 symbol = " "
 
 [dart]
+style = "bold type"
 symbol = " "
 
 [deno]
+style = "type bold"
 symbol = " "
 
 [direnv]
+style = "bold accent"
 symbol = " "
 
 [directory]
+read_only_style = "warning"
 read_only = " 󰌾"
 style = "bold function"
 
 [docker_context]
+style = "accent bold"
 symbol = " "
 
 [dotnet]
+style = "type bold"
 symbol = " "
 
 [elixir]
+style = "bold type"
 symbol = " "
 
 [elm]
+style = "type bold"
 symbol = " "
 
 [erlang]
+style = "bold type"
 symbol = " "
 
 [fennel]
+style = "bold type"
 symbol = " "
 
 [fortran]
+style = "bold type"
 symbol = " "
 
 [fossil_branch]
+style = "bold accent"
 symbol = " "
 
 [gcloud]
+style = "bold accent"
 symbol = "󱇶 "
 
 [gleam]
+style = "bold type"
 symbol = " "
 
 [git_branch]
@@ -103,85 +129,117 @@ symbol = " "
 style = "bold accent"
 
 [git_commit]
+style = "constant bold"
 tag_symbol = '  '
 
 [golang]
+style = "bold type"
+not_capable_style = "bold warning"
 symbol = " "
 
 [gradle]
+style = "bold type"
 symbol = " "
 
 [guix_shell]
+style = "accent bold"
 symbol = " "
 
 [haskell]
+style = "bold type"
 symbol = " "
 
 [haxe]
+style = "bold type"
 symbol = " "
 
 [helm]
+style = "bold type"
 symbol = " "
 
 [hg_branch]
+style = "bold accent"
 symbol = " "
 
 [hostname]
+style = "accent dimmed bold"
 ssh_symbol = " "
 
 [java]
+style = "type dimmed"
 symbol = " "
 
 [julia]
+style = "bold type"
 symbol = " "
 
 [kotlin]
+style = "bold type"
 symbol = " "
 
 [kubernetes]
+style = "accent bold"
 symbol = "󱃾 "
 
 [lua]
+style = "bold type"
 symbol = " "
 
 [maven]
+style = "bold type"
 symbol = " "
 
 [memory_usage]
+style = "constant bold dimmed"
 symbol = "󰍛 "
 
 [meson]
+style = "type bold"
 symbol = "󰔷 "
 
 [mojo]
+style = "bold type"
 symbol = "󰈸 "
 
 [nats]
+style = "bold accent"
 symbol = " "
 
 [netns]
+style = "accent bold dimmed"
 symbol = "󰛳 "
 
 [nim]
+style = "type bold"
 symbol = " "
 
 [nix_shell]
+style = "bold accent"
 symbol = " "
 
 [nodejs]
+style = "bold type"
+not_capable_style = "bold warning"
 symbol = " "
 
 [ocaml]
+style = "bold type"
 symbol = " "
 
 [odin]
+style = "bold type"
 symbol = "󰟢 "
 
 [opa]
+style = "bold type"
 symbol = " "
 
 [openstack]
+style = "bold accent"
 symbol = " "
+
+[os]
+style = "bold type"
 
 [os.symbols]
 AIX = " "
@@ -245,57 +303,74 @@ Zorin = " "
 
 [package]
 symbol = "󰏗 "
-style = "function"
+style = "constant"
 
 [perl]
+style = "type bold"
 symbol = " "
 
 [php]
+style = "type bold"
 symbol = " "
 
 [pijul_channel]
+style = "bold accent"
 symbol = " "
 
 [pixi]
+style = "accent bold"
 symbol = "󰏗 "
 
 [pulumi]
+style = "bold accent"
 symbol = " "
 
 [purescript]
+style = "bold type"
 symbol = " "
 
 [python]
+style = "type bold"
 symbol = " "
 
 [raku]
+style = "type bold"
 symbol = "󱖊 "
 
 [red]
+style = "type bold"
 symbol = "󱍼 "
 
 [rlang]
+style = "type bold"
 symbol = "󰟔 "
 
 [ruby]
+style = "bold type"
 symbol = " "
 
 [rust]
+style = "bold type"
 symbol = "󱘗 "
 
 [scala]
+style = "type bold"
 symbol = " "
 
 [shlvl]
+style = "bold constant"
 symbol = "󰹍 "
 
 [singularity]
+style = "accent bold dimmed"
 symbol = " "
 
 [solidity]
+style = "bold type"
 symbol = " "
 
 [spack]
+style = "accent bold"
 symbol = " "
 
 [status]
@@ -303,25 +378,60 @@ symbol = " "
 style = "bold error"
 
 [sudo]
+style = "bold warning"
 symbol = " "
 
 [swift]
+style = "bold type"
 symbol = " "
 
 [terraform]
+style = "bold accent"
 symbol = " "
 
 [vlang]
+style = "type bold"
 symbol = " "
 
 [typst]
+style = "bold type"
 symbol = " "
 
 [vagrant]
+style = "type bold"
 symbol = " "
 
 [xmake]
+style = "bold type"
 symbol = " "
 
 [zig]
+style = "bold type"
 symbol = " "
+
+[character]
+success_symbol = "[❯](bold success)"
+error_symbol = "[❯](bold error)"
+vimcmd_symbol = "[❮](bold function)"
+vimcmd_visual_symbol = "[❮](bold function)"
+vimcmd_replace_symbol = "[❮](bold function)"
+vimcmd_replace_one_symbol = "[❮](bold function)"
+
+[cmd_duration]
+style = "constant bold"
+
+[git_state]
+style = "bold control"
+
+[git_status]
+style = "warning bold"
+
+[jobs]
+style = "bold constant"
+
+[time]
+style = "bold constant"
+
+[username]
+style_user = "foreground bold"
+style_root = "warning bold"
