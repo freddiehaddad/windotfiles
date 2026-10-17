@@ -1,8 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "Sanzo"
+palette = "Haishoku"
 
-[palettes.Sanzo]
+[palettes.Haishoku]
 foreground = "#e8e8d3"
 muted = "#6f6f6b"
 function = "#dcbd93"

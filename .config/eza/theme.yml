@@ -1,4 +1,4 @@
-# Sanzo eza theme. Ordinary text inherits the terminal foreground.
+# Haishoku eza theme. Ordinary text inherits the terminal foreground.
 # Actions use function colors, resources use type colors, and values use constants.
 
 filekinds:
@@ -109,7 +109,7 @@ links:
   multi_link_file:
     foreground: "#cca598"
 
-# Match Sanzo's added, changed, deleted, and diagnostic colors.
+# Match Haishoku's added, changed, deleted, and diagnostic colors.
 git:
   new:
     foreground: "#a8bcac"

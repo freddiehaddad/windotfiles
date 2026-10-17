@@ -443,7 +443,7 @@
         "defaults":
         {
             "bellStyle": "taskbar",
-            "colorScheme": "Sanzo",
+            "colorScheme": "Haishoku",
             "cursorShape": "filledBox",
             "font":
             {
@@ -557,7 +557,7 @@
             "cyan": "#A8B0B8",
             "foreground": "#E8E8D3",
             "green": "#A8BCAC",
-            "name": "Sanzo",
+            "name": "Haishoku",
             "purple": "#9E8F9C",
             "red": "#CC9A98",
             "selectionBackground": "#4D4D4D",
