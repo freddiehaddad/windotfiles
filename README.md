@@ -45,6 +45,7 @@ provide the steps to install and configure third-party software.
    - Allow local PowerShell scripts to run without signing
    - Enable sudo
      - Set Configure how sudo runs applications to Inline
+     - From an elevated command prompt run `sudo config --enable normal`
 
 1. Go to Advanced System Settings > Advanced > Settings
 
