@@ -128,6 +128,7 @@ window_rules:
       # Notepad Print Dialog
       - window_tile: { equals: "Notepad - Print" }
         window_class: { equals: "ApplicationFrameWindow" }
+        window_process: { equals: "Notepad" }
 
       # Snipping Tool
       - window_title: { equals: "Snipping Tool" }
@@ -137,6 +138,10 @@ window_rules:
       # Battle.net
       - window_title: { equals: "Battle.net" }
         window_class: { equals: "Chrome_WidgetWin_0" }
+        window_process: { equals: "Battle" }
+      - window_title: { equals: "Battle.net - Chats and Groups" }
+        window_class: { equals: "Chrome_WidgetWin_0" }
+        window_process: { equals: "Battle" }
 
   # ---------------------------------------------
   # Force fullscreen
