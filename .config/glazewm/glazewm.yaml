@@ -118,7 +118,7 @@ workspaces:
 
 window_rules:
   # To identify window names:
-  #   glazewm.exe query windows 
+  #   glazewm.exe query windows
 
   # ---------------------------------------------
   # Force floating
@@ -151,6 +151,7 @@ window_rules:
       # Games
       - window_title: { equals: "World of Warcraft" }
         window_class: { equals: "waApplication Window" }
+        window_process: { equals: "Wow" }
 
   # ---------------------------------------------
   # Ignore rules
